@@ -1,14 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    "./src/components/**/*.{ts,js,tsx,jsx}",
-    "./src/pages/**/*.{ts,js,tsx,jsx}"
+    "./src/components/**/*.{js,ts,jsx,tsx}",
+    "./src/pages/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    colors: {
-      "bg": "#E7EEF6",
+    colors:{
+      "primary": "#E7EEF6",
       "titulo": "#061C39",
-      "titulo-bg": "#E7EEF6",
       "faixa": "#0E3C7A",
     },
     extend: {},

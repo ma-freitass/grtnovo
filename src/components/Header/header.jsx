@@ -7,39 +7,44 @@ import Home from "../../pages/Home/home";
 import About from "../../pages/About/about";
 import Portifolio from "../../pages/Portifolio/portifolio";
 import Contact from "../../pages/Contact/contact";
-import "./header.module.scss";
 
 export default function Header() {
   return (
     <BrowserRouter>
       <header>
         <div>
-          <div className={s.destaque}>
-            <img src={Instagram} alt="Logo Instagram" />
-            <img src={Whatsapp} alt="Logo Whatsapp" />
-            <img src={Linkedin} alt="Logo Linkedin" />
+          <div className="bg-faixa flex justify-center h-10 items-center">
+            <img
+              src={Instagram}
+              alt="Logo Instagram"
+              className="w-6 h-6 mx-4"
+            />
+            <img src={Whatsapp} alt="Logo Whatsapp" className="w-6 h-6 mx-4" />
+            <img src={Linkedin} alt="Logo Linkedin" className="w-6 h-6 mx-4" />
           </div>
         </div>
-        <div className="logo">
-          <Link to="/">
-            <img src={Logo} alt="Logo GRT" />
-          </Link>
-        </div>
-        <div>
-          <nav>
-            <ul>
-              <li>
-                <Link to="/about">Sobre</Link>
-              </li>
-              <li>
-                <Link to="/portifolio">Portifolio</Link>
-              </li>
-              <li>
-                <Link to="/contact">Contato</Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
+        <section>
+          <div className="flex justify-center items-center">
+            <Link to="/">
+              <img src={Logo} alt="Logo GRT" />
+            </Link>
+          </div>
+          <div>
+            <nav>
+              <ul>
+                <li>
+                  <Link to="/about">Sobre</Link>
+                </li>
+                <li>
+                  <Link to="/portifolio">Portifolio</Link>
+                </li>
+                <li>
+                  <Link to="/contact">Contato</Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </section>
       </header>
       <Routes>
         <Route path="/" element={<Home />} />

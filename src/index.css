@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --bg: #E7EEF6;
+  --primary: #E7EEF6;
   --titulo:#061C39;
   --faixa: #0E3C7A;
 }
