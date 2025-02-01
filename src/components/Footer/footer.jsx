@@ -46,7 +46,7 @@ export default function Footer() {
 
       <div className="bg-faixa text-primary h-12 flex justify-center text-center items-center">
         <p>
-          &copy; 2004 - {currentYear} GRT Engenharia - Todos os direitos
+          &copy; 2014 - {currentYear} GRT Engenharia - Todos os direitos
           reservados. Desenvolvido por Maiala Freitas.
         </p>
       </div>
