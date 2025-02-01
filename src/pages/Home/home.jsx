@@ -27,7 +27,7 @@ export default function Home() {
                 <p className="sm: text-lg font-bold text-left ml-6">- Escavação </p>
                 <p className="sm: text-lg font-bold text-left ml-6">- Carga</p> 
                 <p className="sm: text-lg font-bold text-left ml-6">- Transporte e acondicionamento de materiais</p>
-                <ul className="sm: text-lg font-bold flex space-x-3 ml-24 ">
+                <ul className="sm: text-lg font-bold flex space-x-3 ml-20 ">
                     <li>• Minério</li>
                     <li>• Carvão</li>
                     <li>• Escória</li>
@@ -54,7 +54,7 @@ export default function Home() {
                 <li>• Umidificação de vias e materiais;</li>
                 <li>• Limpeza industrial em geral. </li>
             </ul>
-            <button >Conheça nosso portifólio</button>
+            <button className="" >Conheça nosso portifólio</button>
             
         </section>
         <section>
