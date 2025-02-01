@@ -21,7 +21,9 @@ export default {
       // => @media (min-width: 1280px) { ... }
     },
     colors:{
+      "branco":"#FFFFFF",
       "primary": "#E7EEF6",
+      "subtitulos":"#B6C9E2",
       "titulo": "#061C39",
       "faixa": "#0E3C7A",
       "faixa1": "#0C316D",

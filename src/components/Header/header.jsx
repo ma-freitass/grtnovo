@@ -13,9 +13,30 @@ export default function Header() {
     <BrowserRouter>
       <header>
         <section className="bg-faixa flex justify-center h-10 items-center">
-          <img src={Instagram} alt="Logo Instagram" className="w-6 h-6 mx-4" />
-          <img src={Whatsapp} alt="Logo Whatsapp" className="w-6 h-6 mx-4" />
-          <img src={Linkedin} alt="Logo Linkedin" className="w-6 h-6 mx-4" />
+          <a href="https://www.instagram.com/grt.engenharia/" target="_blank">
+            <img
+              src={Instagram}
+              alt="Logo Instagram"
+              className="w-6 h-6 mx-4 hover:bg-faixa2 rounded-md"
+            />
+          </a>
+          <a href="https://wa.me/5524981417949" target="_blank">
+            <img
+              src={Whatsapp}
+              alt="Logo Whatsapp"
+              className="w-6 h-6 mx-4 hover:bg-faixa2 rounded-md"
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/company/grtengenharia-grt/"
+            target="_blank"
+          >
+            <img
+              src={Linkedin}
+              alt="Logo Linkedin"
+              className="w-6 h-6 mx-4 hover:bg-faixa2 rounded-md"
+            />
+          </a>
         </section>
         <section className="h-36 bg-primary text-titulo font-semibold flex justify-around items-center">
           <Link to="/">
