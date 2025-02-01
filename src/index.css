@@ -6,6 +6,8 @@
   --primary: #E7EEF6;
   --titulo:#061C39;
   --faixa: #0E3C7A;
+  --faixa1: #0C316D;
+  --faixa2: #185FD3;
 }
 
 *{
@@ -15,4 +17,12 @@
   list-style: none;
   text-decoration: none;
   font-family: "Roboto", Helvetica, sans-serif;
+  background-color: #E7EEF6;
+
+}
+@layer base {
+  @font-face {
+    font-family: "Quantico", serif;
+    src: url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap') format('quantico');
+  }
 }

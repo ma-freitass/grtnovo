@@ -17,47 +17,45 @@ export default function Home() {
       <main>
         <section>
             <div>
-            <img src={Logo} alt="" />
-            </div>
-            <div>
-                <img src={Fundo} alt="" />
+                <img className="h-[40%] w-[100%] pb-7" src={Fundo} alt="Equipamentos" />
             </div>
         </section>
         <section>
-            <h1>Conheça nossos serviços</h1>
+            <h1 className="sm: text-2xl font-serif font-bold text-center">Conheça nossos serviços</h1>
             <div>
-                <img src={Escavadeira} alt="" />
-                <p>Escavação </p>
-                <p>Carga</p> 
-                <p>transporte e acondicionamento de materiais</p>
-                <ul>
-                    <li>Minério</li>
-                    <li>Carvão</li>
-                    <li>Escória</li>
+                <img className="sm: w-[85vw] h-42 object-cover rounded-md m-6 items-center" src={Escavadeira} alt="" />
+                <p className="sm: text-lg font-bold text-left ml-6">- Escavação </p>
+                <p className="sm: text-lg font-bold text-left ml-6">- Carga</p> 
+                <p className="sm: text-lg font-bold text-left ml-6">- Transporte e acondicionamento de materiais</p>
+                <ul className="sm: text-lg font-bold flex space-x-3 ml-24 ">
+                    <li>• Minério</li>
+                    <li>• Carvão</li>
+                    <li>• Escória</li>
                 </ul> 
             </div>
             <div>
-                <img src={Equipamentos} alt="" />
-                <p>- Aluguel de máquinas e equipamentos</p>
+                <img  className="sm: w-[85vw] h-42 object-cover rounded-md m-6 items-center" src={Equipamentos} alt="" />
+                <p className="sm: text-lg font-bold text-left ml-6">- Aluguel de máquinas e equipamentos</p>
             </div>
             <div>
-                <img src={Carga} alt="" />
-                <p>- Movimentação de carga</p>
+                <img className="sm: w-[85vw] h-42 object-cover rounded-md m-6 items-center" src={Carga} alt="" />
+                <p className="sm: text-lg font-bold text-left ml-6">- Movimentação de carga</p>
             </div>
         </section>
-        <section>
-            <h2>Áreas de atuação</h2>
-            <img src={Atuacao} alt="" />
-            <p>A GRT ENGENHARIA e LOCAÇÕES possui cadastro na VALE e hoje estamos executando uma Subestação na unidade de Xerém/RJ.</p>
-            <ul>
-                <li>Prestação de serviços com movimentação de cargas (Containers/ Equipamentos); </li>
-                <li>Transporte de reíduos de obra - Classe RDC, A, B, C, 2A e 2B;</li>
-                <li>Transporte e abastecimento de combustíveis e lubrificantes;</li>
-                <li>Demolições de grande porte;</li>
-                <li>Umidificação de vias e materiais;</li>
-                <li>Limpeza industrial em geral. </li>
+        <section className="sm: bg-gradient-to-b from-faixa1 to-faixa2 w-full h-auto mt-8">
+            <h2 className="sm: text-2xl font-serif font-bold text-center">Áreas de atuação</h2>
+            <img className="sm: w-[85vw] h-42 object-cover rounded-md m-6 items-center" src={Atuacao} alt="Máquina carregando um caminhão" />
+            <p className="sm: text-lg text-left ml-6 leading-8">A GRT ENGENHARIA e LOCAÇÕES possui cadastro na VALE e hoje estamos executando uma Subestação na unidade de Xerém/RJ.</p>
+            <ul className="sm: text-lg text-left ml-12 text-wrap mr-5">
+                <li>• Prestação de serviços com movimentação de cargas (Containers/ Equipamentos); </li>
+                <li>• Transporte de reíduos de obra - Classe RDC, A, B, C, 2A e 2B;</li>
+                <li>• Transporte e abastecimento de combustíveis e lubrificantes;</li>
+                <li>• Demolições de grande porte;</li>
+                <li>• Umidificação de vias e materiais;</li>
+                <li>• Limpeza industrial em geral. </li>
             </ul>
-            <button>Conheça nosso portifólio</button>
+            <button >Conheça nosso portifólio</button>
+            
         </section>
         <section>
             <h2>Nossos Clientes</h2>
