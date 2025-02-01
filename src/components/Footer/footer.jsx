@@ -1,39 +1,55 @@
 import Logo from "../../assets/logo.png";
+import Instagram from "../../assets/instagram.svg";
+import Whatsapp from "../../assets/whatsapp.svg";
+import Linkedin from "../../assets/linkedin.svg";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
     <>
-      <section className="">
+      <section className="bg-primary flex flex-col items-center h-96 justify-evenly">
         <div>
           <a href="/">
-            <img src={Logo} alt="Logo GRT" />
+            <img src={Logo} alt="Logo GRT" className="h-36 w-80" />
           </a>
         </div>
-        <div className="adress">
+        <div className="text-faixa font-bold text-center">
           <p> Avenida Paulo Erlei Alves Abrantes, 1110</p>
           <p>Três Poços, Volta Redonda, RJ - CEP: 27240-560</p>
+          <p>Contato: (24) 3350-1815 / (24) 98141-7949</p>
         </div>
-        <div className="social-media">
-          <a href="/">
-            <img src="" alt="instagram-icon" />
+        <div className="flex justify-center">
+          <a href="https://www.instagram.com/grt.engenharia/">
+            <img
+              src={Instagram}
+              alt="instagram-icon"
+              className="w-10 h-10 mx-6"
+            />
           </a>
-          <a href="/">
-            <img src="" alt="whatsapp-icon" />
+          <a href="https://wa.me/5524981417949">
+            <img
+              src={Whatsapp}
+              alt="whatsapp-icon"
+              className="w-10 h-10 mx-6"
+            />
           </a>
-          <a href="/">
-            <img src="" alt="linkedin-icon" />
+          <a href="https://www.linkedin.com/company/grtengenharia-grt/">
+            <img
+              src={Linkedin}
+              alt="linkedin-icon"
+              className="w-10 h-10 mx-6"
+            />
           </a>
         </div>
       </section>
 
-      <section className="rights">
+      <div className="bg-faixa text-primary h-12 flex justify-center text-center items-center">
         <p>
           &copy; 2004 - {currentYear} GRT Engenharia - Todos os direitos
           reservados. Desenvolvido por Maiala Freitas.
         </p>
-      </section>
+      </div>
     </>
   );
 }

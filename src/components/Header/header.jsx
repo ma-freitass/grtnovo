@@ -12,26 +12,21 @@ export default function Header() {
   return (
     <BrowserRouter>
       <header>
-        <div>
-          <div className="bg-faixa flex justify-center h-10 items-center">
-            <img
-              src={Instagram}
-              alt="Logo Instagram"
-              className="w-6 h-6 mx-4"
-            />
-            <img src={Whatsapp} alt="Logo Whatsapp" className="w-6 h-6 mx-4" />
-            <img src={Linkedin} alt="Logo Linkedin" className="w-6 h-6 mx-4" />
-          </div>
-        </div>
-        <section>
-          <div className="flex justify-center items-center">
-            <Link to="/">
-              <img src={Logo} alt="Logo GRT" />
-            </Link>
-          </div>
+        <section className="bg-faixa flex justify-center h-10 items-center">
+          <img src={Instagram} alt="Logo Instagram" className="w-6 h-6 mx-4" />
+          <img src={Whatsapp} alt="Logo Whatsapp" className="w-6 h-6 mx-4" />
+          <img src={Linkedin} alt="Logo Linkedin" className="w-6 h-6 mx-4" />
+        </section>
+        <section className="h-36 bg-primary text-titulo font-semibold flex justify-around items-center">
+          <Link to="/">
+            <img src={Logo} alt="Logo GRT" className="h-16" />
+          </Link>
           <div>
             <nav>
-              <ul>
+              <ul className="w-[30vw] flex justify-around">
+                <li>
+                  <Link to="/">Home</Link>
+                </li>
                 <li>
                   <Link to="/about">Sobre</Link>
                 </li>
