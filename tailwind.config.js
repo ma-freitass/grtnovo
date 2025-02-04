@@ -27,7 +27,8 @@ export default {
       "titulo": "#061C39",
       "faixa": "#0E3C7A",
       "faixa1": "#0C316D",
-      "faixa2": "#185FD3"
+      "faixa2": "#185FD3",
+      "faixa3": "#00000080",
     },
     extend: {
     

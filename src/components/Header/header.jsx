@@ -44,7 +44,7 @@ export default function Header() {
           </Link>
           <div>
             <nav>
-              <ul className="w-[30vw] flex justify-around">
+              <ul className="w-[30vw] flex justify-around sm: flex-wrap">
                 <li>
                   <Link to="/">Home</Link>
                 </li>
@@ -59,8 +59,10 @@ export default function Header() {
                 </li>
               </ul>
             </nav>
+
           </div>
         </section>
+    
       </header>
       <Routes>
         <Route path="/" element={<Home />} />

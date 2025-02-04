@@ -6,6 +6,11 @@ import Maquina from "../../assets/maquina.png"
 import Maquina1 from "../../assets/maquina1.png"
 import Pipa from "../../assets/pipa.png"
 import Equip from "../../assets/equip.png"
+import Carousel from "../../components/Carousel/carousel"
+import Image from "../../assets/image.png"
+import Image1 from "../../assets/image1.png"
+import Image2 from "../../assets/image2.png"
+import Image3 from "../../assets/image3.png"
 
 
 export default function Portilio() {
@@ -63,7 +68,7 @@ export default function Portilio() {
                     </div>
                 </div>
                 <div>
-                    <img className="sm: mr-10 rounded-lg mt-6 w-[106vw]" src={Maquina1} alt="" />
+                    <img className="sm: mr-10 rounded-lg mt-6 w-[97vw]" src={Maquina1} alt="" />
                     <h3 className="text-2xl font-bold text-left text-wrap ml-8 pt-6 mr-32">Demolições de grande porte</h3>
                     <p className="sm: text-lg  text-left pb-8 text-wrap mx-12 my-4">Executamos demolições de grande porte com segurança, eficiência e total conformidade com as normas técnicas e ambientais. Utilizamos equipamentos modernos e metodologias avançadas para garantir a remoção controlada de estruturas, minimizando riscos e impactos na área. Nosso serviço é ideal para projetos industriais, comerciais e residenciais, proporcionando soluções ágeis, seguras e planejadas para cada necessidade.</p>
                 </div>
@@ -75,13 +80,16 @@ export default function Portilio() {
                     </div>
                 </div>
                 <div>
-                    <img className="sm: mr-10 rounded-lg mt-6 w-[106vw]" src={Equip} alt="" />
+                    <img className="sm: mr-10 rounded-lg mt-6 w-[95vw]" src={Equip} alt="" />
                     <h3 className="text-2xl font-bold text-left text-wrap ml-8 pt-6 mr-32">Limpeza industrial em geral</h3>
                     <p className="sm: text-lg  text-left pb-8 text-wrap mx-12 my-4">Realizamos limpeza industrial em geral, garantindo ambientes mais seguros, organizados e em conformidade com as normas de higiene e segurança. Contamos com equipamentos e técnicas adequadas para a remoção de resíduos, poeira, óleo e outros contaminantes, atendendo indústrias, fábricas e canteiros de obras. Nosso serviço contribui para a conservação dos equipamentos, a eficiência operacional e a segurança dos trabalhadores.</p>
                 </div>
             </section>
             <section className="bg-gradient-to-b from-faixa1 to-faixa2 w-full h-auto">
-                <h3 className="text-2xl font-bold text-left text-wrap ml-8 pt-6 mr-32 text-primary">Conheça também alguns de nossos equipamentos</h3>
+                <h3 className="text-2xl font-bold text-left text-wrap ml-8 pt-6 mr-32 text-primary h-24">Conheça também alguns de nossos equipamentos</h3>
+                <Carousel />
+
+                
             </section>
             <section>
                 <h3 className="text-3xl font-bold text-left text-wrap ml-8 pt-6 mr-32">Nossa Expertise,
@@ -92,24 +100,25 @@ export default function Portilio() {
                     Estabelecemos uma relação transparente com nossos clientes, oferecendo suporte através o atendimento diferenciado, em horario comercial e uma equipe para atendimentos emergenciais
                     Estamos preparados para atender clientes de pequeno, médio e grande porte, oferecendo sempre uma solução inteligente e econômica para quem precisa de serviços de terraplenagem, transporte, infraestrutura e locação de equipamentos.</p>
             </section>
-            <section className="bg-gradient-to-b from-faixa1 to-faixa2 w-full h-auto">
-                <h3 className="text-3xl font-bold text-left text-wrap ml-8 pt-6 mr-32 text-primary">Por que escolher a GRT Engenharia?</h3>
+            <section className="bg-gradient-to-b from-faixa1 to-faixa2 w-full h-auto pb-12">
+                <h3 className="text-3xl font-bold text-left text-wrap ml-8 pt-10 mr-32 text-primary mb-6">Por que escolher a GRT Engenharia?</h3>
                 <div>
-                    <div>
-                    <img src="" alt="" />
-                    <p  className="sm: text-lg  text-left pb-8 text-wrap mx-12 my-4 text-primary">Experiência consolidada no mercado.</p>
+                    <div className="relative">
+                    <img className="sm: mr-20 rounded-lg mt-6 w-96" src={Image} alt="" />
+                    <p className="sm: text-lg  text-left text-wrap  text-primary absolute bottom-0 w-96 pl-3 bg-gradient-to-tr from-faixa3/95 to-transparent">Experiência consolidada no mercado.</p>
                     </div>
-                    <div>
-                    <img src="" alt="" />
-                    <p className="sm: text-lg  text-left pb-8 text-wrap mx-12 my-4 text-primary">Equipamentos de ponta e equipe qualificada</p>
+                    <div className="relative">
+                    <img className="sm: ml-14 rounded-lg mt-6 w-96"  src={Image1}alt="" />
+                    <p className="sm: text-lg  text-right flex ml-14 pl-2 text-primary absolute bottom-0 w-96 bg-gradient-to-tr from-faixa3/95 to-transparent">Equipamentos de ponta e equipe qualificada</p>
                     </div>
-                    <div>
-                    <img src="" alt="" />
-                    <p className="sm: text-lg  text-left pb-8 text-wrap mx-12 my-4 text-primary">Experiência consolidada no mercado.</p>
+                    <div className="relative">
+                    <img className="sm: mr-20 rounded-lg mt-6 w-96 h-44"  src={Image3} alt="" />
+                    <p className="sm: text-lg  text-left text-wrap  text-primary pl-3 absolute bottom-0 w-96 bg-gradient-to-tr from-faixa3/95 to-transparent">Soluções personalizadas para cada cliente.
+                    </p>
                     </div>
-                    <div>
-                    <img src="" alt="" />
-                    <p className="sm: text-lg  text-left pb-8 text-wrap mx-12 my-4 text-primary">Compromisso com prazos e qualidade.</p>
+                    <div className="relative ">
+                    <img className="sm: ml-20 rounded-lg mt-6 w-96"  src={Image2} alt="" />
+                    <p className="sm: text-lg  text-right flex ml-20 pl-3 text-primary absolute bottom-0 w-96 bg-gradient-to-tr from-faixa3/95 to-transparent ">Compromisso com prazos e qualidade.</p>
                     </div>
                 </div>
             </section>
