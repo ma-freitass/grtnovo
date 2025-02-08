@@ -31,8 +31,22 @@ export default {
       "faixa3": "#00000080",
     },
     extend: {
+      dropShadow: {
+        custom: ' 2px 2px 10px rgba(0, 0, 0, 0.6)'
+      }
     
     },
+    keyframes: {
+      slide: {
+        '0%': { transform: 'translateX(0)' },
+        '100%': { transform: 'translateX(-30%)' },
+      },
+    },
+    animation: {
+      slide: 'slide 30s linear infinite',
+      
+    },
+  
   },
   plugins: [],
 }

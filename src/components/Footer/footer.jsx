@@ -11,7 +11,7 @@ export default function Footer() {
       <section className="bg-primary flex flex-col items-center h-96 justify-evenly">
         <div>
           <a href="/">
-            <img src={Logo} alt="Logo GRT" className="h-36 w-80" />
+            <img src={Logo} alt="Logo GRT" className="h-36 w-80 drop-shadow-custom	" />
           </a>
         </div>
         <div className="text-faixa2 font-bold text-center">

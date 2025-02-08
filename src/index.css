@@ -20,6 +20,10 @@
   
 
 }
+html, body {
+  overflow-x: hidden;
+}
+
 @layer base {
   @font-face {
     font-family: "Quantico", serif;
