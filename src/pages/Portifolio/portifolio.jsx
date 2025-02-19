@@ -56,7 +56,7 @@ export default function Portilio() {
                     <img className="pr-12 rounded-xl mt-6 object-cover" src={Caminhao2} alt="" />
                     <h3 className="text-2xl font-bold text-left ml-8 py-8 mr-10">Transporte de reíduos de obra
                         Classe RDC, A, B, C, 2A e 2B</h3>
-                    <p p className="text-lg  text-left  pb-8 text-wrap mx-12">Oferecemos soluções eficientes para o transporte de resíduos de obras, abrangendo as classes RDC, A, B, C, 2A e 2B, sempre em conformidade com as normas ambientais. Nossa estrutura conta com veículos adequados para cada tipo de material, garantindo uma logística ágil e segura. Priorizamos a destinação correta dos resíduos, reduzindo impactos ambientais e contribuindo para a sustentabilidade. Atendemos projetos de diferentes portes com compromisso, responsabilidade e eficiência.</p>
+                    <p  className="text-lg  text-left  pb-8 text-wrap mx-12">Oferecemos soluções eficientes para o transporte de resíduos de obras, abrangendo as classes RDC, A, B, C, 2A e 2B, sempre em conformidade com as normas ambientais. Nossa estrutura conta com veículos adequados para cada tipo de material, garantindo uma logística ágil e segura. Priorizamos a destinação correta dos resíduos, reduzindo impactos ambientais e contribuindo para a sustentabilidade. Atendemos projetos de diferentes portes com compromisso, responsabilidade e eficiência.</p>
 
                 </div>
                 <div>
