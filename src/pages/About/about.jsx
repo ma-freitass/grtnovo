@@ -5,6 +5,8 @@ import Equipamentos1 from "../../assets/equipamentos1.png"
 import Pessoal from "../../assets/pessoal.png"
 import Escavadeira1 from "../../assets/escavadeira1.png"
 import Escavadeira2 from "../../assets/escavadeira2.png"
+import WhatsappIcon from "../../assets/whats.png"
+
 
 
 export default function About() {
@@ -23,18 +25,25 @@ export default function About() {
                 <h2 className="text-3xl font-bold text-left ml-8 py-10 tablet:px-20 tablet:py-10 font-quantico">A GRT Engenharia é uma empresa sólida e experiente, atuando há mais de 10 anos no setor de construção civil e infraestrutura.</h2>
                 <p className="text-2xl  text-left text-wrap  ml-8 px-8 tablet:px-20 mb-14">Reconhecida pela qualidade e confiabilidade de seus serviços, a GRT se destaca especialmente na locação de equipamentos de linha amarela e na execução de obras civis de pequeno, médio e grande porte. Nosso compromisso é fornecer soluções práticas e eficientes, adaptadas às necessidades de cada cliente, com foco em resultados de alto padrão e na segurança do trabalho.</p>
             </section>
-            <section className="flex flex-col items-center tablet:flex-row tablet:items-stretch w-full relative">
-                <div className="tablet:w-1/2">
+            <section className="mx-auto px-6 py-12 flex flex-col  items-center relative laptop:flex-row laptop:items-center laptop:px-24 laptop:py-10">
+                <div class="w-full laptop:w-1/2 relative z-10">
+                    <img src={Pessoal} alt="Movimentação de cargas" class="w-full h-auto rounded-lg shadow-lg" />
+                </div>
 
-                    <img className="rounded-xl mt-6 object-cover w-full h-[90%] tablet:w-[90%] mx-auto mr-0" src={Pessoal} alt="" />
+
+                <div className="w-full relative z-10 laptop:pl-10 text-left laptop:text-left mt-6 flex items-center laptop:mt-0">
+                    <div>
+                        <p className="mt-4 text-lg text-primary">
+                            Contamos com uma equipe de profissionais altamente capacitados e em constante atualização, além de uma frota moderna e bem equipada, garantindo soluções, segurança e agilidade em todas as etapas dos projetos. Nossa experiência acumulada nos permite entender profundamente os desafios específicos de cada obra e propor soluções inovadoras, sempre alinhadas às melhores práticas do mercado e às exigências dos clientes.</p>
+                    </div>
                 </div>
-                <div className="bg-gradient-to-b from-faixa1 to-faixa2 w-screen h-auto tablet:w-1/2 flex items-center tablet:rounded-xl">
-                    <p className="text-lg text-left leading-8 text-primary p-6 tablet:p-12">Contamos com uma equipe de profissionais altamente capacitados e em constante atualização, além de uma frota moderna e bem equipada, garantindo soluções, segurança e agilidade em todas as etapas dos projetos. Nossa experiência acumulada nos permite entender profundamente os desafios específicos de cada obra e propor soluções inovadoras, sempre alinhadas às melhores práticas do mercado e às exigências dos clientes.</p>
-                </div>
+
+                <div className="absolute right-0 top-0 h-full lg:w-[80%] w-full laptop:w-2/3 bg-gradient-to-b from-faixa1 to-faixa2 z-0"></div>
+
+
             </section>
             <section className="flex flex-col items-center laptop:grid laptop:grid-cols-2 w-full gap-8 px-6 tablet:px-12 laptop:px-24 py-12">
 
-                {/* Bloco da Esquerda */}
                 <div className="flex flex-col items-center laptop:items-start w-full">
                     <img className="rounded-xl object-cover w-full h-[450%]"
                         src={Escavadeira1}
@@ -48,7 +57,7 @@ export default function About() {
                     </p>
                 </div>
 
-                {/* Bloco da Direita */}
+
                 <div className="relative flex flex-col items-center w-full">
                     <img className="rounded-xl object-cover w-full h-[550%]"
                         src={Escavadeira2}
@@ -68,6 +77,14 @@ export default function About() {
                 <img className="w-60 h-auto" src={Visao} alt="Visão" />
                 <img className="w-60 h-auto" src={Valores} alt="Valores" />
             </section>
+            <a
+                href="https://wa.me/5524981417949" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="fixed bottom-6 right-6 z-50 p-3  hover:scale-110 transition duration-300"
+            >
+                <img src={WhatsappIcon} alt="WhatsApp" className="size-20" />
+            </a>
 
         </main>
     );

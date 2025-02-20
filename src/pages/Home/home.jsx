@@ -10,6 +10,7 @@ import Engeko from "../../assets/engeko.png"
 import MBP from "../../assets/mbp.png"
 import SG from "../../assets/sg.png"
 import Final from "../../assets/final.png"
+import WhatsappIcon from "../../assets/whats.png"
 
 export default function Home() {
     return (
@@ -21,9 +22,9 @@ export default function Home() {
             </section>
             <section>
                 <h1 className="text-3xl font-bold text-center py-8 font-quantico">Conheça nossos serviços</h1>
-                <div className="flex justify-center p-2 mx-10 max-tablet:flex-col">
+                <div className="flex flex-col justify-center p-2 mx-10 laptop:flex-row">
                     <div>
-                        <img className="w-[90%]  h-42 object-cover rounded-md m-6 items-center hover:scale-110 cursor-pointer" src={Escavadeira} alt="" />
+                        <img className="w-[90%] h-42 object-cover rounded-md m-6 items-center hover:scale-110 cursor-pointer" src={Escavadeira} alt="" />
                         <p className="text-lg font-bold text-left ml-6">- Escavação </p>
                         <p className="text-lg font-bold text-left ml-6">- Carga</p>
                         <p className="text-lg font-bold text-left ml-6">- Transporte e acondicionamento de materiais</p>
@@ -43,10 +44,10 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <section className="bg-gradient-to-b from-faixa1 to-faixa2 h-auto my-10 ">
+            <section className="bg-gradient-to-b from-faixa1 to-faixa2 h-auto my-10 flex flex-col justify-center items-center">
 
                     <h2 className="text-4xl font-quantico font-bold text-center text-primary pt-10 text-nowrap">Áreas de atuação</h2>
-                <div className="flex max-tablet:flex-col h-auto p-10 gap-10 justify-center items-center" >
+                <div className="flex flex-col h-auto p-10 gap-10 justify-center items-center laptop:flex-row" >
                     <div className="w-2/5 max-laptop:w-full flex justify-center items-center">
 
                         <img className="w-[70vw] h-auto object-cover rounded-md" src={Atuacao} alt="Máquina carregando um caminhão" />
@@ -142,6 +143,14 @@ export default function Home() {
                 </div>
                 </div>
             </section>
+            <a
+                href="https://wa.me/5524981417949" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="fixed bottom-6 right-6 z-50 p-3  hover:scale-110 transition duration-300"
+            >
+                <img src={WhatsappIcon} alt="WhatsApp" className="size-20" />
+            </a>
         </main>
     );
 }

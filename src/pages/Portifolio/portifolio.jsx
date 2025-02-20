@@ -11,6 +11,7 @@ import Image from "../../assets/image.jpg"
 import Image1 from "../../assets/image1.jpg"
 import Image2 from "../../assets/image2.jpg"
 import Image3 from "../../assets/image3.jpg"
+import WhatsappIcon from "../../assets/whats.png"
 
 
 export default function Portilio() {
@@ -34,18 +35,18 @@ export default function Portilio() {
                     <h2 className="text-3xl font-bold text-left ml-8 py-12 desktop:text-5xl font-quantico px-6 tablet:px-20 tablet:py-10 ">Descubra como podemos te ajudar!</h2>
                 </div>
 
-            <section class="mx-auto px-6 py-12 flex flex-col tablet:flex-row items-center tablet:items-center relative tablet:px-24 tablet:py-10">
-                <div class="w-full tablet:w-1/2 relative z-10">
-                    <img src={Caminhao} alt="Movimentação de cargas" class="w-full h-auto rounded-lg shadow-lg" />
+            <section className="mx-auto px-6 py-12 flex flex-col laptop:flex-row items-center relative laptop:px-24 laptop:py-10">
+                <div className="w-full laptop:w-1/2 relative z-10">
+                    <img src={Caminhao} alt="Movimentação de cargas" className="w-full h-auto rounded-lg shadow-lg" />
                 </div>
 
 
-                <div class="w-full tablet:w-1/2 relative z-10 tablet:pl-10 text-left tablet:text-left mt-6 tablet:mt-0 flex items-center">
+                <div className="w-full laptop:w-1/2 relative z-10 laptop:pl-10 text-left laptop:text-left mt-6 laptop:mt-0 flex items-center">
                     <div>
-                        <h2 class="text-2xl font-bold font-quantico">
+                        <h2 className="text-2xl font-bold font-quantico">
                             Prestação de serviços com movimentação de cargas (Containers/ Equipamentos)
                         </h2>
-                        <p class="mt-4 text-lg">
+                        <p className="mt-4 text-lg">
                             Somos especialistas na locação de equipamentos e prestação de serviços para construção civil, oferecendo soluções eficientes para movimentação de cargas, como containers e equipamentos pesados. Nossa equipe qualificada garante operações seguras, ágeis e dentro das normas técnicas. Trabalhamos com comprometimento e excelência para atender às necessidades de cada projeto, proporcionando qualidade e confiabilidade. Seja para obras de pequeno, médio ou grande porte, contamos com a infraestrutura ideal para otimizar sua logística e operação.
                         </p>
                     </div>
@@ -53,41 +54,41 @@ export default function Portilio() {
 
 
             </section>
-            <section class="mx-auto px-6 py-12 flex flex-col tablet:flex-row items-center tablet:items-center relative tablet:px-24 tablet:py-10">
-                <div class="w-full tablet:w-1/2 relative z-10">
-                    <img src={Caminhao1} alt="Movimentação de cargas" class="w-full h-auto rounded-lg shadow-lg" />
+            <section className="mx-auto px-6 py-12 flex flex-col laptop:flex-row items-center relative laptop:px-24 laptop:py-10">
+            <div className="w-full laptop:w-1/2 relative z-10">
+                    <img src={Caminhao1} alt="Movimentação de cargas" className="w-full h-auto rounded-lg shadow-lg" />
                 </div>
 
-
-                <div class="w-full tablet:w-1/2 relative z-10 tablet:pl-10 text-left tablet:text-left mt-6 tablet:mt-0 flex items-center">
+                <div className="w-full laptop:w-1/2 relative z-10 laptop:pl-10 text-left laptop:text-left mt-6 laptop:mt-0 flex items-center">
                     <div>
-                        <h2 class="text-2xl font-bold text-primary font-quantico">
+                        <h2 className="text-2xl font-bold text-primary font-quantico">
                             Escavação, Carga, Transpote e acondicionamento de materiais:
                         </h2>
-                        <p class="mt-4 text-lg text-primary">• Minério •  Carvão • Escória </p>
-                        <p class="mt-4 text-lg text-primary">
+                        <p className="mt-4 text-lg text-primary">• Minério •  Carvão • Escória </p>
+                        <p className="mt-4 text-lg text-primary">
                             Oferecemos serviços especializados em escavação, carga, transporte e acondicionamento de materiais como minério, carvão e escória. Com equipamentos modernos e equipe qualificada, garantimos eficiência, segurança e cumprimento das normas técnicas. Atendemos projetos de diversos portes, proporcionando soluções ágeis e confiáveis para a movimentação de materiais. Nosso compromisso é otimizar processos, reduzir custos operacionais e garantir a máxima produtividade para sua obra ou empreendimento.
                         </p>
                     </div>
                 </div>
 
-                <div class="absolute right-0 top-0 h-full lg:w-[80%] w-full tablet:w-3/5 bg-gradient-to-b from-faixa1 to-faixa2 z-0"></div>
+                <div className="absolute right-0 top-0 h-full lg:w-[80%] w-full laptop:w-3/5 bg-gradient-to-b from-faixa1 to-faixa2 z-0"></div>
 
 
             </section>
-            <section class="mx-auto px-6 py-12 flex flex-col tablet:flex-row items-center tablet:items-center relative tablet:px-24 tablet:py-10">
-                <div class="w-full tablet:w-1/2 relative z-10">
-                    <img src={Caminhao2} alt="Movimentação de cargas" class="w-full h-auto rounded-lg shadow-lg" />
+            <section className="mx-auto px-6 py-12 flex flex-col laptop:flex-row items-center relative laptop:px-24 laptop:py-10">
+            <div className="w-full laptop:w-1/2 relative z-10">
+
+                    <img src={Caminhao2} alt="Movimentação de cargas" className="w-full h-auto rounded-lg shadow-lg" />
                 </div>
 
 
-                <div class="w-full tablet:w-1/2 relative z-10 tablet:pl-10 text-left tablet:text-left mt-6 tablet:mt-0 flex items-center">
+                <div className="w-full laptop:w-1/2 relative z-10 laptop:pl-10 text-left laptop:text-left mt-6 laptop:mt-0 flex items-center">
                     <div>
-                        <h2 class="text-2xl font-bold font-quantico">
+                        <h2 className="text-2xl font-bold font-quantico">
                             Transporte de reíduos de obra
                             Classe RDC, A, B, C, 2A e 2B
                         </h2>
-                        <p class="mt-4 text-lg">
+                        <p className="mt-4 text-lg">
                             Oferecemos soluções eficientes para o transporte de resíduos de obras, abrangendo as classes RDC, A, B, C, 2A e 2B, sempre em conformidade com as normas ambientais. Nossa estrutura conta com veículos adequados para cada tipo de material, garantindo uma logística ágil e segura. Priorizamos a destinação correta dos resíduos, reduzindo impactos ambientais e contribuindo para a sustentabilidade. Atendemos projetos de diferentes portes com compromisso, responsabilidade e eficiência.
                         </p>
                     </div>
@@ -95,40 +96,39 @@ export default function Portilio() {
 
 
             </section>
-            <section class="mx-auto px-6 py-12 flex flex-col tablet:flex-row items-center tablet:items-center relative tablet:px-24 tablet:py-10">
-                <div class="w-full tablet:w-1/2 relative z-10">
-                    <img src={Maquina} alt="Movimentação de cargas" class="w-full h-auto rounded-lg shadow-lg" />
+            <section className="mx-auto px-6 py-12 flex flex-col laptop:flex-row items-center relative laptop:px-24 laptop:py-10">
+            <div className="w-full laptop:w-1/2 relative z-10">
+                    <img src={Maquina} alt="Movimentação de cargas" className="w-full h-auto rounded-lg shadow-lg" />
                 </div>
 
-
-                <div class="w-full tablet:w-1/2 relative z-10 tablet:pl-10 text-left tablet:text-left mt-6 tablet:mt-0 flex items-center">
+                <div className="w-full laptop:w-1/2 relative z-10 laptop:pl-10 text-left laptop:text-left mt-6 laptop:mt-0 flex items-center">
                     <div>
-                        <h2 class="text-2xl font-bold text-primary font-quantico">
+                        <h2 className="text-2xl font-bold text-primary font-quantico">
                         Transporte e abastecimento de combustíveis e lubrificantes
                         </h2>
                         
-                        <p class="mt-4 text-lg text-primary">
+                        <p className="mt-4 text-lg text-primary">
                         Realizamos o transporte e abastecimento de combustíveis e lubrificantes com segurança, eficiência e total conformidade com as regulamentações vigentes. Contamos com veículos apropriados e processos rigorosos para garantir a integridade dos produtos e a continuidade das operações. Nossos serviços são ideais para atender obras, indústrias e frotas, assegurando abastecimento ágil e confiável, reduzindo paradas e otimizando a produtividade do seu negócio.
                         </p>
                     </div>
                 </div>
 
-                <div class="absolute right-0 top-0 h-full lg:w-[80%] w-full tablet:w-3/5 bg-gradient-to-b from-faixa1 to-faixa2 z-0"></div>
+                <div className="absolute right-0 top-0 h-full lg:w-[80%] w-full laptop:w-3/5 bg-gradient-to-b from-faixa1 to-faixa2 z-0"></div>
 
 
             </section>
-            <section class="mx-auto px-6 py-12 flex flex-col tablet:flex-row items-center tablet:items-center relative tablet:px-24 tablet:py-10">
-                <div class="w-full tablet:w-1/2 relative z-10">
-                    <img src={Maquina1} alt="Movimentação de cargas" class="w-full h-auto rounded-lg shadow-lg" />
+            <section className="mx-auto px-6 py-12 flex flex-col laptop:flex-row items-center relative laptop:px-24 laptop:py-10">
+            <div className="w-full laptop:w-1/2 relative z-10">
+                    <img src={Maquina1} alt="Movimentação de cargas" className="w-full h-auto rounded-lg shadow-lg" />
                 </div>
 
 
-                <div class="w-full tablet:w-1/2 relative z-10 tablet:pl-10 text-left tablet:text-left mt-6 tablet:mt-0 flex items-center">
+                <div className="w-full laptop:w-1/2 relative z-10 laptop:pl-10 text-left laptop:text-left mt-6 laptop:mt-0 flex items-center">
                     <div>
-                        <h2 class="text-2xl font-bold font-quantico">
+                        <h2 className="text-2xl font-bold font-quantico">
                         Demolições de grande porte
                         </h2>
-                        <p class="mt-4 text-lg">
+                        <p className="mt-4 text-lg">
                         Executamos demolições de grande porte com segurança, eficiência e total conformidade com as normas técnicas e ambientais. Utilizamos equipamentos modernos e metodologias avançadas para garantir a remoção controlada de estruturas, minimizando riscos e impactos na área. Nosso serviço é ideal para projetos industriais, comerciais e residenciais, proporcionando soluções ágeis, seguras e planejadas para cada necessidade.
 
 </p>
@@ -137,42 +137,43 @@ export default function Portilio() {
 
 
             </section>
-            <section class="mx-auto px-6 py-12 flex flex-col tablet:flex-row items-center tablet:items-center relative tablet:px-24 tablet:py-10">
-                <div class="w-full tablet:w-1/2 relative z-10">
-                    <img src={Pipa} alt="Movimentação de cargas" class="w-full h-auto rounded-lg shadow-lg" />
+          
+            <section className="mx-auto px-6 py-12 flex flex-col laptop:flex-row items-center relative laptop:px-24 laptop:py-10">
+            <div className="w-full laptop:w-1/2 relative z-10">
+
+                    <img src={Pipa} alt="Movimentação de cargas" className="w-full h-auto rounded-lg shadow-lg" />
                 </div>
 
 
-                <div class="w-full tablet:w-1/2 relative z-10 tablet:pl-10 text-left tablet:text-left mt-6 tablet:mt-0 flex items-center">
+                <div className="w-full laptop:w-1/2 relative z-10 laptop:pl-10 text-left laptop:text-left mt-6 laptop:mt-0 flex items-center">
                     <div>
-                        <h2 class="text-2xl font-bold text-primary font-quantico">
+                        <h2 className="text-2xl font-bold text-primary font-quantico">
                         Umidificação de vias e materiais
                         </h2>
                         
-                        <p class="mt-4 text-lg text-primary">
-                        Oferecemos serviços de umidificação de vias e materiais para controle de poeira e melhoria das condições ambientais em obras, mineradoras e indústrias. Utilizamos equipamentos adequados para garantir a aplicação eficiente da água, reduzindo emissões de partículas e promovendo mais segurança no local. Nossa solução contribui para a preservação do meio ambiente, o cumprimento das normas ambientais e a qualidade das operações.
-
-</p>
+                        <p className="mt-4 text-lg text-primary">
+                        Oferecemos serviços de umidificação de vias e materiais para controle de poeira e melhoria das condições ambientais em obras, mineradoras e indústrias. Utilizamos equipamentos adequados para garantir a aplicação eficiente da água, reduzindo emissões de partículas e promovendo mais segurança no local. Nossa solução contribui para a preservação do meio ambiente, o cumprimento das normas ambientais e a qualidade das operações.</p>
                     </div>
                 </div>
 
-                <div class="absolute right-0 top-0 h-full lg:w-[80%] w-full tablet:w-3/5 bg-gradient-to-b from-faixa1 to-faixa2 z-0"></div>
+                <div className="absolute right-0 top-0 h-full lg:w-[80%] w-full laptop:w-3/5 bg-gradient-to-b from-faixa1 to-faixa2 z-0"></div>
 
 
             </section>
-            <section class="mx-auto px-6 py-12 flex flex-col tablet:flex-row items-center tablet:items-center relative tablet:px-24 tablet:py-10">
-                <div class="w-full tablet:w-1/2 relative z-10">
-                    <img src={Equip} alt="Movimentação de cargas" class="w-full h-auto rounded-lg shadow-lg" />
+            
+           <section className="mx-auto px-6 py-12 flex flex-col laptop:flex-row items-center relative laptop:px-24 laptop:py-10">
+            <div className="w-full laptop:w-1/2 relative z-10">
+                    <img src={Equip} alt="Movimentação de cargas" className="w-full h-auto rounded-lg shadow-lg" />
                 </div>
 
 
-                <div class="w-full tablet:w-1/2 relative z-10 tablet:pl-10 text-left tablet:text-left mt-6 tablet:mt-0 flex items-center">
+                <div className="w-full laptop:w-1/2 relative z-10 laptop:pl-10 text-left laptop:text-left mt-6 laptop:mt-0 flex items-center">
                     <div>
-                        <h2 class="text-2xl font-bold font-quantico">
+                        <h2 className="text-2xl font-bold font-quantico">
                         Limpeza industrial em geral
                         </h2>
                         
-                        <p class="mt-4 text-lg">
+                        <p className="mt-4 text-lg">
                         Realizamos limpeza industrial em geral, garantindo ambientes mais seguros, organizados e em conformidade com as normas de higiene e segurança. Contamos com equipamentos e técnicas adequadas para a remoção de resíduos, poeira, óleo e outros contaminantes, atendendo indústrias, fábricas e canteiros de obras. Nosso serviço contribui para a conservação dos equipamentos, a eficiência operacional e a segurança dos trabalhadores.
 </p>
                     </div>
@@ -219,7 +220,14 @@ export default function Portilio() {
                     </div>
                 </div>
             </section>
-
+            <a
+                href="https://wa.me/5524981417949" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="fixed bottom-6 right-6 z-50 p-3  hover:scale-110 transition duration-300"
+            >
+                <img src={WhatsappIcon} alt="WhatsApp" className="size-20" />
+            </a>
 
 
         </main>

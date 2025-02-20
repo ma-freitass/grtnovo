@@ -2,6 +2,8 @@ import { useState } from "react";
 import Whatsapp from "../../assets/whatsapp.png";
 import Instagram from "../../assets/instagram.png";
 import Linkedin from "../../assets/linkedin.png";
+import { Link } from "react-router-dom";
+import Mapa from "../../assets/mapa.jpg";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -51,16 +53,16 @@ export default function Contact() {
   return (
     <main>
       <section>
-                <div className="bg-gradient-to-b from-faixa1 to-faixa2 w-full h-auto px-6 tablet:px-20">
-                    <h3 className="text-primary uppercase text-1xl pt-8 text-left ml-8">tire sua duvida</h3>
-                    <h2 className="text-primary uppercase text-2xl font-bold text-left ml-8 pb-8 font-quantico">Nosso Contato</h2>
-                </div>
+        <div className="bg-gradient-to-b from-faixa1 to-faixa2 w-full h-auto px-6 tablet:px-20">
+          <h3 className="text-primary uppercase text-1xl pt-8 text-left ml-8">tire sua duvida</h3>
+          <h2 className="text-primary uppercase text-2xl font-bold text-left ml-8 pb-8 font-quantico">Nosso Contato</h2>
+        </div>
 
-            </section>
+      </section>
 
-      <section className="bg-primary flex flex-col justify-center p-16">
-        <article className="bg-gradient-to-b from-faixa1 to-faixa2 text-branco h-[50vh] w-auto text-center flex flex-col justify-evenly rounded-md">
-          <h2>Tire Suas Dúvidas</h2>
+      <section className="bg-primary flex flex-col justify-center p-16 tablet:flex-row">
+        <article className="bg-gradient-to-b from-faixa1 to-faixa2 text-branco h-[30vh] w-auto text-center flex flex-col justify-evenly rounded-md tablet:w-1/2 tablet:h-[45vh] laptop:h-[60vh] laptop:w-1/3">
+          <h2 className="font-quantico font-bold text-2xl">Tire Suas Dúvidas</h2>
           <p>contato@grtengenharia.com.br</p>
           <p>
             +55 24 3350-1815
@@ -97,7 +99,7 @@ export default function Contact() {
 
         <form
           onSubmit={handleSubmit}
-          className="bg-branco h-auto w-auto rounded-md flex flex-col justify-evenly"
+          className="bg-branco h-auto w-auto rounded-md flex flex-col justify-evenly tablet:w-1/2 laptop:w-[30%]"
         >
           <div className="flex flex-col p-2">
             <div className="p-2">
@@ -127,7 +129,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="p-2">
+          <div className="px-4">
             <label>Email:</label>
             <input
               type="email"
@@ -139,7 +141,7 @@ export default function Contact() {
             />
           </div>
 
-          <div className="p-2">
+          <div className="px-4 p-2">
             <label>Mensagem:</label>
             <textarea
               name="message"
@@ -160,26 +162,46 @@ export default function Contact() {
         </form>
       </section>
 
-      <section className="bg-gradient-to-b from-faixa1 to-faixa2 text-branco h-auto">
-        <h2 className=" pl-[8vw] py-[5vh] text-3xl font-semibold font-quantico">
+      <section className="bg-gradient-to-b from-faixa1 to-faixa2 text-branco h-auto flex flex-col items-center justify-center py-[5vh]">
+        <h2 className="text-3xl font-semibold font-quantico text-center mb-6">
           Nossa Localização
         </h2>
-        <div className="flex flex-col justify-evenly items-center">
-          
-          <img
-            src={`https://maps.googleapis.com/maps/api/staticmap?center=Avenida+Paulo+Erlei+Alves+Abrantes,+1110+-+Tr%C3%AAs+Po%C3%A7os,+Volta+Redonda,+RJ&zoom=15&size=700x450&maptype=roadmap&markers=color:red%7Clabel:C%7CAvenida+Paulo+Erlei+Alves+Abrantes,+1110+-+Tr%C3%AAs+Po%C3%A7os,+Volta+Redonda,+RJ&key=AIzaSyC7UMT73Vwz_Z8jWqz6nFuZyUbBT6ChShs`}
-            alt="Mapa da localização da empresa"
-            className="h-auto w-full"
-            onClick={handleMapClick}
-            style={{ cursor: "pointer" }}
-          ></img>
-          <div className="text-center">
-            <p> Avenida Paulo Erlei Alves Abrantes, 1110</p>
-            <p>Três Poços, Volta Redonda, RJ</p>
-            <p>CEP: 27240-560</p>
+
+        <div className="w-full max-w-screen-lg flex flex-col laptop:flex-row items-center justify-center gap-6 text-nowrap px-8">
+          {/* Link apenas na imagem */}
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Avenida+Paulo+Erlei+Alves+Abrantes,+1110,+Três+Poços,+Volta+Redonda,+RJ"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="laptop:w-1/2 w-full flex justify-center"
+          >
+            <img
+              src={Mapa}
+              alt="Mapa da localização da empresa"
+              className="w-full rounded-sm cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
+            />
+          </a>
+
+
+          {/* Link separado para o endereço */}
+          <div className="text-center laptop:text-left">
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Avenida+Paulo+Erlei+Alves+Abrantes,+1110,+Três+Poços,+Volta+Redonda,+RJ"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
+            >
+              <p className="text-lg font-medium">
+                Avenida Paulo Erlei Alves Abrantes, 1110
+              </p>
+              <p className="text-lg">Três Poços, Volta Redonda, RJ</p>
+              <p className="text-lg">CEP: 27240-560</p>
+            </a>
           </div>
         </div>
       </section>
+
+
     </main>
   );
 }
