@@ -13,9 +13,9 @@ export default function About() {
     return (
         <main>
             <section>
-                <div className="bg-gradient-to-b from-faixa1 to-faixa2 w-full h-auto px-20">
-                    <h3 className="text-primary uppercase text-2xl pt-8 text-left ml-8">a empresa</h3>
-                    <h2 className="text-primary uppercase text-3xl font-bold text-left ml-8 pb-8 font-quantico">Sobre a GRT Engenharia</h2>
+            <div className="bg-gradient-to-b from-faixa1 to-faixa2 w-full h-auto px-6 tablet:px-20">
+                    <h3 className="text-primary uppercase text-1xl pt-8 text-left ml-8">a empresa</h3>
+                    <h2 className="text-primary uppercase text-2xl font-bold text-left ml-8 pb-8 font-quantico">sobre a GRT engenharia</h2>
                 </div>
                 <div>
                     <img src={Equipamentos1} alt="" />
@@ -81,7 +81,7 @@ export default function About() {
                 href="https://wa.me/5524981417949" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="fixed bottom-6 right-6 z-50 p-3  hover:scale-110 transition duration-300"
+               className="fixed bottom-2 right-2 z-50 tablet:bottom-6 tablet:right-6 tablet:p-3 hover:scale-110 transition duration-300"
             >
                 <img src={WhatsappIcon} alt="WhatsApp" className="size-20" />
             </a>

@@ -190,7 +190,7 @@ export default function Portilio() {
 
 
             <section>
-                <h3 className="text-3xl font-bold text-left text-wrap ml-8 pt-6 mr-32 tablet:px-20 tablet:py-10 font-quantico">Nossa Expertise,
+                <h3 className="text-2xl font-bold text-left text-wrap ml-8 pt-6 mr-32 tablet:px-20 tablet:py-10 font-quantico">Nossa Expertise,
                     Seu Sucesso:</h3>
                 <h4 className="text-2xl font-bold text-left text-wrap ml-8 mr-32 tablet:px-20 font-quantico">Soluções Inteligentes para Todos os Projetos</h4>
                 <p className="text-2xl  text-left pb-8 text-wrap mx-12 my-4 tablet:px-20 mb-14">Nossa equipe possui ampla experiência para auxiliá-los na melhor opção e atender vossas necessidades.
@@ -199,7 +199,7 @@ export default function Portilio() {
                     Estamos preparados para atender clientes de pequeno, médio e grande porte, oferecendo sempre uma solução inteligente e econômica para quem precisa de serviços de terraplenagem, transporte, infraestrutura e locação de equipamentos.</p>
             </section>
             <section className="bg-gradient-to-b from-faixa1 to-faixa2 h-auto p-6 laptop:justify-center laptop:content-center self-center">
-                <h3 className="text-3xl font-bold text-left text-wrap ml-8 pt-10 mr-32 text-primary mb-6 font-quantico tablet:px-20 tablet:py-6">Por que escolher a GRT Engenharia?</h3>
+                <h3 className="text-2xl font-bold text-left text-wrap ml-8 pt-10 mr-32 text-primary mb-6 font-quantico tablet:px-20 tablet:py-6">Por que escolher a GRT Engenharia?</h3>
                 <div className="flex flex-col justify-center items-center  content-center laptop:grid laptop:grid-cols-2   laptop:px-20">
                     <div className="relative">
                         <img className=" rounded-lg mt-6 w-96 tablet:w-[80%] laptop:w-[80%]" src={Image} alt="" />
@@ -224,7 +224,7 @@ export default function Portilio() {
                 href="https://wa.me/5524981417949" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="fixed bottom-6 right-6 z-50 p-3  hover:scale-110 transition duration-300"
+                className="fixed bottom-2 right-2 z-50 tablet:bottom-6 tablet:right-6 tablet:p-3 hover:scale-110 transition duration-300"
             >
                 <img src={WhatsappIcon} alt="WhatsApp" className="size-20" />
             </a>
