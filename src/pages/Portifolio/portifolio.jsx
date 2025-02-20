@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Portifolio from "../../assets/fundo.jpg"
 import Caminhao from "../../assets/caminhao.jpg"
 import Caminhao1 from "../../assets/caminhao1.jpg"
@@ -12,9 +14,29 @@ import Image1 from "../../assets/image1.jpg"
 import Image2 from "../../assets/image2.jpg"
 import Image3 from "../../assets/image3.jpg"
 import WhatsappIcon from "../../assets/whats.png"
+import Equipamentos from "../../assets/equipamentos.jpg"
 
 
 export default function Portilio() {
+    const location = useLocation();
+
+    useEffect(() => {
+        const scrollToSection = () => {
+            if (location.hash) {
+                const id = location.hash.replace("#", "");
+                const section = document.getElementById(id);
+                if (section) {
+                    setTimeout(() => {
+                        const offset = 80; // Ajuste esse valor conforme necessário
+                        const topPosition = section.getBoundingClientRect().top + window.scrollY - offset;
+                        window.scrollTo({ top: topPosition, behavior: "smooth" });
+                    }, 100); // Pequeno delay para garantir o carregamento
+                }
+            }
+        };
+    
+        scrollToSection();
+    }, [location]);
     return (
         <main>
             <section>
@@ -33,9 +55,29 @@ export default function Portilio() {
             </section>
             <div>
                     <h2 className="text-3xl font-bold text-left ml-8 py-12 desktop:text-5xl font-quantico px-6 tablet:px-20 tablet:py-10 ">Descubra como podemos te ajudar!</h2>
+            </div>
+            <section id="aluguel" className="mx-auto px-6 py-12 flex flex-col laptop:flex-row items-center relative laptop:px-24 laptop:py-10">
+            <div className="w-full laptop:w-1/2 relative z-10">
+                    <img src={Equipamentos} alt="Movimentação de cargas" className="w-full h-auto rounded-lg shadow-lg" />
                 </div>
 
-            <section className="mx-auto px-6 py-12 flex flex-col laptop:flex-row items-center relative laptop:px-24 laptop:py-10">
+                <div className="w-full laptop:w-1/2 relative z-10 laptop:pl-10 text-left laptop:text-left mt-6 laptop:mt-0 flex items-center">
+                    <div>
+                        <h2 className="text-2xl font-bold text-primary font-quantico">
+                        Aluguel de máquinas e equipamentos
+                        </h2>
+                        
+                        <p className="mt-4 text-lg text-primary">
+                        Oferecemos soluções completas em aluguel de máquinas e equipamentos para construção civil, infraestrutura e projetos industriais. Nosso portfólio inclui escavadeiras, retroescavadeiras, caminhões basculantes, motoniveladoras e diversas outras máquinas de alta performance, garantindo eficiência e produtividade para sua obra. Trabalhamos com equipamentos modernos, rigorosamente revisados e prontos para operar com segurança e confiabilidade. Seja para curto ou longo prazo, disponibilizamos opções flexíveis de locação, atendendo às necessidades específicas de cada cliente com excelência e suporte técnico especializado.
+                        </p>
+                    </div>
+                </div>
+
+                <div className="absolute right-0 top-0 h-full lg:w-[80%] w-full laptop:w-3/5 bg-gradient-to-b from-faixa1 to-faixa2 z-0"></div>
+
+
+            </section>
+            <section id="movimentacao" className="mx-auto px-6 py-12 flex flex-col laptop:flex-row items-center relative laptop:px-24 laptop:py-10">
                 <div className="w-full laptop:w-1/2 relative z-10">
                     <img src={Caminhao} alt="Movimentação de cargas" className="w-full h-auto rounded-lg shadow-lg" />
                 </div>
@@ -54,7 +96,7 @@ export default function Portilio() {
 
 
             </section>
-            <section className="mx-auto px-6 py-12 flex flex-col laptop:flex-row items-center relative laptop:px-24 laptop:py-10">
+            <section id="escavacao" className="mx-auto px-6 py-12 flex flex-col laptop:flex-row items-center relative laptop:px-24 laptop:py-10 scroll-mt-28">
             <div className="w-full laptop:w-1/2 relative z-10">
                     <img src={Caminhao1} alt="Movimentação de cargas" className="w-full h-auto rounded-lg shadow-lg" />
                 </div>

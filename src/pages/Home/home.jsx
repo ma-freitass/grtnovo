@@ -13,6 +13,15 @@ import Final from "../../assets/final.png"
 import WhatsappIcon from "../../assets/whats.png"
 
 export default function Home() {
+    const scrollToSection = (id) => {
+        console.log(`Scrolling to section: ${id}`);
+        const section = document.getElementById(id);
+        if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+        } else {
+            console.warn(`Elemento com ID '${id}' não encontrado`);
+        }
+    };
     return (
         <main>
             <section>
@@ -20,11 +29,16 @@ export default function Home() {
                     <img className="h-[40%] w-[100%] pb-7" src={Fundo} alt="Equipamentos" />
                 </div>
             </section>
-            <section>
+            <section id="servicos">
                 <h1 className="text-3xl font-bold text-center py-8 font-quantico">Conheça nossos serviços</h1>
                 <div className="flex flex-col justify-center p-2 mx-10 laptop:flex-row">
                     <div>
-                        <img className="w-[90%] h-42 object-cover rounded-md m-6 items-center hover:scale-110 cursor-pointer" src={Escavadeira} alt="" />
+                       
+
+                        <img 
+                        onClick={() => window.location.href = '/portifolio#escavacao'}
+                        className="w-[90%] h-42 object-cover rounded-md m-6 items-center hover:scale-110 cursor-pointer" src={Escavadeira} alt="" />
+                       
                         <p className="text-lg font-bold text-left ml-6">- Escavação </p>
                         <p className="text-lg font-bold text-left ml-6">- Carga</p>
                         <p className="text-lg font-bold text-left ml-6">- Transporte e acondicionamento de materiais</p>
@@ -35,11 +49,15 @@ export default function Home() {
                         </ul>
                     </div>
                     <div>
-                        <img className="w-[90%] h-42 object-cover rounded-md m-6 items-center hover:scale-110 cursor-pointer" src={Equipamentos} alt="" />
+                        <img 
+                         onClick={() => window.location.href = '/portifolio#aluguel'}
+                        className="w-[90%] h-42 object-cover rounded-md m-6 items-center hover:scale-110 cursor-pointer" src={Equipamentos} alt="" />
                         <p className="text-lg font-bold text-left ml-6">- Aluguel de máquinas e equipamentos</p>
                     </div>
                     <div>
-                        <img className="w-[90%] h-42 object-cover rounded-md m-6 items-center hover:scale-110 cursor-pointer" src={Carga} alt="" />
+                        <img 
+                         onClick={() => window.location.href = '/portifolio#movimentacao'}
+                        className="w-[90%] h-42 object-cover rounded-md m-6 items-center hover:scale-110 cursor-pointer" src={Carga} alt="" />
                         <p className="text-lg font-bold text-left ml-6">- Movimentação de carga</p>
                     </div>
                 </div>
@@ -63,7 +81,7 @@ export default function Home() {
                             <li>• Umidificação de vias e materiais;</li>
                             <li>• Limpeza industrial em geral. </li>
                         </ul>
-                        <button className="bg-primary px-12 py-4 rounded-lg mx-4 my-6 font-bold" button onClick={() => window.location.href = '/portifolio'}>Conheça nosso portifólio ➔</button>
+                        <button className="bg-primary px-4 py-4 rounded-lg mx-4 my-6 font-bold" button onClick={() => window.location.href = '/portifolio'}>Conheça nosso portifólio ➔</button>
 
                     </div>
                 </div>

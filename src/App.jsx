@@ -5,6 +5,8 @@ import Home from "./pages/Home/home";
 import About from "./pages/About/about";
 import Portifolio from "./pages/Portifolio/portifolio";
 import Contact from "./pages/Contact/contact";
+import ScrollToTopButton from "./components/botaoTopo/ScrollToTopButton";
+
 
 export default function App() {
   return (
@@ -17,7 +19,7 @@ export default function App() {
         <Route path="/portifolio" element={<Portifolio />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-
+      <ScrollToTopButton />
       <Footer />
     </Router>
   );
