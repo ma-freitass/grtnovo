@@ -6,7 +6,7 @@ export default {
   ],
   theme: {
     fontFamily:{
-      'serif':['quantico'],
+      quantico:['quantico'],
     },
     screens:{
       'mobile': '201px',

@@ -50,15 +50,16 @@ export default function Contact() {
 
   return (
     <main>
-      <section className="bg-gradient-to-r from-faixa1 to-faixa2 text-primary h-[10vh] flex flex-col justify-center">
-        <h2 className="uppercase text-subtitulos pl-[8vw]">
-          entre em contato conosco
-        </h2>
-        <h1 className="pl-[8vw] text-5xl font-semibold">Nosso Contato</h1>
-      </section>
+      <section>
+                <div className="bg-gradient-to-b from-faixa1 to-faixa2 w-full h-auto px-6 tablet:px-20">
+                    <h3 className="text-primary uppercase text-1xl pt-8 text-left ml-8">tire sua duvida</h3>
+                    <h2 className="text-primary uppercase text-2xl font-bold text-left ml-8 pb-8 font-quantico">Nosso Contato</h2>
+                </div>
 
-      <section className="bg-primary flex justify-center p-16">
-        <article className="bg-gradient-to-b from-faixa1 to-faixa2 text-branco h-[50vh] w-[15vw] text-center flex flex-col justify-evenly rounded-md">
+            </section>
+
+      <section className="bg-primary flex flex-col justify-center p-16">
+        <article className="bg-gradient-to-b from-faixa1 to-faixa2 text-branco h-[50vh] w-auto text-center flex flex-col justify-evenly rounded-md">
           <h2>Tire Suas Dúvidas</h2>
           <p>contato@grtengenharia.com.br</p>
           <p>
@@ -96,55 +97,55 @@ export default function Contact() {
 
         <form
           onSubmit={handleSubmit}
-          className="bg-branco h-[50vh] w-[30vw] rounded-md flex flex-col justify-evenly px-[2vw]"
+          className="bg-branco h-auto w-auto rounded-md flex flex-col justify-evenly"
         >
-          <div className="flex">
-            <div>
+          <div className="flex flex-col p-2">
+            <div className="p-2">
               <label>Nome:</label>
               <input
                 type="text"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className="bg-primary rounded-md w-[13vw] placeholder:pl-2"
+                className="bg-primary rounded-md w-full placeholder:pl-2"
                 placeholder="Seu Nome"
               />
               {errors.name && <span className="error">{errors.name}</span>}
             </div>
 
-            <div>
+            <div className="p-2">
               <label>Telefone:</label>
               <input
                 type="text"
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                className="bg-primary rounded-md w-auto placeholder:pl-2"
+                className="bg-primary rounded-md w-full placeholder:pl-2"
                 placeholder="(24) 99999-9999"
               />
               {errors.phone && <span className="error">{errors.phone}</span>}
             </div>
           </div>
 
-          <div>
+          <div className="p-2">
             <label>Email:</label>
             <input
               type="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="bg-primary rounded-md w-[24vw] placeholder:pl-2 flex"
+              className="bg-primary rounded-md w-full placeholder:pl-2 flex"
               placeholder="Contato@gmail.com"
             />
           </div>
 
-          <div className="">
+          <div className="p-2">
             <label>Mensagem:</label>
             <textarea
               name="message"
               value={formData.message}
               onChange={handleChange}
-              className="bg-primary rounded-md placeholder:pl-2 h-[15vh] w-[24vw] flex"
+              className="bg-primary rounded-md placeholder:pl-2 h-[15vh] w-full flex"
               placeholder="O que você precisa?"
             />
             {errors.message && <span className="error">{errors.message}</span>}
@@ -152,22 +153,23 @@ export default function Contact() {
 
           <button
             type="submit"
-            className="h-[5vh] w-[10vw] bg-gradient-to-t from-faixa to-faixa2 text-branco rounded-md hover:h-[7vh] hover:w-[12vw]"
+            className="h-[5vh] w-[80%] my-4 mx-8 bg-gradient-to-t from-faixa to-faixa2 text-branco rounded-md hover:scale-110"
           >
             Enviar Mensagem
           </button>
         </form>
       </section>
 
-      <section className="bg-gradient-to-b from-faixa1 to-faixa2 text-branco h-[55vh]">
-        <h2 className=" pl-[8vw] py-[5vh] text-3xl font-semibold">
+      <section className="bg-gradient-to-b from-faixa1 to-faixa2 text-branco h-auto">
+        <h2 className=" pl-[8vw] py-[5vh] text-3xl font-semibold font-quantico">
           Nossa Localização
         </h2>
-        <div className="flex justify-evenly items-center">
+        <div className="flex flex-col justify-evenly items-center">
+          
           <img
             src={`https://maps.googleapis.com/maps/api/staticmap?center=Avenida+Paulo+Erlei+Alves+Abrantes,+1110+-+Tr%C3%AAs+Po%C3%A7os,+Volta+Redonda,+RJ&zoom=15&size=700x450&maptype=roadmap&markers=color:red%7Clabel:C%7CAvenida+Paulo+Erlei+Alves+Abrantes,+1110+-+Tr%C3%AAs+Po%C3%A7os,+Volta+Redonda,+RJ&key=AIzaSyC7UMT73Vwz_Z8jWqz6nFuZyUbBT6ChShs`}
             alt="Mapa da localização da empresa"
-            className="h-[35vh] w-[30vw]"
+            className="h-auto w-full"
             onClick={handleMapClick}
             style={{ cursor: "pointer" }}
           ></img>

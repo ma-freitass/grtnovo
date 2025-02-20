@@ -11,17 +11,17 @@ export default function About() {
     return (
         <main>
             <section>
-                <div className="bg-gradient-to-b from-faixa1 to-faixa2 w-full h-auto">
+                <div className="bg-gradient-to-b from-faixa1 to-faixa2 w-full h-auto px-20">
                     <h3 className="text-primary uppercase text-2xl pt-8 text-left ml-8">a empresa</h3>
-                    <h2 className="text-primary uppercase text-3xl font-bold text-left ml-8 pb-8">Sobre a GRT Engenharia</h2>
+                    <h2 className="text-primary uppercase text-3xl font-bold text-left ml-8 pb-8 font-quantico">Sobre a GRT Engenharia</h2>
                 </div>
                 <div>
                     <img src={Equipamentos1} alt="" />
                 </div>
             </section>
             <section>
-                <h2 className="text-3xl font-bold text-left ml-8 py-10">A GRT Engenharia é uma empresa sólida e experiente, atuando há mais de 10 anos no setor de construção civil e infraestrutura.</h2>
-                <p className="text-lg  text-left  pb-8 text-wrap mx-12">Reconhecida pela qualidade e confiabilidade de seus serviços, a GRT se destaca especialmente na locação de equipamentos de linha amarela e na execução de obras civis de pequeno, médio e grande porte. Nosso compromisso é fornecer soluções práticas e eficientes, adaptadas às necessidades de cada cliente, com foco em resultados de alto padrão e na segurança do trabalho.</p>
+                <h2 className="text-3xl font-bold text-left ml-8 py-10 tablet:px-20 tablet:py-10 font-quantico">A GRT Engenharia é uma empresa sólida e experiente, atuando há mais de 10 anos no setor de construção civil e infraestrutura.</h2>
+                <p className="text-2xl  text-left text-wrap  ml-8 px-8 tablet:px-20 mb-14">Reconhecida pela qualidade e confiabilidade de seus serviços, a GRT se destaca especialmente na locação de equipamentos de linha amarela e na execução de obras civis de pequeno, médio e grande porte. Nosso compromisso é fornecer soluções práticas e eficientes, adaptadas às necessidades de cada cliente, com foco em resultados de alto padrão e na segurança do trabalho.</p>
             </section>
             <section className="flex flex-col items-center tablet:flex-row tablet:items-stretch w-full relative">
                 <div className="tablet:w-1/2">
@@ -36,7 +36,7 @@ export default function About() {
 
                 {/* Bloco da Esquerda */}
                 <div className="flex flex-col items-center laptop:items-start w-full">
-                    <img className="rounded-xl object-cover w-full max-h-[400px] h-[400px]"
+                    <img className="rounded-xl object-cover w-full h-[450%]"
                         src={Escavadeira1}
                         alt="Escavadeira em obra" />
                     <p className="text-lg text-center laptop:text-left text-titulo leading-8 mt-4">
@@ -50,10 +50,10 @@ export default function About() {
 
                 {/* Bloco da Direita */}
                 <div className="relative flex flex-col items-center w-full">
-                    <img className="rounded-xl object-cover w-full max-h-[400px] h-[400px]"
+                    <img className="rounded-xl object-cover w-full h-[550%]"
                         src={Escavadeira2}
                         alt="Escavadeira em galpão" />
-                    <div className="bg-gradient-to-b from-faixa1 to-faixa2 w-full p-6 text-primary text-lg leading-8 text-center laptop:text-left -mt-10 relative z-10">
+                    <div className="bg-gradient-to-b from-faixa1 to-faixa2 w-full p-6 text-primary text-lg leading-8 text-center laptop:text-left -mt-10 relative z-10 rounded-xl">
                         Estamos preparados para enfrentar qualquer desafio no setor de construção civil,
                         contribuindo para o desenvolvimento de projetos que agregam valor e impactam positivamente
                         a comunidade. Conte com a GRT Engenharia para transformar suas ideias em realidade,

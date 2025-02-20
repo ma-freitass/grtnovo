@@ -1,4 +1,4 @@
-import Fundo from "../../assets/fundo.png"
+import Fundo from "../../assets/fundo.jpg"
 import Escavadeira from "../../assets/escavadeira.jpg"
 import Equipamentos from "../../assets/equipamentos.jpg"
 import Carga from "../../assets/carga.jpg"
@@ -20,10 +20,10 @@ export default function Home() {
                 </div>
             </section>
             <section>
-                <h1 className="text-3xl font-Quantico font-bold text-center py-8">Conheça nossos serviços</h1>
+                <h1 className="text-3xl font-bold text-center py-8 font-quantico">Conheça nossos serviços</h1>
                 <div className="flex justify-center p-2 mx-10 max-tablet:flex-col">
                     <div>
-                        <img className="w-[90%]  h-42 object-cover rounded-md m-6 items-center" src={Escavadeira} alt="" />
+                        <img className="w-[90%]  h-42 object-cover rounded-md m-6 items-center hover:scale-110 cursor-pointer" src={Escavadeira} alt="" />
                         <p className="text-lg font-bold text-left ml-6">- Escavação </p>
                         <p className="text-lg font-bold text-left ml-6">- Carga</p>
                         <p className="text-lg font-bold text-left ml-6">- Transporte e acondicionamento de materiais</p>
@@ -34,18 +34,18 @@ export default function Home() {
                         </ul>
                     </div>
                     <div>
-                        <img className="w-[90%] h-42 object-cover rounded-md m-6 items-center" src={Equipamentos} alt="" />
+                        <img className="w-[90%] h-42 object-cover rounded-md m-6 items-center hover:scale-110 cursor-pointer" src={Equipamentos} alt="" />
                         <p className="text-lg font-bold text-left ml-6">- Aluguel de máquinas e equipamentos</p>
                     </div>
                     <div>
-                        <img className="w-[90%] h-42 object-cover rounded-md m-6 items-center" src={Carga} alt="" />
+                        <img className="w-[90%] h-42 object-cover rounded-md m-6 items-center hover:scale-110 cursor-pointer" src={Carga} alt="" />
                         <p className="text-lg font-bold text-left ml-6">- Movimentação de carga</p>
                     </div>
                 </div>
             </section>
             <section className="bg-gradient-to-b from-faixa1 to-faixa2 h-auto my-10 ">
 
-                    <h2 className="text-4xl font-Quantico font-bold text-center text-primary pt-10 text-nowrap">Áreas de atuação</h2>
+                    <h2 className="text-4xl font-quantico font-bold text-center text-primary pt-10 text-nowrap">Áreas de atuação</h2>
                 <div className="flex max-tablet:flex-col h-auto p-10 gap-10 justify-center items-center" >
                     <div className="w-2/5 max-laptop:w-full flex justify-center items-center">
 
@@ -69,7 +69,7 @@ export default function Home() {
 
             </section>
             <section>
-                <h2 className="text-4xl font-Quantico font-bold text-left pt-6 ml-8">Nossos Clientes</h2>
+                <h2 className="text-4xl font-bold text-center pt-6 ml-8 font-quantico tablet:text-5xl">Nossos Clientes</h2>
                 <div className="w-[355vw] max-laptop:w-[680vw] h-auto p-6 flex gap-10 animate-slide whitespace-nowrap justify-center">
                     <div className="w-[300%]">
 
@@ -136,7 +136,7 @@ export default function Home() {
                 <img className="rounded-xl my-6 mx-8 object-cover w-1/2 max-laptop:w-full h-auto justify-center" src={Final} alt="" />
                 <div className="w-full h-auto place-content-center">
 
-                    <h2 className="text-4xl font-Quatico font-bold text-left text-primary pt-6 ml-8 ">Faça seu orçamento!</h2>
+                    <h2 className="text-4xl font-quantico font-bold text-left text-primary pt-6 ml-8 ">Faça seu orçamento!</h2>
                     <p className="text-lg text-left ml-6 leading-8 text-primary p-4">A GRT Engenharia está pronta para transformar seus desafios em soluções. Entre em contato conosco e descubra como podemos ajudar você a alcançar o sucesso em seus projetos com qualidade, segurança e eficiência.</p>
                     <button className="bg-primary px-20 py-4 rounded-lg ml-20 my-6 font-bold"  button onClick={() => window.location.href = '/contact'}>Fale conosco ➔</button>
                 </div>
