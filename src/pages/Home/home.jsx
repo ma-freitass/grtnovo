@@ -113,9 +113,16 @@ export default function Home() {
                             <li>• Limpeza industrial em geral. </li>
                         </ul>
                         <Link to="/portifolio">
-                            <button className="bg-primary px-4 py-4 rounded-lg mx-4 my-6 font-bold">
+                            <motion.button
+                                 variants={fadeInUp}
+                                 initial="hidden"
+                                 whileInView="visible"
+                                 animate="visible"
+                                className="bg-primary px-4 py-4 rounded-lg mx-4 my-6 font-bold"
+                                onClick={() => window.scrollTo(0, 0)}
+                            >
                                 Conheça nosso portifólio ➔
-                            </button>
+                            </motion.button>
                         </Link>
 
                     </motion.div>
@@ -199,6 +206,7 @@ export default function Home() {
                                 initial="hidden"
                                 whileInView="visible"
                                 animate="visible"
+                                onClick={() => window.scrollTo(0, 0)} 
                             >
                                 Fale conosco ➔
                             </motion.button>
