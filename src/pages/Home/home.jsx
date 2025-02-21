@@ -59,12 +59,16 @@ export default function Home() {
                 <div className="flex flex-col justify-center p-2 mx-10 laptop:flex-row">
                     <div>
 
-
-                        <motion.img
-                            onClick={() => window.location.href = '/portifolio#escavacao'}
-                            className="w-[90%] h-42 object-cover rounded-md m-6 items-center hover:scale-110 cursor-pointer" src={Escavadeira} alt="" initial={{ opacity: 0, clipPath: "inset(100% 0 0 0)" }}
-                            whileInView={{ opacity: 1, clipPath: "inset(0% 0 0 0)" }}
-                            transition={{ duration: 1.5, ease: "easeOut" }} />
+                        <Link to="/portifolio#escavacao">
+                            <motion.img
+                                className="w-[90%] h-42 object-cover rounded-md m-6 items-center hover:scale-110 cursor-pointer"
+                                src={Escavadeira}
+                                alt=""
+                                initial={{ opacity: 0, clipPath: "inset(100% 0 0 0)" }}
+                                whileInView={{ opacity: 1, clipPath: "inset(0% 0 0 0)" }}
+                                transition={{ duration: 1.5, ease: "easeOut" }}
+                            />
+                        </Link>
 
                         <p className="text-lg font-bold text-left ml-6">- Escavação </p>
                         <p className="text-lg font-bold text-left ml-6">- Carga</p>
@@ -76,19 +80,21 @@ export default function Home() {
                         </ul>
                     </div>
                     <div>
-                        <motion.img
-                            onClick={() => window.location.href = '/portifolio#aluguel'}
-                            className="w-[90%] h-42 object-cover rounded-md m-6 items-center hover:scale-110 cursor-pointer" src={Equipamentos} alt="" initial={{ opacity: 0, clipPath: "inset(100% 0 0 0)" }}
-                            whileInView={{ opacity: 1, clipPath: "inset(0% 0 0 0)" }}
-                            transition={{ duration: 1.5, ease: "easeOut" }} />
+                        <Link to="/portifolio#aluguel">
+                            <motion.img
+                                className="w-[90%] h-42 object-cover rounded-md m-6 items-center hover:scale-110 cursor-pointer" src={Equipamentos} alt="" initial={{ opacity: 0, clipPath: "inset(100% 0 0 0)" }}
+                                whileInView={{ opacity: 1, clipPath: "inset(0% 0 0 0)" }}
+                                transition={{ duration: 1.5, ease: "easeOut" }} />
+                        </Link>
                         <p className="text-lg font-bold text-left ml-6">- Aluguel de máquinas e equipamentos</p>
                     </div>
                     <div>
-                        <motion.img
-                            onClick={() => window.location.href = '/portifolio#movimentacao'}
-                            className="w-[90%] h-42 object-cover rounded-md m-6 items-center hover:scale-110 cursor-pointer" src={Carga} alt="" initial={{ opacity: 0, clipPath: "inset(100% 0 0 0)" }}
-                            whileInView={{ opacity: 1, clipPath: "inset(0% 0 0 0)" }}
-                            transition={{ duration: 1.5, ease: "easeOut" }} />
+                        <Link to="/portifolio#movimentacao">
+                            <motion.img
+                                className="w-[90%] h-42 object-cover rounded-md m-6 items-center hover:scale-110 cursor-pointer" src={Carga} alt="" initial={{ opacity: 0, clipPath: "inset(100% 0 0 0)" }}
+                                whileInView={{ opacity: 1, clipPath: "inset(0% 0 0 0)" }}
+                                transition={{ duration: 1.5, ease: "easeOut" }} />
+                        </Link>
                         <p className="text-lg font-bold text-left ml-6">- Movimentação de carga</p>
                     </div>
                 </div>
@@ -114,10 +120,10 @@ export default function Home() {
                         </ul>
                         <Link to="/portifolio">
                             <motion.button
-                                 variants={fadeInUp}
-                                 initial="hidden"
-                                 whileInView="visible"
-                                 animate="visible"
+                                variants={fadeInUp}
+                                initial="hidden"
+                                whileInView="visible"
+                                animate="visible"
                                 className="bg-primary px-4 py-4 rounded-lg mx-4 my-6 font-bold"
                                 onClick={() => window.scrollTo(0, 0)}
                             >
@@ -206,7 +212,7 @@ export default function Home() {
                                 initial="hidden"
                                 whileInView="visible"
                                 animate="visible"
-                                onClick={() => window.scrollTo(0, 0)} 
+                                onClick={() => window.scrollTo(0, 0)}
                             >
                                 Fale conosco ➔
                             </motion.button>
