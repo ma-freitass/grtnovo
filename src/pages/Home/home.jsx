@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-
+import { Link } from 'react-router-dom';
 import Fundo from "../../assets/fundo.jpg"
 import Escavadeira from "../../assets/escavadeira.jpg"
 import Equipamentos from "../../assets/equipamentos.jpg"
@@ -30,12 +30,12 @@ export default function Home() {
         hidden: { opacity: 0, y: 50 },
         visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 0.5 } }
     };
-    
+
     const fadeIn = {
         hidden: { opacity: 0 },
         visible: { opacity: 1, transition: { duration: 1, delay: 0.5 } }
     };
-    
+
     const scaleIn = {
         hidden: { scale: 0.8, opacity: 0 },
         visible: { scale: 1, opacity: 1, transition: { duration: 1, delay: 0.5 } }
@@ -54,7 +54,7 @@ export default function Home() {
                     />
                 </div>
             </section>
-            <motion.section variants={scaleIn} initial="hidden"    whileInView="visible" animate="visible" id="servicos">
+            <motion.section variants={scaleIn} initial="hidden" whileInView="visible" animate="visible" id="servicos">
                 <h1 className="text-3xl font-bold text-center py-8 font-quantico">Conheça nossos serviços</h1>
                 <div className="flex flex-col justify-center p-2 mx-10 laptop:flex-row">
                     <div>
@@ -64,7 +64,7 @@ export default function Home() {
                             onClick={() => window.location.href = '/portifolio#escavacao'}
                             className="w-[90%] h-42 object-cover rounded-md m-6 items-center hover:scale-110 cursor-pointer" src={Escavadeira} alt="" initial={{ opacity: 0, clipPath: "inset(100% 0 0 0)" }}
                             whileInView={{ opacity: 1, clipPath: "inset(0% 0 0 0)" }}
-                            transition={{ duration: 1.5, ease: "easeOut" }}/>
+                            transition={{ duration: 1.5, ease: "easeOut" }} />
 
                         <p className="text-lg font-bold text-left ml-6">- Escavação </p>
                         <p className="text-lg font-bold text-left ml-6">- Carga</p>
@@ -80,15 +80,15 @@ export default function Home() {
                             onClick={() => window.location.href = '/portifolio#aluguel'}
                             className="w-[90%] h-42 object-cover rounded-md m-6 items-center hover:scale-110 cursor-pointer" src={Equipamentos} alt="" initial={{ opacity: 0, clipPath: "inset(100% 0 0 0)" }}
                             whileInView={{ opacity: 1, clipPath: "inset(0% 0 0 0)" }}
-                            transition={{ duration: 1.5, ease: "easeOut" }}/>
+                            transition={{ duration: 1.5, ease: "easeOut" }} />
                         <p className="text-lg font-bold text-left ml-6">- Aluguel de máquinas e equipamentos</p>
                     </div>
                     <div>
                         <motion.img
                             onClick={() => window.location.href = '/portifolio#movimentacao'}
-                            className="w-[90%] h-42 object-cover rounded-md m-6 items-center hover:scale-110 cursor-pointer" src={Carga} alt=""  initial={{ opacity: 0, clipPath: "inset(100% 0 0 0)" }}
+                            className="w-[90%] h-42 object-cover rounded-md m-6 items-center hover:scale-110 cursor-pointer" src={Carga} alt="" initial={{ opacity: 0, clipPath: "inset(100% 0 0 0)" }}
                             whileInView={{ opacity: 1, clipPath: "inset(0% 0 0 0)" }}
-                            transition={{ duration: 1.5, ease: "easeOut" }}/>
+                            transition={{ duration: 1.5, ease: "easeOut" }} />
                         <p className="text-lg font-bold text-left ml-6">- Movimentação de carga</p>
                     </div>
                 </div>
@@ -112,13 +112,17 @@ export default function Home() {
                             <li>• Umidificação de vias e materiais;</li>
                             <li>• Limpeza industrial em geral. </li>
                         </ul>
-                        <button className="bg-primary px-4 py-4 rounded-lg mx-4 my-6 font-bold" button onClick={() => window.location.href = '/portifolio'}>Conheça nosso portifólio ➔</button>
+                        <Link to="/portifolio">
+                            <button className="bg-primary px-4 py-4 rounded-lg mx-4 my-6 font-bold">
+                                Conheça nosso portifólio ➔
+                            </button>
+                        </Link>
 
                     </motion.div>
                 </div>
 
             </motion.section>
-            <motion.section  initial="hidden" whileInView="visible" animate="visible" variants={fadeInUp}>
+            <motion.section initial="hidden" whileInView="visible" animate="visible" variants={fadeInUp}>
                 <motion.h2 className="text-4xl font-bold text-center pt-6 ml-8 font-quantico tablet:text-5xl" variants={scaleIn} initial="hidden" whileInView="visible" animate="visible">Nossos Clientes</motion.h2>
                 <motion.div className="w-[355vw] max-laptop:w-[680vw] h-auto p-6 flex gap-10 animate-slide whitespace-nowrap justify-center" variants={scaleIn} initial="hidden" whileInView="visible" animate="visible">
                     <div className="w-[300%]">
@@ -183,12 +187,22 @@ export default function Home() {
             <motion.section initial="hidden" whileInView="visible" animate="visible" variants={fadeInUp}>
                 <motion.div className="flex flex-row max-laptop:flex-col bg-gradient-to-b from-faixa1 to-faixa2 py-10 w-full" variants={fadeInUp} initial="hidden" whileInView="visible" animate="visible">
 
-                    <motion.img className="rounded-xl my-6 mx-8 object-cover w-1/2 max-laptop:w-full h-auto justify-center" src={Final} alt="" variants={scaleIn} initial="hidden" whileInView="visible" animate="visible"/>
+                    <motion.img className="rounded-xl my-6 mx-8 object-cover w-1/2 max-laptop:w-full h-auto justify-center" src={Final} alt="" variants={scaleIn} initial="hidden" whileInView="visible" animate="visible" />
                     <div className="w-full h-auto place-content-center">
 
                         <motion.h2 className="text-4xl font-quantico font-bold text-left text-primary pt-6 ml-8" variants={fadeInUp} initial="hidden" whileInView="visible" animate="visible">Faça seu orçamento!</motion.h2>
                         <motion.p className="text-lg text-left ml-6 leading-8 text-primary p-4" variants={scaleIn} initial="hidden" whileInView="visible" animate="visible">A GRT Engenharia está pronta para transformar seus desafios em soluções. Entre em contato conosco e descubra como podemos ajudar você a alcançar o sucesso em seus projetos com qualidade, segurança e eficiência.</motion.p>
-                        <motion.button className="bg-primary px-20 py-4 rounded-lg ml-20 my-6 font-bold" button onClick={() => window.location.href = '/contact'} variants={fadeInUp} initial="hidden" whileInView="visible" animate="visible">Fale conosco ➔</motion.button>
+                        <Link to="/contact">
+                            <motion.button
+                                className="bg-primary px-20 py-4 rounded-lg ml-20 my-6 font-bold"
+                                variants={fadeInUp}
+                                initial="hidden"
+                                whileInView="visible"
+                                animate="visible"
+                            >
+                                Fale conosco ➔
+                            </motion.button>
+                        </Link>
                     </div>
                 </motion.div>
             </motion.section>
