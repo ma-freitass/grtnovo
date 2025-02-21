@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { motion } from "framer-motion"
 import Portifolio from "../../assets/fundo.jpg"
 import Caminhao from "../../assets/caminhao.jpg"
 import Caminhao1 from "../../assets/caminhao1.jpg"
@@ -27,48 +28,80 @@ export default function Portilio() {
                 const section = document.getElementById(id);
                 if (section) {
                     setTimeout(() => {
-                        const offset = 80; // Ajuste esse valor conforme necessário
+                        const offset = 80;
                         const topPosition = section.getBoundingClientRect().top + window.scrollY - offset;
                         window.scrollTo({ top: topPosition, behavior: "smooth" });
-                    }, 100); // Pequeno delay para garantir o carregamento
+                    }, 100);
                 }
             }
         };
-    
+
         scrollToSection();
     }, [location]);
+
+    const fadeInUp = {
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 0.5 } }
+    };
+
+    const fadeIn = {
+        hidden: { opacity: 0 },
+        visible: { opacity: 1, transition: { duration: 1, delay: 0.5 } }
+    };
+
+    const scaleIn = {
+        hidden: { scale: 0.8, opacity: 0 },
+        visible: { scale: 1, opacity: 1, transition: { duration: 1, delay: 0.5 } }
+    };
     return (
         <main>
             <section>
-                <div className="bg-gradient-to-b from-faixa1 to-faixa2 w-full h-auto px-6 tablet:px-20">
+                <motion.div initial={{ opacity: 0, x: -100 }} // 
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5 }} className="bg-gradient-to-b from-faixa1 to-faixa2 w-full h-auto px-6 tablet:px-20">
                     <h3 className="text-primary uppercase text-1xl pt-8 text-left ml-8">nossos serviços</h3>
                     <h2 className="text-primary uppercase text-2xl font-bold text-left ml-8 pb-8 font-quantico">Engenharia e Locações</h2>
-                </div>
+                </motion.div>
 
             </section>
-            <section>
+            <motion.section initial="hidden"
+                whileInView="visible"
+                variants={{
+                    hidden: { opacity: 0, y: 50 },
+                    visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.6 } }
+                }}>
                 <h2 className="text-3xl font-bold text-left ml-8 px-6 py-12 tablet:px-20 tablet:py-10 font-quantico">Transformando projetos em realidade com inovação, precisão e compromisso com a excelência.</h2>
                 <p className="text-2xl  text-left text-wrap  ml-8 px-8 tablet:px-20 mb-14">A GRT Engenharia se destaca pela ampla experiência e expertise em serviços essenciais para o setor de construção civil, incluindo terraplenagem, transporte de materiais, infraestrutura e locação de equipamentos de alta performance.</p>
                 <div>
                     <img className="w-full object-cover" src={Portifolio} alt="" />
                 </div>
-            </section>
-            <div>
-                    <h2 className="text-3xl font-bold text-left ml-8 py-12 desktop:text-5xl font-quantico px-6 tablet:px-20 tablet:py-10 ">Descubra como podemos te ajudar!</h2>
-            </div>
-            <section id="aluguel" className="mx-auto px-6 py-12 flex flex-col laptop:flex-row items-center relative laptop:px-24 laptop:py-10">
-            <div className="w-full laptop:w-1/2 relative z-10">
+            </motion.section>
+            <motion.div initial="hidden"
+                whileInView="visible"
+                variants={{
+                    hidden: { opacity: 0, y: 50 },
+                    visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.6 } }
+                }}>
+                <h2 className="text-3xl font-bold text-left ml-8 py-12 desktop:text-5xl font-quantico px-6 tablet:px-20 tablet:py-10 ">Descubra como podemos te ajudar!</h2>
+            </motion.div>
+            <motion.section initial="hidden"
+                whileInView="visible"
+                variants={{
+                    hidden: { opacity: 0, y: 50 },
+                    visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.6 } }
+                }} id="aluguel" className="mx-auto px-6 py-12 flex flex-col laptop:flex-row items-center relative laptop:px-24 laptop:py-10">
+                <div className="w-full laptop:w-1/2 relative z-10">
                     <img src={Equipamentos} alt="Movimentação de cargas" className="w-full h-auto rounded-lg shadow-lg" />
                 </div>
 
                 <div className="w-full laptop:w-1/2 relative z-10 laptop:pl-10 text-left laptop:text-left mt-6 laptop:mt-0 flex items-center">
                     <div>
                         <h2 className="text-2xl font-bold text-primary font-quantico">
-                        Aluguel de máquinas e equipamentos
+                            Aluguel de máquinas e equipamentos
                         </h2>
-                        
+
                         <p className="mt-4 text-lg text-primary">
-                        Oferecemos soluções completas em aluguel de máquinas e equipamentos para construção civil, infraestrutura e projetos industriais. Nosso portfólio inclui escavadeiras, retroescavadeiras, caminhões basculantes, motoniveladoras e diversas outras máquinas de alta performance, garantindo eficiência e produtividade para sua obra. Trabalhamos com equipamentos modernos, rigorosamente revisados e prontos para operar com segurança e confiabilidade. Seja para curto ou longo prazo, disponibilizamos opções flexíveis de locação, atendendo às necessidades específicas de cada cliente com excelência e suporte técnico especializado.
+                            Oferecemos soluções completas em aluguel de máquinas e equipamentos para construção civil, infraestrutura e projetos industriais. Nosso portfólio inclui escavadeiras, retroescavadeiras, caminhões basculantes, motoniveladoras e diversas outras máquinas de alta performance, garantindo eficiência e produtividade para sua obra. Trabalhamos com equipamentos modernos, rigorosamente revisados e prontos para operar com segurança e confiabilidade. Seja para curto ou longo prazo, disponibilizamos opções flexíveis de locação, atendendo às necessidades específicas de cada cliente com excelência e suporte técnico especializado.
                         </p>
                     </div>
                 </div>
@@ -76,8 +109,13 @@ export default function Portilio() {
                 <div className="absolute right-0 top-0 h-full lg:w-[80%] w-full laptop:w-3/5 bg-gradient-to-b from-faixa1 to-faixa2 z-0"></div>
 
 
-            </section>
-            <section id="movimentacao" className="mx-auto px-6 py-12 flex flex-col laptop:flex-row items-center relative laptop:px-24 laptop:py-10">
+            </motion.section>
+            <motion.section initial="hidden"
+                whileInView="visible"
+                variants={{
+                    hidden: { opacity: 0, y: 50 },
+                    visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.6 } }
+                }} id="movimentacao" className="mx-auto px-6 py-12 flex flex-col laptop:flex-row items-center relative laptop:px-24 laptop:py-10">
                 <div className="w-full laptop:w-1/2 relative z-10">
                     <img src={Caminhao} alt="Movimentação de cargas" className="w-full h-auto rounded-lg shadow-lg" />
                 </div>
@@ -95,9 +133,14 @@ export default function Portilio() {
                 </div>
 
 
-            </section>
-            <section id="escavacao" className="mx-auto px-6 py-12 flex flex-col laptop:flex-row items-center relative laptop:px-24 laptop:py-10 scroll-mt-28">
-            <div className="w-full laptop:w-1/2 relative z-10">
+            </motion.section>
+            <motion.section initial="hidden"
+                whileInView="visible"
+                variants={{
+                    hidden: { opacity: 0, y: 50 },
+                    visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.6 } }
+                }} id="escavacao" className="mx-auto px-6 py-12 flex flex-col laptop:flex-row items-center relative laptop:px-24 laptop:py-10 scroll-mt-28">
+                <div className="w-full laptop:w-1/2 relative z-10">
                     <img src={Caminhao1} alt="Movimentação de cargas" className="w-full h-auto rounded-lg shadow-lg" />
                 </div>
 
@@ -116,9 +159,14 @@ export default function Portilio() {
                 <div className="absolute right-0 top-0 h-full lg:w-[80%] w-full laptop:w-3/5 bg-gradient-to-b from-faixa1 to-faixa2 z-0"></div>
 
 
-            </section>
-            <section className="mx-auto px-6 py-12 flex flex-col laptop:flex-row items-center relative laptop:px-24 laptop:py-10">
-            <div className="w-full laptop:w-1/2 relative z-10">
+            </motion.section>
+            <motion.section initial="hidden"
+                whileInView="visible"
+                variants={{
+                    hidden: { opacity: 0, y: 50 },
+                    visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.6 } }
+                }} className="mx-auto px-6 py-12 flex flex-col laptop:flex-row items-center relative laptop:px-24 laptop:py-10">
+                <div className="w-full laptop:w-1/2 relative z-10">
 
                     <img src={Caminhao2} alt="Movimentação de cargas" className="w-full h-auto rounded-lg shadow-lg" />
                 </div>
@@ -137,20 +185,25 @@ export default function Portilio() {
                 </div>
 
 
-            </section>
-            <section className="mx-auto px-6 py-12 flex flex-col laptop:flex-row items-center relative laptop:px-24 laptop:py-10">
-            <div className="w-full laptop:w-1/2 relative z-10">
+            </motion.section>
+            <motion.section initial="hidden"
+                whileInView="visible"
+                variants={{
+                    hidden: { opacity: 0, y: 50 },
+                    visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.6 } }
+                }} className="mx-auto px-6 py-12 flex flex-col laptop:flex-row items-center relative laptop:px-24 laptop:py-10">
+                <div className="w-full laptop:w-1/2 relative z-10">
                     <img src={Maquina} alt="Movimentação de cargas" className="w-full h-auto rounded-lg shadow-lg" />
                 </div>
 
                 <div className="w-full laptop:w-1/2 relative z-10 laptop:pl-10 text-left laptop:text-left mt-6 laptop:mt-0 flex items-center">
                     <div>
                         <h2 className="text-2xl font-bold text-primary font-quantico">
-                        Transporte e abastecimento de combustíveis e lubrificantes
+                            Transporte e abastecimento de combustíveis e lubrificantes
                         </h2>
-                        
+
                         <p className="mt-4 text-lg text-primary">
-                        Realizamos o transporte e abastecimento de combustíveis e lubrificantes com segurança, eficiência e total conformidade com as regulamentações vigentes. Contamos com veículos apropriados e processos rigorosos para garantir a integridade dos produtos e a continuidade das operações. Nossos serviços são ideais para atender obras, indústrias e frotas, assegurando abastecimento ágil e confiável, reduzindo paradas e otimizando a produtividade do seu negócio.
+                            Realizamos o transporte e abastecimento de combustíveis e lubrificantes com segurança, eficiência e total conformidade com as regulamentações vigentes. Contamos com veículos apropriados e processos rigorosos para garantir a integridade dos produtos e a continuidade das operações. Nossos serviços são ideais para atender obras, indústrias e frotas, assegurando abastecimento ágil e confiável, reduzindo paradas e otimizando a produtividade do seu negócio.
                         </p>
                     </div>
                 </div>
@@ -158,9 +211,14 @@ export default function Portilio() {
                 <div className="absolute right-0 top-0 h-full lg:w-[80%] w-full laptop:w-3/5 bg-gradient-to-b from-faixa1 to-faixa2 z-0"></div>
 
 
-            </section>
-            <section className="mx-auto px-6 py-12 flex flex-col laptop:flex-row items-center relative laptop:px-24 laptop:py-10">
-            <div className="w-full laptop:w-1/2 relative z-10">
+            </motion.section>
+            <motion.section initial="hidden"
+                whileInView="visible"
+                variants={{
+                    hidden: { opacity: 0, y: 50 },
+                    visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.6 } }
+                }} className="mx-auto px-6 py-12 flex flex-col laptop:flex-row items-center relative laptop:px-24 laptop:py-10">
+                <div className="w-full laptop:w-1/2 relative z-10">
                     <img src={Maquina1} alt="Movimentação de cargas" className="w-full h-auto rounded-lg shadow-lg" />
                 </div>
 
@@ -168,20 +226,25 @@ export default function Portilio() {
                 <div className="w-full laptop:w-1/2 relative z-10 laptop:pl-10 text-left laptop:text-left mt-6 laptop:mt-0 flex items-center">
                     <div>
                         <h2 className="text-2xl font-bold font-quantico">
-                        Demolições de grande porte
+                            Demolições de grande porte
                         </h2>
                         <p className="mt-4 text-lg">
-                        Executamos demolições de grande porte com segurança, eficiência e total conformidade com as normas técnicas e ambientais. Utilizamos equipamentos modernos e metodologias avançadas para garantir a remoção controlada de estruturas, minimizando riscos e impactos na área. Nosso serviço é ideal para projetos industriais, comerciais e residenciais, proporcionando soluções ágeis, seguras e planejadas para cada necessidade.
+                            Executamos demolições de grande porte com segurança, eficiência e total conformidade com as normas técnicas e ambientais. Utilizamos equipamentos modernos e metodologias avançadas para garantir a remoção controlada de estruturas, minimizando riscos e impactos na área. Nosso serviço é ideal para projetos industriais, comerciais e residenciais, proporcionando soluções ágeis, seguras e planejadas para cada necessidade.
 
-</p>
+                        </p>
                     </div>
                 </div>
 
 
-            </section>
-          
-            <section className="mx-auto px-6 py-12 flex flex-col laptop:flex-row items-center relative laptop:px-24 laptop:py-10">
-            <div className="w-full laptop:w-1/2 relative z-10">
+            </motion.section>
+
+            <motion.section initial="hidden"
+                whileInView="visible"
+                variants={{
+                    hidden: { opacity: 0, y: 50 },
+                    visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.6 } }
+                }} className="mx-auto px-6 py-12 flex flex-col laptop:flex-row items-center relative laptop:px-24 laptop:py-10">
+                <div className="w-full laptop:w-1/2 relative z-10">
 
                     <img src={Pipa} alt="Movimentação de cargas" className="w-full h-auto rounded-lg shadow-lg" />
                 </div>
@@ -190,21 +253,26 @@ export default function Portilio() {
                 <div className="w-full laptop:w-1/2 relative z-10 laptop:pl-10 text-left laptop:text-left mt-6 laptop:mt-0 flex items-center">
                     <div>
                         <h2 className="text-2xl font-bold text-primary font-quantico">
-                        Umidificação de vias e materiais
+                            Umidificação de vias e materiais
                         </h2>
-                        
+
                         <p className="mt-4 text-lg text-primary">
-                        Oferecemos serviços de umidificação de vias e materiais para controle de poeira e melhoria das condições ambientais em obras, mineradoras e indústrias. Utilizamos equipamentos adequados para garantir a aplicação eficiente da água, reduzindo emissões de partículas e promovendo mais segurança no local. Nossa solução contribui para a preservação do meio ambiente, o cumprimento das normas ambientais e a qualidade das operações.</p>
+                            Oferecemos serviços de umidificação de vias e materiais para controle de poeira e melhoria das condições ambientais em obras, mineradoras e indústrias. Utilizamos equipamentos adequados para garantir a aplicação eficiente da água, reduzindo emissões de partículas e promovendo mais segurança no local. Nossa solução contribui para a preservação do meio ambiente, o cumprimento das normas ambientais e a qualidade das operações.</p>
                     </div>
                 </div>
 
                 <div className="absolute right-0 top-0 h-full lg:w-[80%] w-full laptop:w-3/5 bg-gradient-to-b from-faixa1 to-faixa2 z-0"></div>
 
 
-            </section>
-            
-           <section className="mx-auto px-6 py-12 flex flex-col laptop:flex-row items-center relative laptop:px-24 laptop:py-10">
-            <div className="w-full laptop:w-1/2 relative z-10">
+            </motion.section>
+
+            <motion.section initial="hidden"
+                whileInView="visible"
+                variants={{
+                    hidden: { opacity: 0, y: 50 },
+                    visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.6 } }
+                }} className="mx-auto px-6 py-12 flex flex-col laptop:flex-row items-center relative laptop:px-24 laptop:py-10">
+                <div className="w-full laptop:w-1/2 relative z-10">
                     <img src={Equip} alt="Movimentação de cargas" className="w-full h-auto rounded-lg shadow-lg" />
                 </div>
 
@@ -212,26 +280,36 @@ export default function Portilio() {
                 <div className="w-full laptop:w-1/2 relative z-10 laptop:pl-10 text-left laptop:text-left mt-6 laptop:mt-0 flex items-center">
                     <div>
                         <h2 className="text-2xl font-bold font-quantico">
-                        Limpeza industrial em geral
+                            Limpeza industrial em geral
                         </h2>
-                        
+
                         <p className="mt-4 text-lg">
-                        Realizamos limpeza industrial em geral, garantindo ambientes mais seguros, organizados e em conformidade com as normas de higiene e segurança. Contamos com equipamentos e técnicas adequadas para a remoção de resíduos, poeira, óleo e outros contaminantes, atendendo indústrias, fábricas e canteiros de obras. Nosso serviço contribui para a conservação dos equipamentos, a eficiência operacional e a segurança dos trabalhadores.
-</p>
+                            Realizamos limpeza industrial em geral, garantindo ambientes mais seguros, organizados e em conformidade com as normas de higiene e segurança. Contamos com equipamentos e técnicas adequadas para a remoção de resíduos, poeira, óleo e outros contaminantes, atendendo indústrias, fábricas e canteiros de obras. Nosso serviço contribui para a conservação dos equipamentos, a eficiência operacional e a segurança dos trabalhadores.
+                        </p>
                     </div>
                 </div>
 
 
-            </section>
-            <section className="bg-gradient-to-b from-faixa1 to-faixa2 w-full h-auto">
+            </motion.section>
+            <motion.section initial="hidden"
+                whileInView="visible"
+                variants={{
+                    hidden: { opacity: 0, y: 50 },
+                    visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.6 } }
+                }} className="bg-gradient-to-b from-faixa1 to-faixa2 w-full h-auto">
                 <h3 className="text-2xl font-bold text-left text-wrap ml-8 pt-6 mr-32 text-primary h-24 tablet:px-20 tablet:py-10 font-quantico">Conheça também alguns de nossos equipamentos</h3>
                 <Carousel />
 
 
-            </section>
+            </motion.section>
 
 
-            <section>
+            <motion.section initial="hidden"
+                whileInView="visible"
+                variants={{
+                    hidden: { opacity: 0, y: 50 },
+                    visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.6 } }
+                }}>
                 <h3 className="text-2xl font-bold text-left text-wrap ml-8 pt-6 mr-32 tablet:px-20 tablet:py-10 font-quantico">Nossa Expertise,
                     Seu Sucesso:</h3>
                 <h4 className="text-2xl font-bold text-left text-wrap ml-8 mr-32 tablet:px-20 font-quantico">Soluções Inteligentes para Todos os Projetos</h4>
@@ -239,8 +317,13 @@ export default function Portilio() {
                     Contamos com uma equipe de profissionais qualificados e comprometidos com a qualidade e segurança de nossos serviços.
                     Estabelecemos uma relação transparente com nossos clientes, oferecendo suporte através o atendimento diferenciado, em horario comercial e uma equipe para atendimentos emergenciais
                     Estamos preparados para atender clientes de pequeno, médio e grande porte, oferecendo sempre uma solução inteligente e econômica para quem precisa de serviços de terraplenagem, transporte, infraestrutura e locação de equipamentos.</p>
-            </section>
-            <section className="bg-gradient-to-b from-faixa1 to-faixa2 h-auto p-6 laptop:justify-center laptop:content-center self-center">
+            </motion.section>
+            <motion.section initial="hidden"
+                whileInView="visible"
+                variants={{
+                    hidden: { opacity: 0, y: 50 },
+                    visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.6 } }
+                }} className="bg-gradient-to-b from-faixa1 to-faixa2 h-auto p-6 laptop:justify-center laptop:content-center self-center">
                 <h3 className="text-2xl font-bold text-left text-wrap ml-8 pt-10 mr-32 text-primary mb-6 font-quantico tablet:px-20 tablet:py-6">Por que escolher a GRT Engenharia?</h3>
                 <div className="flex flex-col justify-center items-center  content-center laptop:grid laptop:grid-cols-2   laptop:px-20">
                     <div className="relative">
@@ -261,9 +344,9 @@ export default function Portilio() {
                         <p className="text-sm  text-right flex pl-3 text-primary absolute bottom-0 w-96 bg-gradient-to-tr from-faixa3/95 to-transparent tablet:text-2xl tablet:w-[80%] tablet:text-nowrap laptop:w-[80%] laptop:text-base">Compromisso com prazos e qualidade.</p>
                     </div>
                 </div>
-            </section>
+            </motion.section>
             <a
-                href="https://wa.me/5524981417949" 
+                href="https://wa.me/5524981417949"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="fixed bottom-2 right-2 z-50 tablet:bottom-6 tablet:right-6 tablet:p-3 hover:scale-110 transition duration-300"

@@ -1,8 +1,8 @@
 import { useState } from "react";
+import { motion } from "framer-motion"
 import Whatsapp from "../../assets/whatsapp.png";
 import Instagram from "../../assets/instagram.png";
 import Linkedin from "../../assets/linkedin.png";
-import { Link } from "react-router-dom";
 import Mapa from "../../assets/mapa.jpg";
 
 export default function Contact() {
@@ -50,13 +50,30 @@ export default function Contact() {
     );
   };
 
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 0.5 } }
+  };
+
+  const fadeIn = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 1, delay: 0.5 } }
+  };
+
+  const scaleIn = {
+    hidden: { scale: 0.8, opacity: 0 },
+    visible: { scale: 1, opacity: 1, transition: { duration: 1, delay: 0.5 } }
+  };
+
   return (
     <main>
       <section>
-        <div className="bg-gradient-to-b from-faixa1 to-faixa2 w-full h-auto px-6 tablet:px-20">
+        <motion.div initial={{ opacity: 0, x: -100 }} // Estado inicial oculto
+          whileInView={{ opacity: 1, x: 0 }} // Animação de entrada
+          transition={{ duration: 0.5 }} className="bg-gradient-to-b from-faixa1 to-faixa2 w-full h-auto px-6 tablet:px-20">
           <h3 className="text-primary uppercase text-1xl pt-8 text-left ml-8">tire sua duvida</h3>
           <h2 className="text-primary uppercase text-2xl font-bold text-left ml-8 pb-8 font-quantico">Nosso Contato</h2>
-        </div>
+        </motion.div>
 
       </section>
 

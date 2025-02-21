@@ -64,10 +64,10 @@ export default function About() {
                     initial={{ opacity: 0, x: -100 }}
                     animate={visibleSections[0] ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }} 
                     transition={{ duration: 0.5 }}
-                    className="bg-gradient-to-b from-faixa1 to-faixa2 w-full h-auto px-20"
+                    className="bg-gradient-to-b from-faixa1 to-faixa2 w-full h-auto px-6 tablet:px-20"
                 >
-                    <h3 className="text-primary uppercase text-2xl pt-8 text-left ml-8">a empresa</h3>
-                    <h2 className="text-primary uppercase text-3xl font-bold text-left ml-8 pb-8 font-quantico">
+                    <h3 className="text-primary uppercase text-1xl pt-8 text-left ml-8">a empresa</h3>
+                    <h2 className="text-primary uppercase text-2xl font-bold text-left ml-8 pb-8 font-quantico">
                         Sobre a GRT Engenharia
                     </h2>
                 </motion.div>
