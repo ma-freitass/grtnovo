@@ -68,7 +68,7 @@ export default function Header() {
       </section>
       <section className="h-36 bg-primary text-titulo font-semibold flex justify-around items-center">
         <Link to="/">
-          <img src={Logo} alt="Logo GRT" className="h-16" />
+          <img src={Logo} alt="Logo GRT" className="h-24" />
         </Link>
         <div>
           <nav id="mobile-menu" className="hidden laptop:block items-center z-40 max-laptop:fixed max-laptop:w-full max-laptop:inset-0">

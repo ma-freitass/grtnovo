@@ -17,15 +17,6 @@ import WhatsappIcon from "../../assets/whats.png"
 
 
 export default function Home() {
-    const scrollToSection = (id) => {
-        console.log(`Scrolling to section: ${id}`);
-        const section = document.getElementById(id);
-        if (section) {
-            section.scrollIntoView({ behavior: "smooth" });
-        } else {
-            console.warn(`Elemento com ID '${id}' não encontrado`);
-        }
-    };
     const fadeInUp = {
         hidden: { opacity: 0, y: 50 },
         visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 0.5 } }
@@ -56,6 +47,7 @@ export default function Home() {
             </section>
             <motion.section variants={scaleIn} initial="hidden" whileInView="visible" animate="visible" id="servicos">
                 <h1 className="text-3xl font-bold text-center py-8 font-quantico">Conheça nossos serviços</h1>
+                <p className="text-xl text-center py-8">Contamos com uma frota moderna e diversificada, equipada com tecnologia de ponta e operada por profissionais altamente capacitados, prontos para atender com eficiência e segurança às demandas dos setores de construção, movimentação de cargas e materiais, transportes e terraplanagem.</p>
                 <div className="flex flex-col justify-center p-2 mx-10 laptop:flex-row">
                     <div>
 
@@ -69,15 +61,18 @@ export default function Home() {
                                 transition={{ duration: 1.5, ease: "easeOut" }}
                             />
                         </Link>
+                        <div>
 
-                        <p className="text-lg font-bold text-left ml-6">- Escavação </p>
-                        <p className="text-lg font-bold text-left ml-6">- Carga</p>
-                        <p className="text-lg font-bold text-left ml-6">- Transporte e acondicionamento de materiais</p>
-                        <ul className="text-lg font-bold flex space-x-3 ml-20 ">
-                            <li>• Minério</li>
-                            <li>• Carvão</li>
-                            <li>• Escória</li>
-                        </ul>
+                            <p className="text-lg font-bold text-left ml-6">Realizamos escavação, carga, transporte e acondicionamento de diversos materiais, garantindo eficiência e segurança em cada etapa do processo. </p>
+                            <p className="text-lg font-bold text-left ml-6">Materiais que trabalhamos:</p>
+
+                            <ul className="text-lg font-bold space-x-3 ml-20 ">
+                                <li>• Minério;</li>
+                                <li>• Carvão;</li>
+                                <li>• Escória;</li>
+                                <li>• Solo de 1ª, 2ª e 3ª categoria</li>
+                            </ul>
+                        </div>
                     </div>
                     <div>
                         <Link to="/portifolio#aluguel">
@@ -86,7 +81,43 @@ export default function Home() {
                                 whileInView={{ opacity: 1, clipPath: "inset(0% 0 0 0)" }}
                                 transition={{ duration: 1.5, ease: "easeOut" }} />
                         </Link>
-                        <p className="text-lg font-bold text-left ml-6">- Aluguel de máquinas e equipamentos</p>
+                        <p className="text-lg font-bold text-left ml-6">Aluguel de máquinas e equipamentos, mas não se limitando a:</p>
+                        <div>
+                            <p className="text-lg font-bold text-left ml-6">Equipamentos para Movimentação e Transporte:</p>
+
+                            <ul className="text-lg font-bold space-x-3 ml-20 ">
+                                <li>🚛 Caminhões Munck</li>
+                                <li> 🚛 Caminhões basculantes;</li>
+                                <li>🚛 Caminhões carroceria;</li>
+
+                            </ul>
+                        </div>
+                        <div>
+                            <p className="text-lg font-bold text-left ml-6">Equipamentos para Terraplanagem e Construção:</p>
+
+                            <ul className="text-lg font-bold space-x-3 ml-20 ">
+                                <li> 🚜 Escavadeira hidráulica;</li>
+                                <li> 🚜 Retroescavadeira;</li>
+                                <li> 🚜 Pá carregadeira;</li>
+                                <li>🚜 Trator de esteira;</li>
+                                <li> 🚜 Trator agrícola;</li>
+                                <li> 🚜 Motoniveladora;</li>
+                                <li> 🚜 Rolo compactador;</li>
+                                <li> 🚜 Manipulador telescópico;</li>
+
+                            </ul>
+                        </div>
+                        <div>
+                            <p className="text-lg font-bold text-left ml-6">Equipamentos Especiais:</p>
+
+                            <ul className="text-lg font-bold space-x-3 ml-20 ">
+                                <li>🔩 Perfuratriz hidráulica;</li>
+                                <li>🔩 Rompedor hidráulico;</li>
+                                <li>🔩 Tesoura hidráulica;</li>
+                                <li>🔩 Pulverizador hidráulico.</li>
+
+                            </ul>
+                        </div>
                     </div>
                     <div>
                         <Link to="/portifolio#movimentacao">
@@ -96,8 +127,25 @@ export default function Home() {
                                 transition={{ duration: 1.5, ease: "easeOut" }} />
                         </Link>
                         <p className="text-lg font-bold text-left ml-6">- Movimentação de carga</p>
+                        <div>
+                            <p className="text-lg font-bold text-left ml-6">Precisa transportar, içar ou movimentar cargas pesadas com segurança e eficiência? </p>
+
+                            <ul className="text-lg font-bold space-x-3 ml-20 ">
+                                <li> ✅ Içamento e remoção de equipamentos</li>
+                                <li>✅ Transporte e movimentação de máquinas industriais</li>
+                                <li>✅ Montagem e desmontagem de estruturas metálicas</li>
+                                <li> ✅ Atendimento para indústrias, construção civil e agronegócio</li>
+
+                            </ul>
+                        </div>
                     </div>
                 </div>
+                <motion.section variants={scaleIn} initial="hidden" whileInView="visible" animate="visible" id="servicos">
+                    <h1 className="text-3xl font-bold text-center py-8 font-quantico">Compromisso com a Excelência</h1>
+                    <p className="text-xl text-center py-8">Nosso compromisso é fornecer soluções eficientes e personalizadas, por meio de equipamentos modernos e uma equipe altamente qualificada, atendendo com precisão às necessidades do seu projeto.
+                        Asseguramos segurança, agilidade e qualidade em cada serviço prestado, sempre seguindo os mais altos padrões técnicos e operacionais.
+                    </p>
+                </motion.section>
             </motion.section>
             <motion.section className="bg-gradient-to-b from-faixa1 to-faixa2 h-auto my-10 flex flex-col justify-center items-center" initial="hidden" whileInView="visible" variants={fadeInUp}>
 
@@ -105,18 +153,22 @@ export default function Home() {
                 <div className="flex flex-col h-auto p-10 gap-10 justify-center items-center laptop:flex-row" >
                     <motion.div className="w-2/5 max-laptop:w-full flex justify-center items-center" variants={fadeIn}>
 
-                        <img className="w-[70vw] h-auto object-cover rounded-md" src={Atuacao} alt="Máquina carregando um caminhão" />
+                        <img className="w-[90vw] h-auto object-cover rounded-md" src={Atuacao} alt="Máquina carregando um caminhão" />
                     </motion.div>
                     <motion.div className="w-1/3 max-laptop:w-full flex flex-col justify-center items-start" variants={fadeInUp}>
 
-                        <p className="text-lg text-left ml-6 leading-8 text-primary">A <span className="font-bold text-2xl">GRT ENGENHARIA E LOCAÇÕES</span> possui cadastro na VALE e hoje estamos executando uma Subestação na unidade de Xerém/RJ.</p>
+                        <p className="text-lg text-left ml-6 leading-8 text-primary">A <span className="font-bold text-2xl">GRT ENGENHARIA E LOCAÇÕES</span> é especialistas na locação de equipamentos de médio e grande porte e na prestação de serviços para os setores de movimentação de cargas, transporte, serviços industriais, terraplenagem e pavimentação. Com uma frota moderna e uma equipe altamente qualificada, garantimos soluções seguras, eficientes e adaptadas às necessidades de cada projeto.</p>
+                        <p className="text-lg text-left ml-6 leading-8 text-primary">Nossos serviços incluem:</p>
                         <ul className="text-lg text-left ml-12 text-wrap mr-5 text-primary">
-                            <li>• Prestação de serviços com movimentação de cargas (Containers/ Equipamentos); </li>
-                            <li>• Transporte de reíduos de obra - Classe RDC, A, B, C, 2A e 2B;</li>
-                            <li>• Transporte e abastecimento de combustíveis e lubrificantes;</li>
-                            <li>• Demolições de grande porte;</li>
-                            <li>• Umidificação de vias e materiais;</li>
-                            <li>• Limpeza industrial em geral. </li>
+                            <li>✔ Movimentação de cargas – Transporte e içamento de containers e equipamentos com segurança e precisão. </li>
+                            <li>✔ Movimentação industrial, escavação, carga e transporte de materiais – Manuseio e acondicionamento de minério, carvão, escória e solos de 1ª, 2ª e 3ª categoria.</li>
+                            <li>✔ Transporte de resíduos de obra – Coleta e destinação correta de materiais das classes RDC, A, B, C, 2A e 2B.</li>
+                            <li>✔ Transporte e abastecimento – Fornecimento de combustíveis e lubrificantes para operações industriais e de campo.</li>
+                            <li>✔ Demolições de grande porte – Remoção segura e controlada de estruturas robustas.</li>
+                            <li>✔ Umidificação de vias e materiais – Redução de poeira e controle ambiental em obras e indústrias. </li>
+                            <li>✔ Limpeza industrial – Serviços completos de higienização e manutenção de áreas industriais.
+                            Nosso compromisso é oferecer segurança, qualidade e produtividade, sempre alinhados às melhores práticas do setor.</li>
+
                         </ul>
                         <Link to="/portifolio">
                             <motion.button
@@ -204,7 +256,7 @@ export default function Home() {
                     <div className="w-full h-auto place-content-center">
 
                         <motion.h2 className="text-4xl font-quantico font-bold text-left text-primary pt-6 ml-8" variants={fadeInUp} initial="hidden" whileInView="visible" animate="visible">Faça seu orçamento!</motion.h2>
-                        <motion.p className="text-lg text-left ml-6 leading-8 text-primary p-4" variants={scaleIn} initial="hidden" whileInView="visible" animate="visible">A GRT Engenharia está pronta para transformar seus desafios em soluções. Entre em contato conosco e descubra como podemos ajudar você a alcançar o sucesso em seus projetos com qualidade, segurança e eficiência.</motion.p>
+                        <motion.p className="text-lg text-left ml-6 leading-8 text-primary p-4" variants={scaleIn} initial="hidden" whileInView="visible" animate="visible">A GRT Engenharia e Locações está pronta para transformar seus desafios em soluções. Entre em contato conosco e descubra como podemos ajudar você a alcançar o sucesso em seus projetos com qualidade, segurança e eficiência.</motion.p>
                         <Link to="/contact">
                             <motion.button
                                 className="bg-primary px-20 py-4 rounded-lg ml-20 my-6 font-bold"

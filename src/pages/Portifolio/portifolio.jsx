@@ -70,14 +70,15 @@ export default function Portilio() {
                     hidden: { opacity: 0, y: 50 },
                     visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.6 } }
                 }}>
-                <motion.h2 variants={scaleIn} initial="hidden"    whileInView="visible" animate="visible" className="text-3xl font-bold text-left ml-8 px-6 py-12 tablet:px-20 tablet:py-10 font-quantico">Transformando projetos em realidade com inovação, precisão e compromisso com a excelência.</motion.h2>
-                <motion.p variants={fadeIn} initial="hidden"    whileInView="visible" animate="visible" className="text-2xl  text-left text-wrap  ml-8 px-8 tablet:px-20 mb-14">A GRT Engenharia se destaca pela ampla experiência e expertise em serviços essenciais para o setor de construção civil, incluindo terraplenagem, transporte de materiais, infraestrutura e locação de equipamentos de alta performance.</motion.p>
-                <motion.div variants={fadeInUp} initial="hidden"    whileInView="visible" animate="visible">
+                <motion.h2 variants={scaleIn} initial="hidden" whileInView="visible" animate="visible" className="text-3xl font-bold text-left ml-8 px-6 py-12 tablet:px-20 tablet:py-10 font-quantico">Transformando projetos em realidade com inovação, precisão e compromisso com a excelência.</motion.h2>
+                <motion.p variants={fadeIn} initial="hidden" whileInView="visible" animate="visible" className="text-2xl  text-left text-wrap  ml-8 px-8 tablet:px-20 mb-14">A GRT Engenharia e Locações é especializada na locação de equipamentos, movimentação e transporte de cargas e materiais, com forte atuação no transporte de minério, carvão, escória e solos de 1ª, 2ª e 3ª categorias. Também prestamos serviços integrados voltados aos setores industrial, de infraestrutura e construção civil.</motion.p>
+                <motion.p variants={fadeIn} initial="hidden" whileInView="visible" animate="visible" className="text-2xl  text-left text-wrap  ml-8 px-8 tablet:px-20 mb-14">Contamos com uma frota moderna, mantida sob rigorosos padrões de manutenção preventiva, além de uma equipe técnica altamente capacitada, o que nos permite oferecer soluções personalizadas para operações complexas, com foco em eficiência, segurança e alto desempenho, sempre em conformidade com as exigências técnicas e normativas de cada projeto.</motion.p>
+                <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" animate="visible">
                     <img className="w-full object-cover" src={Portifolio} alt="" />
                 </motion.div>
             </motion.section>
-            <motion.div variants={fadeInUp} initial="hidden"    whileInView="visible" animate="visible">
-                <motion.h2 variants={scaleIn} initial="hidden"    whileInView="visible" animate="visible"  className="text-3xl font-bold text-left ml-8 py-12 desktop:text-5xl font-quantico px-6 tablet:px-20 tablet:py-10 ">Descubra como podemos te ajudar!</motion.h2>
+            <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" animate="visible">
+                <motion.h2 variants={scaleIn} initial="hidden" whileInView="visible" animate="visible" className="text-3xl font-bold text-left ml-8 py-12 desktop:text-5xl font-quantico px-6 tablet:px-20 tablet:py-10 ">Descubra como podemos te ajudar!</motion.h2>
             </motion.div>
             <motion.section initial="hidden"
                 whileInView="visible"
@@ -85,18 +86,20 @@ export default function Portilio() {
                     hidden: { opacity: 0, y: 50 },
                     visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.6 } }
                 }} id="aluguel" className="mx-auto px-6 py-12 flex flex-col laptop:flex-row items-center relative laptop:px-24 laptop:py-10">
-                <motion.div variants={fadeInUp} initial="hidden"    whileInView="visible" animate="visible" className="w-full laptop:w-1/2 relative z-10">
+                <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" animate="visible" className="w-full laptop:w-1/2 relative z-10">
                     <img src={Equipamentos} alt="Movimentação de cargas" className="w-full h-auto rounded-lg shadow-lg" />
                 </motion.div>
 
-                <motion.div variants={fadeInUp} initial="hidden"    whileInView="visible" animate="visible" className="w-full laptop:w-1/2 relative z-10 laptop:pl-10 text-left laptop:text-left mt-6 laptop:mt-0 flex items-center">
+                <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" animate="visible" className="w-full laptop:w-1/2 relative z-10 laptop:pl-10 text-left laptop:text-left mt-6 laptop:mt-0 flex items-center">
                     <div>
-                        <motion.h2 variants={scaleIn} initial="hidden"    whileInView="visible" animate="visible"  className="text-2xl font-bold text-primary font-quantico">
+                        <motion.h2 variants={scaleIn} initial="hidden" whileInView="visible" animate="visible" className="text-2xl font-bold text-primary font-quantico">
                             Aluguel de máquinas e equipamentos
                         </motion.h2>
 
-                        <motion.p variants={fadeIn} initial="hidden"    whileInView="visible" animate="visible" className="mt-4 text-lg text-primary">
-                            Oferecemos soluções completas em aluguel de máquinas e equipamentos para construção civil, infraestrutura e projetos industriais. Nosso portfólio inclui escavadeiras, retroescavadeiras, caminhões basculantes, motoniveladoras e diversas outras máquinas de alta performance, garantindo eficiência e produtividade para sua obra. Trabalhamos com equipamentos modernos, rigorosamente revisados e prontos para operar com segurança e confiabilidade. Seja para curto ou longo prazo, disponibilizamos opções flexíveis de locação, atendendo às necessidades específicas de cada cliente com excelência e suporte técnico especializado.
+                        <motion.p variants={fadeIn} initial="hidden" whileInView="visible" animate="visible" className="mt-4 text-lg text-primary">
+                            Disponibilizamos um portfólio completo de máquinas pesadas e equipamentos operacionais para indústrias, obras de infraestrutura e construção civil. Oferecemos escavadeira hidráulica, pá carregadeira, retroescavadeira, motoniveladoras, tratores, caminhões basculantes, caminhões munck, entre outros.
+                            Todos os equipamentos são tecnologicamente atualizados, submetidos a revisões rigorosas e prontos para operação, com foco em produtividade, confiabilidade e segurança.
+                            Trabalhamos com planos de locação flexíveis, para contratos de curto e longo prazo, com suporte técnico especializado e atendimento personalizado.
                         </motion.p>
                     </div>
                 </motion.div>
@@ -116,13 +119,16 @@ export default function Portilio() {
                 </div>
 
 
-                <motion.div variants={fadeInUp} initial="hidden"    whileInView="visible" animate="visible" className="w-full laptop:w-1/2 relative z-10 laptop:pl-10 text-left laptop:text-left mt-6 laptop:mt-0 flex items-center">
+                <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" animate="visible" className="w-full laptop:w-1/2 relative z-10 laptop:pl-10 text-left laptop:text-left mt-6 laptop:mt-0 flex items-center">
                     <div>
-                        <motion.h2 variants={scaleIn} initial="hidden"    whileInView="visible" animate="visible"  className="text-2xl font-bold font-quantico">
-                            Prestação de serviços com movimentação de cargas (Containers/ Equipamentos)
+                        <motion.h2 variants={scaleIn} initial="hidden" whileInView="visible" animate="visible" className="text-2xl font-bold font-quantico">
+                            Movimentação Técnica de Cargas
                         </motion.h2>
-                        <motion.p variants={fadeIn} initial="hidden"    whileInView="visible" animate="visible" className="mt-4 text-lg">
-                            Somos especialistas na locação de equipamentos e prestação de serviços para construção civil, oferecendo soluções eficientes para movimentação de cargas, como containers e equipamentos pesados. Nossa equipe qualificada garante operações seguras, ágeis e dentro das normas técnicas. Trabalhamos com comprometimento e excelência para atender às necessidades de cada projeto, proporcionando qualidade e confiabilidade. Seja para obras de pequeno, médio ou grande porte, contamos com a infraestrutura ideal para otimizar sua logística e operação.
+                        <motion.p variants={fadeIn} initial="hidden" whileInView="visible" animate="visible" className="mt-4 text-lg">
+                            Executamos serviços especializados em movimentação técnica de cargas, como içamento e remoção de containers e equipamentos industriais, montagem e desmontagem de estruturas metálicas, além de transporte e posicionamento de máquinas pesadas.
+                            Contamos com profissionais certificados e equipamentos dimensionados sob medida para garantir segurança, precisão e conformidade com normas vigentes, otimizando prazos e reduzindo riscos operacionais.
+
+
                         </motion.p>
                     </div>
                 </motion.div>
@@ -139,15 +145,18 @@ export default function Portilio() {
                     <img src={Caminhao1} alt="Movimentação de cargas" className="w-full h-auto rounded-lg shadow-lg" />
                 </div>
 
-                <motion.div variants={fadeInUp} initial="hidden"    whileInView="visible" animate="visible" className="w-full laptop:w-1/2 relative z-10 laptop:pl-10 text-left laptop:text-left mt-6 laptop:mt-0 flex items-center">
+                <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" animate="visible" className="w-full laptop:w-1/2 relative z-10 laptop:pl-10 text-left laptop:text-left mt-6 laptop:mt-0 flex items-center">
                     <div>
-                        <motion.h2 	variants={scaleIn} initial="hidden"  whileInView="visible" animate="visible" 
- className="text-2xl font-bold text-primary font-quantico">
+                        <motion.h2 variants={scaleIn} initial="hidden" whileInView="visible" animate="visible"
+                            className="text-2xl font-bold text-primary font-quantico">
                             Escavação, Carga, Transpote e acondicionamento de materiais:
                         </motion.h2>
-                        <motion.p variants={fadeIn} initial="hidden"    whileInView="visible" animate="visible" className="mt-4 text-lg text-primary">• Minério •  Carvão • Escória </motion.p>
+                        <motion.p variants={fadeIn} initial="hidden" whileInView="visible" animate="visible" className="mt-4 text-lg text-primary">• Minério •  Carvão • Escória </motion.p>
                         <p className="mt-4 text-lg text-primary">
-                            Oferecemos serviços especializados em escavação, carga, transporte e acondicionamento de materiais como minério, carvão e escória. Com equipamentos modernos e equipe qualificada, garantimos eficiência, segurança e cumprimento das normas técnicas. Atendemos projetos de diversos portes, proporcionando soluções ágeis e confiáveis para a movimentação de materiais. Nosso compromisso é otimizar processos, reduzir custos operacionais e garantir a máxima produtividade para sua obra ou empreendimento.
+                            Realizamos escavação, carga, transporte e acondicionamento de materiais a granel, como minério, carvão, escória e solos classificados, com equipamentos de grande porte e equipes capacitadas.
+                            Garantimos logística eficiente, rastreabilidade, conformidade técnica e desempenho operacional contínuo, promovendo redução de custos e otimização de processos logísticos.
+
+
                         </p>
                     </div>
                 </motion.div>
@@ -168,9 +177,9 @@ export default function Portilio() {
                 </div>
 
 
-                <motion.div variants={fadeInUp} initial="hidden"    whileInView="visible" animate="visible" className="w-full laptop:w-1/2 relative z-10 laptop:pl-10 text-left laptop:text-left mt-6 laptop:mt-0 flex items-center">
+                <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" animate="visible" className="w-full laptop:w-1/2 relative z-10 laptop:pl-10 text-left laptop:text-left mt-6 laptop:mt-0 flex items-center">
                     <div>
-                        <motion.h2 variants={scaleIn} initial="hidden" whileInView="visible" animate="visible"  className="text-2xl font-bold font-quantico">
+                        <motion.h2 variants={scaleIn} initial="hidden" whileInView="visible" animate="visible" className="text-2xl font-bold font-quantico">
                             Transporte de reíduos de obra
                             Classe RDC, A, B, C, 2A e 2B
                         </motion.h2>
@@ -194,12 +203,14 @@ export default function Portilio() {
 
                 <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" animate="visible" className="w-full laptop:w-1/2 relative z-10 laptop:pl-10 text-left laptop:text-left mt-6 laptop:mt-0 flex items-center">
                     <div>
-                        <motion.h2 variants={scaleIn} initial="hidden" whileInView="visible" animate="visible"  className="text-2xl font-bold text-primary font-quantico">
+                        <motion.h2 variants={scaleIn} initial="hidden" whileInView="visible" animate="visible" className="text-2xl font-bold text-primary font-quantico">
                             Transporte e abastecimento de combustíveis e lubrificantes
                         </motion.h2>
 
                         <motion.p variants={fadeIn} initial="hidden" whileInView="visible" animate="visible" className="mt-4 text-lg text-primary">
-                            Realizamos o transporte e abastecimento de combustíveis e lubrificantes com segurança, eficiência e total conformidade com as regulamentações vigentes. Contamos com veículos apropriados e processos rigorosos para garantir a integridade dos produtos e a continuidade das operações. Nossos serviços são ideais para atender obras, indústrias e frotas, assegurando abastecimento ágil e confiável, reduzindo paradas e otimizando a produtividade do seu negócio.
+                            Oferecemos transporte e abastecimento técnico de combustíveis e lubrificantes, com veículos licenciados, controle de qualidade e segurança operacional.
+                            Atendemos obras, plantas industriais e frotas, garantindo agilidade, confiabilidade e continuidade operacional, com foco na redução de paradas e aumento de produtividade.
+
                         </motion.p>
                     </div>
                 </motion.div>
@@ -221,11 +232,12 @@ export default function Portilio() {
 
                 <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" animate="visible" className="w-full laptop:w-1/2 relative z-10 laptop:pl-10 text-left laptop:text-left mt-6 laptop:mt-0 flex items-center">
                     <div>
-                        <motion.h2 variants={scaleIn} initial="hidden" whileInView="visible" animate="visible"  className="text-2xl font-bold font-quantico">
-                            Demolições de grande porte
-                        </motion.h2>
+                        <motion.h2 variants={scaleIn} initial="hidden" whileInView="visible" animate="visible" className="text-2xl font-bold font-quantico">
+                            Demolições Técnicas de Grande Porte                        </motion.h2>
                         <motion.p variants={fadeIn} initial="hidden" whileInView="visible" animate="visible" className="mt-4 text-lg">
-                            Executamos demolições de grande porte com segurança, eficiência e total conformidade com as normas técnicas e ambientais. Utilizamos equipamentos modernos e metodologias avançadas para garantir a remoção controlada de estruturas, minimizando riscos e impactos na área. Nosso serviço é ideal para projetos industriais, comerciais e residenciais, proporcionando soluções ágeis, seguras e planejadas para cada necessidade.
+                            Realizamos demolições de estruturas em áreas industriais, comerciais e residenciais, com controle técnico, segurança e respeito às normas ambientais.
+                            Utilizamos equipamentos modernos e metodologia planejada, garantindo a remoção segura, minimizando riscos e impactos na área de atuação.
+
 
                         </motion.p>
                     </div>
@@ -249,11 +261,13 @@ export default function Portilio() {
                 <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" animate="visible" className="w-full laptop:w-1/2 relative z-10 laptop:pl-10 text-left laptop:text-left mt-6 laptop:mt-0 flex items-center">
                     <div>
                         <motion.h2 variants={scaleIn} initial="hidden" whileInView="visible" animate="visible" className="text-2xl font-bold text-primary font-quantico">
-                            Umidificação de vias e materiais
+                            Umidificação de Vias e Controle de Poeira
                         </motion.h2>
 
                         <motion.p variants={fadeIn} initial="hidden" whileInView="visible" animate="visible" className="mt-4 text-lg text-primary">
-                            Oferecemos serviços de umidificação de vias e materiais para controle de poeira e melhoria das condições ambientais em obras, mineradoras e indústrias. Utilizamos equipamentos adequados para garantir a aplicação eficiente da água, reduzindo emissões de partículas e promovendo mais segurança no local. Nossa solução contribui para a preservação do meio ambiente, o cumprimento das normas ambientais e a qualidade das operações.</motion.p>
+                            Executamos umidificação de vias e materiais para controle eficiente de poeira em áreas operacionais, industriais e mineradoras, contribuindo para a qualidade ambiental e segurança das atividades.
+                            Trabalhamos com técnicas otimizadas de aplicação e equipamentos apropriados, promovendo a preservação ambiental e cumprimento das exigências legais.
+                        </motion.p>
                     </div>
                 </motion.div>
 
@@ -275,12 +289,13 @@ export default function Portilio() {
 
                 <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" animate="visible" className="w-full laptop:w-1/2 relative z-10 laptop:pl-10 text-left laptop:text-left mt-6 laptop:mt-0 flex items-center">
                     <div>
-                        <motion.h2 variants={scaleIn} initial="hidden" whileInView="visible" animate="visible"  className="text-2xl font-bold font-quantico">
-                            Limpeza industrial em geral
+                        <motion.h2 variants={scaleIn} initial="hidden" whileInView="visible" animate="visible" className="text-2xl font-bold font-quantico">
+                            Limpeza industrial
                         </motion.h2>
 
                         <motion.p variants={fadeIn} initial="hidden" whileInView="visible" animate="visible" className="mt-4 text-lg">
-                            Realizamos limpeza industrial em geral, garantindo ambientes mais seguros, organizados e em conformidade com as normas de higiene e segurança. Contamos com equipamentos e técnicas adequadas para a remoção de resíduos, poeira, óleo e outros contaminantes, atendendo indústrias, fábricas e canteiros de obras. Nosso serviço contribui para a conservação dos equipamentos, a eficiência operacional e a segurança dos trabalhadores.
+                            Oferecemos limpeza técnica e operacional para ambientes industriais, áreas de produção e canteiros de obras. Atuamos na remoção de resíduos, poeira, óleos e contaminantes, com equipamentos específicos e técnicas seguras.
+                            Nossos serviços promovem a eficiência produtiva, conservação de equipamentos e segurança dos colaboradores, em total conformidade com as normas de higiene e segurança do trabalho.
                         </motion.p>
                     </div>
                 </motion.div>
@@ -306,13 +321,12 @@ export default function Portilio() {
                     hidden: { opacity: 0, y: 50 },
                     visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.6 } }
                 }}>
-                <motion.h3 variants={scaleIn} initial="hidden" whileInView="visible" animate="visible"  className="text-2xl font-bold text-left text-wrap ml-8 pt-6 mr-32 tablet:px-20 tablet:py-10 font-quantico">Nossa Expertise,
+                <motion.h3 variants={scaleIn} initial="hidden" whileInView="visible" animate="visible" className="text-2xl font-bold text-left text-wrap ml-8 pt-6 mr-32 tablet:px-20 tablet:py-10 font-quantico">Nossa Expertise,
                     Seu Sucesso:</motion.h3>
                 <motion.h4 variants={fadeInUp} initial="hidden" whileInView="visible" animate="visible" className="text-2xl font-bold text-left text-wrap ml-8 mr-32 tablet:px-20 font-quantico">Soluções Inteligentes para Todos os Projetos</motion.h4>
-                <motion.p variants={fadeIn} initial="hidden" whileInView="visible" animate="visible" className="text-2xl  text-left pb-8 text-wrap mx-12 my-4 tablet:px-20 mb-14">Nossa equipe possui ampla experiência para auxiliá-los na melhor opção e atender vossas necessidades.
-                    Contamos com uma equipe de profissionais qualificados e comprometidos com a qualidade e segurança de nossos serviços.
-                    Estabelecemos uma relação transparente com nossos clientes, oferecendo suporte através o atendimento diferenciado, em horario comercial e uma equipe para atendimentos emergenciais
-                    Estamos preparados para atender clientes de pequeno, médio e grande porte, oferecendo sempre uma solução inteligente e econômica para quem precisa de serviços de terraplenagem, transporte, infraestrutura e locação de equipamentos.</motion.p>
+                <motion.p variants={fadeIn} initial="hidden" whileInView="visible" animate="visible" className="text-2xl  text-left pb-8 text-wrap mx-12 my-4 tablet:px-20 mb-14">Contamos com uma equipe multidisciplinar e experiente, pronta para oferecer as melhores soluções técnicas e logísticas de acordo com as particularidades de cada cliente. Atuamos com transparência, atendimento personalizado e suporte técnico dedicado, tanto durante o horário comercial quanto para atendimentos emergenciais.
+                    Atendemos clientes de pequeno, médio e grande porte, oferecendo sempre uma solução inteligente, econômica e eficiente, seja em locação de equipamentos, transporte, terraplenagem ou operações integradas em infraestrutura.
+                </motion.p>
             </motion.section>
             <motion.section initial="hidden"
                 whileInView="visible"

@@ -31,14 +31,14 @@ export default function About() {
                     if (index !== -1) {
                         setVisibleSections((prev) => {
                             const updated = [...prev];
-                            updated[index] = true; 
+                            updated[index] = true;
                             return updated;
                         });
-                        observer.unobserve(entry.target); 
+                        observer.unobserve(entry.target);
                     }
                 }
             });
-        }, { threshold: 0.1 }); 
+        }, { threshold: 0.1 });
 
         sectionsRef.current.forEach((section) => {
             if (section) {
@@ -62,7 +62,7 @@ export default function About() {
             <section ref={(el) => (sectionsRef.current[0] = el)}>
                 <motion.div
                     initial={{ opacity: 0, x: -100 }}
-                    animate={visibleSections[0] ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }} 
+                    animate={visibleSections[0] ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
                     transition={{ duration: 0.5 }}
                     className="bg-gradient-to-b from-faixa1 to-faixa2 w-full h-auto px-6 tablet:px-20"
                 >
@@ -92,7 +92,10 @@ export default function About() {
                         A GRT Engenharia é uma empresa sólida e experiente, atuando há mais de 10 anos no setor de construção civil e infraestrutura.
                     </h2>
                     <p className="text-2xl text-left text-wrap ml-8 px-8 tablet:px-20 mb-14">
-                        Reconhecida pela qualidade e confiabilidade de seus serviços, a GRT se destaca especialmente na locação de equipamentos de linha amarela e na execução de obras civis de pequeno, médio e grande porte. Nosso compromisso é fornecer soluções práticas e eficientes, adaptadas às necessidades de cada cliente, com foco em resultados de alto padrão e na segurança do trabalho.
+                        Com mais de uma década de experiência, a GRT Engenharia e Locação é uma empresa consolidada no setor de locação de equipamentos, movimentação e transporte de cargas, movimentação e limpeza industrial, reconhecida pela excelência, confiabilidade e alto padrão de seus serviços.
+                        Com uma frota moderna e uma equipe altamente qualificada, a GRT Engenharia e Locação se destaca na locação de equipamentos de linha amarela e caminhões e na execução de serviços industriais e de terraplenagem e pavimentação, oferecendo soluções personalizadas e eficientes. Nosso compromisso é atender às demandas dos clientes com segurança, inovação e alto desempenho, garantindo resultados que agregam valor e produtividade aos projetos.
+                        Nosso compromisso é garantir segurança, qualidade e eficiência, assegurando a execução de projetos com rigor técnico, inovação e foco em resultados.
+
                     </p>
                 </motion.div>
             </section>
@@ -115,7 +118,9 @@ export default function About() {
                     className="w-full relative z-10 laptop:pl-10 text-left laptop:text-left mt-6 flex items-center laptop:mt-0"
                 >
                     <p className="mt-4 text-lg text-primary">
-                        Contamos com uma equipe de profissionais altamente capacitados e em constante atualização, além de uma frota moderna e bem equipada, garantindo soluções, segurança e agilidade em todas as etapas dos projetos. Nossa experiência acumulada nos permite entender profundamente os desafios específicos de cada obra e propor soluções inovadoras, sempre alinhadas às melhores práticas do mercado e às exigências dos clientes.
+                        Contamos com uma equipe de profissionais altamente qualificados, treinados e em constante atualização para oferecer serviços com precisão, eficiência e segurança. Nosso time é composto por especialistas experientes, preparados para atuar em locação de equipamentos, movimentação de cargas, transporte, terraplenagem, pavimentação, limpeza industrial e movimentação industrial, garantindo excelência em cada etapa dos projetos.
+                        Nosso compromisso com a capacitação contínua e o cumprimento rigoroso das normas técnicas e de segurança assegura a entrega de soluções confiáveis e alinhadas às necessidades específicas de cada cliente. Com uma equipe dedicada e qualificada, proporcionamos maior produtividade, redução de riscos operacionais e resultados de alto padrão.
+
                     </p>
                 </motion.div>
                 <div className="absolute right-0 top-0 h-full lg:w-[80%] w-full laptop:w-2/3 bg-gradient-to-b from-faixa1 to-faixa2 z-0"></div>
@@ -150,7 +155,7 @@ export default function About() {
                     <div className="bg-gradient-to-b from-faixa1 to-faixa2 w-full p-6 text-primary text-lg leading-8 text-center laptop:text-left -mt-10 relative z-10 rounded-xl">
                         Estamos preparados para enfrentar qualquer desafio no setor de construção civil,
                         contribuindo para o desenvolvimento de projetos que agregam valor e impactam positivamente
-                        a comunidade. Conte com a GRT Engenharia para transformar suas ideias em realidade,
+                        a comunidade. Conte com a GRT Engenharia e Locações para transformar suas ideias em realidade,
                         com qualidade, segurança e um olhar voltado para o futuro.
                     </div>
                 </motion.div>
@@ -164,7 +169,7 @@ export default function About() {
                     transition={{ duration: 0.5, delay: 1.2 }}
                 >
                     <img className="w-60 h-auto" src={Missao} alt="Missão" />
-              
+
                 </motion.div>
                 <motion.div
                     initial="hidden"
@@ -173,7 +178,7 @@ export default function About() {
                     transition={{ duration: 0.5, delay: 1.4 }}
                 >
                     <img className="w-60 h-auto" src={Visao} alt="Visão" />
-                  
+
                 </motion.div>
                 <motion.div
                     initial="hidden"
@@ -182,17 +187,17 @@ export default function About() {
                     transition={{ duration: 0.5, delay: 1.6 }}
                 >
                     <img className="w-60 h-auto" src={Valores} alt="Valores" />
-                  
+
                 </motion.div>
             </section>
-             <a
-                            href="https://wa.me/5524981417949" 
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="fixed bottom-2 right-2 z-50 tablet:bottom-6 tablet:right-6 tablet:p-3 hover:scale-110 transition duration-300"
-                        >
-                            <img src={WhatsappIcon} alt="WhatsApp" className="size-20" />
-                        </a>
+            <a
+                href="https://wa.me/5524981417949"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="fixed bottom-2 right-2 z-50 tablet:bottom-6 tablet:right-6 tablet:p-3 hover:scale-110 transition duration-300"
+            >
+                <img src={WhatsappIcon} alt="WhatsApp" className="size-20" />
+            </a>
         </main>
     );
 }
