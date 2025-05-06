@@ -180,8 +180,7 @@ export default function Portilio() {
                 <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" animate="visible" className="w-full laptop:w-1/2 relative z-10 laptop:pl-10 text-left laptop:text-left mt-6 laptop:mt-0 flex items-center">
                     <div>
                         <motion.h2 variants={scaleIn} initial="hidden" whileInView="visible" animate="visible" className="text-2xl font-bold font-quantico">
-                            Transporte de reíduos de obra
-                            Classe RDC, A, B, C, 2A e 2B
+                        Transporte e Destinação de Resíduos
                         </motion.h2>
                         <motion.p variants={fadeIn} initial="hidden" whileInView="visible" animate="visible" className="mt-4 text-lg">
                             Oferecemos soluções eficientes para o transporte de resíduos de obras, abrangendo as classes RDC, A, B, C, 2A e 2B, sempre em conformidade com as normas ambientais. Nossa estrutura conta com veículos adequados para cada tipo de material, garantindo uma logística ágil e segura. Priorizamos a destinação correta dos resíduos, reduzindo impactos ambientais e contribuindo para a sustentabilidade. Atendemos projetos de diferentes portes com compromisso, responsabilidade e eficiência.

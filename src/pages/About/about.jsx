@@ -92,11 +92,13 @@ export default function About() {
                         A GRT Engenharia é uma empresa sólida e experiente, atuando há mais de 10 anos no setor de construção civil e infraestrutura.
                     </h2>
                     <p className="text-2xl text-left text-wrap ml-8 px-8 tablet:px-20 mb-14">
-                        Com mais de uma década de experiência, a GRT Engenharia e Locação é uma empresa consolidada no setor de locação de equipamentos, movimentação e transporte de cargas, movimentação e limpeza industrial, reconhecida pela excelência, confiabilidade e alto padrão de seus serviços.
-                        Com uma frota moderna e uma equipe altamente qualificada, a GRT Engenharia e Locação se destaca na locação de equipamentos de linha amarela e caminhões e na execução de serviços industriais e de terraplenagem e pavimentação, oferecendo soluções personalizadas e eficientes. Nosso compromisso é atender às demandas dos clientes com segurança, inovação e alto desempenho, garantindo resultados que agregam valor e produtividade aos projetos.
-                        Nosso compromisso é garantir segurança, qualidade e eficiência, assegurando a execução de projetos com rigor técnico, inovação e foco em resultados.
+                        Com mais de uma década de experiência, a GRT Engenharia e Locação é uma empresa consolidada no setor de locação de equipamentos, movimentação e transporte de cargas, movimentação e limpeza industrial, reconhecida pela excelência, confiabilidade e alto padrão de seus serviços.</p>
 
-                    </p>
+                        <p className="text-2xl text-left text-wrap ml-8 px-8 tablet:px-20 mb-14">Com uma frota moderna e uma equipe altamente qualificada, a GRT Engenharia e Locação se destaca na locação de equipamentos de linha amarela e caminhões e na execução de serviços industriais e de terraplenagem e pavimentação, oferecendo soluções personalizadas e eficientes. </p>
+                        <p className="text-2xl text-left text-wrap ml-8 px-8 tablet:px-20 mb-14"> Nosso compromisso é atender às demandas dos clientes com segurança, inovação e alto desempenho, garantindo resultados que agregam valor e produtividade aos projetos.
+                        Nosso compromisso é garantir segurança, qualidade e eficiência, assegurando a execução de projetos com rigor técnico, inovação e foco em resultados.</p>
+
+                    
                 </motion.div>
             </section>
 
