@@ -46,7 +46,7 @@ export default function Home() {
                 </div>
             </section>
             <motion.section variants={scaleIn} initial="hidden" whileInView="visible" animate="visible" id="servicos">
-                <h1 className="text-3xl font-bold text-center py-8 font-quantico">Conheça nossos serviços</h1>
+                <h1 className="text-3xl font-bold text-center py-8 font-quantico bg-primary">Conheça nossos serviços</h1>
                 <p className="text-xl text-center py-8">Contamos com uma frota moderna e diversificada, equipada com tecnologia de ponta e operada por profissionais altamente capacitados, prontos para atender com eficiência e segurança às demandas dos setores de construção, movimentação de cargas e materiais, transportes e terraplanagem.</p>
                 <div className="flex flex-col justify-center p-2 mx-10 laptop:flex-row">
                     <div>
@@ -86,9 +86,9 @@ export default function Home() {
                             <p className="text-lg font-bold text-left ml-6">Equipamentos para Movimentação e Transporte:</p>
 
                             <ul className="text-lg font-bold space-x-3 ml-20 ">
-                                <li>🚛 Caminhões Munck</li>
-                                <li> 🚛 Caminhões basculantes;</li>
-                                <li>🚛 Caminhões carroceria;</li>
+                                <li>• Caminhões Munck</li>
+                                <li>• Caminhões basculantes;</li>
+                                <li>• Caminhões carroceria;</li>
 
                             </ul>
                         </div>
@@ -96,14 +96,14 @@ export default function Home() {
                             <p className="text-lg font-bold text-left ml-6">Equipamentos para Terraplanagem e Construção:</p>
 
                             <ul className="text-lg font-bold space-x-3 ml-20 ">
-                                <li> 🚜 Escavadeira hidráulica;</li>
-                                <li> 🚜 Retroescavadeira;</li>
-                                <li> 🚜 Pá carregadeira;</li>
-                                <li>🚜 Trator de esteira;</li>
-                                <li> 🚜 Trator agrícola;</li>
-                                <li> 🚜 Motoniveladora;</li>
-                                <li> 🚜 Rolo compactador;</li>
-                                <li> 🚜 Manipulador telescópico;</li>
+                                <li>• Escavadeira hidráulica;</li>
+                                <li>• Retroescavadeira;</li>
+                                <li>• Pá carregadeira;</li>
+                                <li>• Trator de esteira;</li>
+                                <li>• Trator agrícola;</li>
+                                <li>• Motoniveladora;</li>
+                                <li>• Rolo compactador;</li>
+                                <li>• Manipulador telescópico;</li>
 
                             </ul>
                         </div>
@@ -111,10 +111,10 @@ export default function Home() {
                             <p className="text-lg font-bold text-left ml-6">Equipamentos Especiais:</p>
 
                             <ul className="text-lg font-bold space-x-3 ml-20 ">
-                                <li>🔩 Perfuratriz hidráulica;</li>
-                                <li>🔩 Rompedor hidráulico;</li>
-                                <li>🔩 Tesoura hidráulica;</li>
-                                <li>🔩 Pulverizador hidráulico.</li>
+                                <li>• Perfuratriz hidráulica;</li>
+                                <li>• Rompedor hidráulico;</li>
+                                <li>• Tesoura hidráulica;</li>
+                                <li>• Pulverizador hidráulico.</li>
 
                             </ul>
                         </div>
@@ -131,18 +131,18 @@ export default function Home() {
                             <p className="text-lg font-bold text-left ml-6">Precisa transportar, içar ou movimentar cargas pesadas com segurança e eficiência? </p>
 
                             <ul className="text-lg font-bold space-x-3 ml-20 ">
-                                <li> ✅ Içamento e remoção de equipamentos</li>
-                                <li>✅ Transporte e movimentação de máquinas industriais</li>
-                                <li>✅ Montagem e desmontagem de estruturas metálicas</li>
-                                <li> ✅ Atendimento para indústrias, construção civil e agronegócio</li>
+                                <li>• Içamento e remoção de equipamentos</li>
+                                <li>• Transporte e movimentação de máquinas industriais</li>
+                                <li>• Montagem e desmontagem de estruturas metálicas</li>
+                                <li>• Atendimento para indústrias, construção civil e agronegócio</li>
 
                             </ul>
                         </div>
                     </div>
                 </div>
-                <motion.section variants={scaleIn} initial="hidden" whileInView="visible" animate="visible" id="servicos">
-                    <h1 className="text-3xl font-bold text-center py-8 font-quantico">Compromisso com a Excelência</h1>
-                    <p className="text-xl text-center py-8">Nosso compromisso é fornecer soluções eficientes e personalizadas, por meio de equipamentos modernos e uma equipe altamente qualificada, atendendo com precisão às necessidades do seu projeto.
+                <motion.section variants={scaleIn} initial="hidden" whileInView="visible" animate="visible" id="servicos" className="bg-primary">
+                    <h1 className="text-3xl font-bold text-center py-6 font-quantico">Compromisso com a Excelência</h1>
+                    <p className="text-xl text-center py-6">Nosso compromisso é fornecer soluções eficientes e personalizadas, por meio de equipamentos modernos e uma equipe altamente qualificada, atendendo com precisão às necessidades do seu projeto.
                         Asseguramos segurança, agilidade e qualidade em cada serviço prestado, sempre seguindo os mais altos padrões técnicos e operacionais.
                     </p>
                 </motion.section>
@@ -151,13 +151,15 @@ export default function Home() {
 
                 <h2 className="text-4xl font-quantico font-bold text-center text-primary pt-10 text-nowrap">Áreas de atuação</h2>
                 <div className="flex flex-col h-auto p-10 gap-10 justify-center items-center laptop:flex-row" >
-                    <motion.div className="w-2/5 max-laptop:w-full flex justify-center items-center" variants={fadeIn}>
 
-                        <img className="w-[90vw] h-auto object-cover rounded-md" src={Atuacao} alt="Máquina carregando um caminhão" />
-                    </motion.div>
-                    <motion.div className="w-1/3 max-laptop:w-full flex flex-col justify-center items-start" variants={fadeInUp}>
+                    <motion.div className=" max-laptop:w-full flex flex-col justify-center items-center" variants={fadeInUp}>
 
-                        <p className="text-lg text-left ml-6 leading-8 text-primary">A <span className="font-bold text-2xl">GRT ENGENHARIA E LOCAÇÕES</span> é especialistas na locação de equipamentos de médio e grande porte e na prestação de serviços para os setores de movimentação de cargas, transporte, serviços industriais, terraplenagem e pavimentação. Com uma frota moderna e uma equipe altamente qualificada, garantimos soluções seguras, eficientes e adaptadas às necessidades de cada projeto.</p>
+                        <motion.div className="w-2/3 max-laptop:w-full flex justify-center" variants={fadeIn}>
+
+                            <img className=" h-auto object-cover rounded-md mb-10" src={Atuacao} alt="Máquina carregando um caminhão" />
+                        </motion.div>
+
+                        <p className="text-lg text-left ml-6 leading-8 text-primary">A <span className="font-bold text-xl">GRT ENGENHARIA E LOCAÇÕES</span> é especialistas na locação de equipamentos de médio e grande porte e na prestação de serviços para os setores de movimentação de cargas, transporte, serviços industriais, terraplenagem e pavimentação. Com uma frota moderna e uma equipe altamente qualificada, garantimos soluções seguras, eficientes e adaptadas às necessidades de cada projeto.</p>
                         <p className="text-lg text-left ml-6 leading-8 text-primary">Nossos serviços incluem:</p>
                         <ul className="text-lg text-left ml-12 text-wrap mr-5 text-primary">
                             <li>✔ Movimentação de cargas – Transporte e içamento de containers e equipamentos com segurança e precisão. </li>
@@ -167,7 +169,7 @@ export default function Home() {
                             <li>✔ Demolições de grande porte – Remoção segura e controlada de estruturas robustas.</li>
                             <li>✔ Umidificação de vias e materiais – Redução de poeira e controle ambiental em obras e indústrias. </li>
                             <li>✔ Limpeza industrial – Serviços completos de higienização e manutenção de áreas industriais.
-                            Nosso compromisso é oferecer segurança, qualidade e produtividade, sempre alinhados às melhores práticas do setor.</li>
+                                Nosso compromisso é oferecer segurança, qualidade e produtividade, sempre alinhados às melhores práticas do setor.</li>
 
                         </ul>
                         <Link to="/portifolio">
