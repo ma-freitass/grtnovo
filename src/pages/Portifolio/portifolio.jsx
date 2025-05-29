@@ -100,6 +100,7 @@ export default function Portilio() {
                             Disponibilizamos um portfólio completo de máquinas pesadas e equipamentos operacionais para indústrias, obras de infraestrutura e construção civil. Oferecemos escavadeira hidráulica, pá carregadeira, retroescavadeira, motoniveladoras, tratores, caminhões basculantes, caminhões munck, entre outros.
                             Todos os equipamentos são tecnologicamente atualizados, submetidos a revisões rigorosas e prontos para operação, com foco em produtividade, confiabilidade e segurança.
                             Trabalhamos com planos de locação flexíveis, para contratos de curto e longo prazo, com suporte técnico especializado e atendimento personalizado.
+
                         </motion.p>
                     </div>
                 </motion.div>
@@ -115,21 +116,23 @@ export default function Portilio() {
                     visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.6 } }
                 }} id="movimentacao" className="mx-auto px-6 py-12 flex flex-col laptop:flex-row items-center relative laptop:px-24 laptop:py-10">
                 <div className="w-full laptop:w-1/2 relative z-10">
-                    <img src={Caminhao} alt="Movimentação de cargas" className="w-full h-auto rounded-lg shadow-lg" />
+                    <img src={Caminhao1} alt="Movimentação de cargas" className="w-full h-auto rounded-lg shadow-lg" />
                 </div>
 
 
                 <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" animate="visible" className="w-full laptop:w-1/2 relative z-10 laptop:pl-10 text-left laptop:text-left mt-6 laptop:mt-0 flex items-center">
                     <div>
                         <motion.h2 variants={scaleIn} initial="hidden" whileInView="visible" animate="visible" className="text-2xl font-bold font-quantico">
-                            Movimentação Técnica de Cargas
+                            Escavação, Carga, Transpote e acondicionamento de materiais:
                         </motion.h2>
-                        <motion.p variants={fadeIn} initial="hidden" whileInView="visible" animate="visible" className="mt-4 text-lg">
-                            Executamos serviços especializados em movimentação técnica de cargas, como içamento e remoção de containers e equipamentos industriais, montagem e desmontagem de estruturas metálicas, além de transporte e posicionamento de máquinas pesadas.
-                            Contamos com profissionais certificados e equipamentos dimensionados sob medida para garantir segurança, precisão e conformidade com normas vigentes, otimizando prazos e reduzindo riscos operacionais.
+                        <motion.p variants={fadeIn} initial="hidden" whileInView="visible" animate="visible" className="mt-4 text-lg">• Minério •  Carvão • Escória </motion.p>
+                        <p className="mt-4 text-lg">
+                            Realizamos escavação, carga, transporte e acondicionamento de materiais a granel, como minério, carvão, escória e solos classificados, com equipamentos de grande porte e equipes capacitadas.
+                            Garantimos logística eficiente, rastreabilidade, conformidade técnica e desempenho operacional contínuo, promovendo redução de custos e otimização de processos logísticos.
 
 
-                        </motion.p>
+                        </p>
+
                     </div>
                 </motion.div>
 
@@ -142,22 +145,23 @@ export default function Portilio() {
                     visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.6 } }
                 }} id="escavacao" className="mx-auto px-6 py-12 flex flex-col laptop:flex-row items-center relative laptop:px-24 laptop:py-10 scroll-mt-28">
                 <div className="w-full laptop:w-1/2 relative z-10">
-                    <img src={Caminhao1} alt="Movimentação de cargas" className="w-full h-auto rounded-lg shadow-lg" />
+                    <img src={Caminhao} alt="Movimentação de cargas" className="w-full h-auto rounded-lg shadow-lg" />
                 </div>
 
                 <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" animate="visible" className="w-full laptop:w-1/2 relative z-10 laptop:pl-10 text-left laptop:text-left mt-6 laptop:mt-0 flex items-center">
                     <div>
                         <motion.h2 variants={scaleIn} initial="hidden" whileInView="visible" animate="visible"
                             className="text-2xl font-bold text-primary font-quantico">
-                            Escavação, Carga, Transpote e acondicionamento de materiais:
+                            Movimentação Técnica de Cargas
                         </motion.h2>
-                        <motion.p variants={fadeIn} initial="hidden" whileInView="visible" animate="visible" className="mt-4 text-lg text-primary">• Minério •  Carvão • Escória </motion.p>
-                        <p className="mt-4 text-lg text-primary">
-                            Realizamos escavação, carga, transporte e acondicionamento de materiais a granel, como minério, carvão, escória e solos classificados, com equipamentos de grande porte e equipes capacitadas.
-                            Garantimos logística eficiente, rastreabilidade, conformidade técnica e desempenho operacional contínuo, promovendo redução de custos e otimização de processos logísticos.
+                        <motion.p variants={fadeIn} initial="hidden" whileInView="visible" animate="visible" className="mt-4 text-lg text-primary">
+                            Executamos serviços especializados em movimentação técnica de cargas, como içamento e remoção de containers e equipamentos industriais, montagem e desmontagem de estruturas metálicas, além de transporte e posicionamento de máquinas pesadas.
+                            Contamos com profissionais certificados e equipamentos dimensionados sob medida para garantir segurança, precisão e conformidade com normas vigentes, otimizando prazos e reduzindo riscos operacionais.
 
 
-                        </p>
+
+                        </motion.p>
+
                     </div>
                 </motion.div>
 
@@ -180,10 +184,12 @@ export default function Portilio() {
                 <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" animate="visible" className="w-full laptop:w-1/2 relative z-10 laptop:pl-10 text-left laptop:text-left mt-6 laptop:mt-0 flex items-center">
                     <div>
                         <motion.h2 variants={scaleIn} initial="hidden" whileInView="visible" animate="visible" className="text-2xl font-bold font-quantico">
-                        Transporte e Destinação de Resíduos
+                            Transporte e Destinação de Resíduos
                         </motion.h2>
                         <motion.p variants={fadeIn} initial="hidden" whileInView="visible" animate="visible" className="mt-4 text-lg">
-                            Oferecemos soluções eficientes para o transporte de resíduos de obras, abrangendo as classes RDC, A, B, C, 2A e 2B, sempre em conformidade com as normas ambientais. Nossa estrutura conta com veículos adequados para cada tipo de material, garantindo uma logística ágil e segura. Priorizamos a destinação correta dos resíduos, reduzindo impactos ambientais e contribuindo para a sustentabilidade. Atendemos projetos de diferentes portes com compromisso, responsabilidade e eficiência.
+                            Oferecemos soluções completas para transporte e destinação ambientalmente correta de resíduos da construção civil, abrangendo as classes RDC, A, B, C, 2A e 2B, conforme exigências legais.
+                            Utilizamos frota licenciada, logística rastreável e processos padronizados, assegurando o cumprimento das obrigações ambientais e redução do impacto ecológico.
+
                         </motion.p>
                     </div>
                 </motion.div>
@@ -203,13 +209,12 @@ export default function Portilio() {
                 <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" animate="visible" className="w-full laptop:w-1/2 relative z-10 laptop:pl-10 text-left laptop:text-left mt-6 laptop:mt-0 flex items-center">
                     <div>
                         <motion.h2 variants={scaleIn} initial="hidden" whileInView="visible" animate="visible" className="text-2xl font-bold text-primary font-quantico">
-                            Transporte e abastecimento de combustíveis e lubrificantes
+                            Limpeza industrial
                         </motion.h2>
 
                         <motion.p variants={fadeIn} initial="hidden" whileInView="visible" animate="visible" className="mt-4 text-lg text-primary">
-                            Oferecemos transporte e abastecimento técnico de combustíveis e lubrificantes, com veículos licenciados, controle de qualidade e segurança operacional.
-                            Atendemos obras, plantas industriais e frotas, garantindo agilidade, confiabilidade e continuidade operacional, com foco na redução de paradas e aumento de produtividade.
-
+                            Oferecemos limpeza técnica e operacional para ambientes industriais, áreas de produção e canteiros de obras. Atuamos na remoção de resíduos, poeira, óleos e contaminantes, com equipamentos específicos e técnicas seguras.
+                            Nossos serviços promovem a eficiência produtiva, conservação de equipamentos e segurança dos colaboradores, em total conformidade com as normas de higiene e segurança do trabalho.
                         </motion.p>
                     </div>
                 </motion.div>
@@ -289,12 +294,12 @@ export default function Portilio() {
                 <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" animate="visible" className="w-full laptop:w-1/2 relative z-10 laptop:pl-10 text-left laptop:text-left mt-6 laptop:mt-0 flex items-center">
                     <div>
                         <motion.h2 variants={scaleIn} initial="hidden" whileInView="visible" animate="visible" className="text-2xl font-bold font-quantico">
-                            Limpeza industrial
+                            Transporte e abastecimento de combustíveis e lubrificantes
                         </motion.h2>
 
                         <motion.p variants={fadeIn} initial="hidden" whileInView="visible" animate="visible" className="mt-4 text-lg">
-                            Oferecemos limpeza técnica e operacional para ambientes industriais, áreas de produção e canteiros de obras. Atuamos na remoção de resíduos, poeira, óleos e contaminantes, com equipamentos específicos e técnicas seguras.
-                            Nossos serviços promovem a eficiência produtiva, conservação de equipamentos e segurança dos colaboradores, em total conformidade com as normas de higiene e segurança do trabalho.
+                            Oferecemos transporte e abastecimento técnico de combustíveis e lubrificantes, com veículos licenciados, controle de qualidade e segurança operacional.
+                            Atendemos obras, plantas industriais e frotas, garantindo agilidade, confiabilidade e continuidade operacional, com foco na redução de paradas e aumento de produtividade.
                         </motion.p>
                     </div>
                 </motion.div>

@@ -66,7 +66,7 @@ export default function Home() {
                             <p className="text-lg font-bold text-left ml-6">Realizamos escavação, carga, transporte e acondicionamento de diversos materiais, garantindo eficiência e segurança em cada etapa do processo. </p>
                             <p className="text-lg font-bold text-left ml-6">Materiais que trabalhamos:</p>
 
-                            <ul className="text-lg font-bold space-x-3 ml-20 ">
+                            <ul className="text-lg font-bold list-disc ml-10 pl-4 space-y-1">
                                 <li>• Minério;</li>
                                 <li>• Carvão;</li>
                                 <li>• Escória;</li>
@@ -85,7 +85,7 @@ export default function Home() {
                         <div>
                             <p className="text-lg font-bold text-left ml-6">Equipamentos para Movimentação e Transporte:</p>
 
-                            <ul className="text-lg font-bold space-x-3 ml-20 ">
+                            <ul className="text-lg font-bold list-disc ml-10 pl-4 space-y-1">
                                 <li>• Caminhões Munck</li>
                                 <li>• Caminhões basculantes;</li>
                                 <li>• Caminhões carroceria;</li>
@@ -95,7 +95,7 @@ export default function Home() {
                         <div>
                             <p className="text-lg font-bold text-left ml-6">Equipamentos para Terraplanagem e Construção:</p>
 
-                            <ul className="text-lg font-bold space-x-3 ml-20 ">
+                            <ul className="text-lg font-bold list-disc ml-10 pl-4 space-y-1">
                                 <li>• Escavadeira hidráulica;</li>
                                 <li>• Retroescavadeira;</li>
                                 <li>• Pá carregadeira;</li>
@@ -110,7 +110,7 @@ export default function Home() {
                         <div>
                             <p className="text-lg font-bold text-left ml-6">Equipamentos Especiais:</p>
 
-                            <ul className="text-lg font-bold space-x-3 ml-20 ">
+                            <ul className="text-lg font-bold list-disc ml-10 pl-4 space-y-1">
                                 <li>• Perfuratriz hidráulica;</li>
                                 <li>• Rompedor hidráulico;</li>
                                 <li>• Tesoura hidráulica;</li>
@@ -130,7 +130,7 @@ export default function Home() {
                         <div>
                             <p className="text-lg font-bold text-left ml-6">Precisa transportar, içar ou movimentar cargas pesadas com segurança e eficiência? </p>
 
-                            <ul className="text-lg font-bold space-x-3 ml-20 ">
+                            <ul className="text-lg font-bold list-disc ml-10 pl-4 space-y-1">
                                 <li>• Içamento e remoção de equipamentos</li>
                                 <li>• Transporte e movimentação de máquinas industriais</li>
                                 <li>• Montagem e desmontagem de estruturas metálicas</li>
