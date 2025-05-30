@@ -17,7 +17,7 @@ import Img17 from "../../assets/img17.jpg";
 import Img20 from "../../assets/img20.jpg";
 import Img21 from "../../assets/img21.jpg";
 import Img22 from "../../assets/img22.jpg";
-import Img40 from "../../assets/Img40.jpg";
+import Img40 from "../../assets/img40.jpg";
 import Img41 from "../../assets/Img41.jpg";
 import Img42 from "../../assets/Img42.jpg";     
 import Img43 from "../../assets/Img43.jpg";
