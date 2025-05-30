@@ -69,9 +69,12 @@ export default function Home() {
       </section>
 
       <CarouselFull images={imagens} />
-            <motion.section variants={scaleIn} initial="hidden" whileInView="visible" animate="visible" id="servicos">
-                <h1 className="text-3xl font-bold text-center py-8 font-quantico bg-primary">Conheça nossos serviços</h1>
-                <p className="text-xl text-center py-8">Contamos com uma frota moderna e diversificada, equipada com tecnologia de ponta e operada por profissionais altamente capacitados, prontos para atender com eficiência e segurança às demandas dos setores de construção, movimentação de cargas e materiais, transportes e terraplanagem.</p>
+            <motion.section variants={scaleIn} initial="hidden" whileInView="visible" animate="visible" id="servicos" >
+                <div className="bg-primary">
+
+                <h1 className="text-3xl font-bold text-center py-6 font-quantico">Conheça nossos serviços</h1>
+                <p className="text-xl text-center py-6">Contamos com uma frota moderna e diversificada, equipada com tecnologia de ponta e operada por profissionais altamente capacitados, prontos para atender com eficiência e segurança às demandas dos setores de construção, movimentação de cargas e materiais, transportes e terraplanagem.</p>
+                </div>
                 <div className="flex flex-col justify-center p-2 mx-10 laptop:flex-row">
                     <div>
 
