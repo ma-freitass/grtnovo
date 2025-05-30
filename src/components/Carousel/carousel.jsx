@@ -37,10 +37,10 @@ import Img56 from "../../assets/Img56.jpg";
 import Img57 from "../../assets/Img57.jpg";
 import Img58 from "../../assets/Img58.jpg";
 import Img59 from "../../assets/Img59.jpg";
-import Img60 from "../../assets/Img60.jpg";
-import Img61 from "../../assets/Img61.jpg";
-import Img62 from "../../assets/Img62.jpg";
-import Img63 from "../../assets/Img63.jpg";
+import Img60 from "../../assets/img60.jpg";
+import Img61 from "../../assets/img61.jpg";
+import Img62 from "../../assets/img62.jpg";
+import Img63 from "../../assets/img63.jpg";
 
 export default function Carousel() {
   const images = [
