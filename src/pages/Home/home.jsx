@@ -29,14 +29,14 @@ import Img35 from "../../assets/img35.jpg";
 import Img36 from "../../assets/img36.jpg";
 import Img37 from "../../assets/img37.jpg";
 import Img38 from "../../assets/img38.jpg";
-import Img9 from "../../assets/img9.jpg";
-import Img11 from "../../assets/img11.jpg";
+
+
 import Img13 from "../../assets/img13.jpg"
 import Img18 from "../../assets/img18.jpg"
 import Img19 from "../../assets/img19.jpg"
 const imagens = [
      Img24, Img25, Img26, Img27, Img28, Img29, Img30, Img31,
-    Img32, Img33, Img34, Img35, Img36, Img37, Img38, Img9, Img11, Img13, Img18, Img19
+    Img32, Img33, Img34, Img35, Img36, Img37, Img38, Img13, Img18, Img19
 ];
 
 export default function Home() {
