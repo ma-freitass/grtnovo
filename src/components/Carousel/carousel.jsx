@@ -24,6 +24,8 @@ import Img22 from "../../assets/img22.jpg"
 import Img23 from "../../assets/img23.jpg"
 
 
+import PropTypes from "prop-types";
+
 export default function Carousel() {
     const PrevArrow = (props) => {
         const { onClick } = props;
@@ -35,7 +37,11 @@ export default function Carousel() {
                 ❮
             </button>
         );
-    }
+    };
+
+    PrevArrow.propTypes = {
+        onClick: PropTypes.func,
+    };
 
     const NextArrow = (props) => {
         const { onClick } = props;
@@ -48,6 +54,10 @@ export default function Carousel() {
             </button>
         );
     };
+
+    NextArrow.propTypes = {
+        onClick: PropTypes.func,
+    };
     const images = [Img1, Img2, Img3, Img4, Img5, Img6, Img7, Img8, Img9, Img10, Img11, Img12, Img13, Img14, Img15, Img16, Img17, Img18, Img19, Img20, Img21, Img22, Img23,];
     const settings = {
         dots: true,
@@ -58,7 +68,6 @@ export default function Carousel() {
         slidesToScroll: 1,
         //waitForAnimate: false,
         autoplay: true,
-        speed: 2000,
         autoplaySpeed: 1000,
         cssEase: "linear",
         nextArrow: <NextArrow />,

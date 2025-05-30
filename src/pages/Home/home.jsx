@@ -13,8 +13,26 @@ import MBP from "../../assets/mbp.png"
 import SG from "../../assets/sg.png"
 import Final from "../../assets/final.png"
 import WhatsappIcon from "../../assets/whats.png"
-
-
+import CarouselFull from "../../components/Carousel/carousselFull";
+import Img24 from "../../assets/img24.jpg";
+import Img25 from "../../assets/img25.jpg";
+import Img26 from "../../assets/img26.jpg";
+import Img27 from "../../assets/img27.jpg";
+import Img28 from "../../assets/img28.jpg";
+import Img29 from "../../assets/img29.jpg";
+import Img30 from "../../assets/img30.jpg";
+import Img31 from "../../assets/img31.jpg";
+import Img32 from "../../assets/img32.jpg";
+import Img33 from "../../assets/img33.jpg";
+import Img34 from "../../assets/img34.jpg";
+import Img35 from "../../assets/img35.jpg";
+import Img36 from "../../assets/img36.jpg";
+import Img37 from "../../assets/img37.jpg";
+import Img38 from "../../assets/img38.jpg";
+const imagens = [
+     Img24, Img25, Img26, Img27, Img28, Img29, Img30, Img31,
+    Img32, Img33, Img34, Img35, Img36, Img37, Img38
+];
 
 export default function Home() {
     const fadeInUp = {
@@ -31,20 +49,21 @@ export default function Home() {
         hidden: { scale: 0.8, opacity: 0 },
         visible: { scale: 1, opacity: 1, transition: { duration: 1, delay: 0.5 } }
     };
+
     return (
         <main>
-            <section>
-                <div>
-                    <motion.img
-                        className="h-[40%] w-[100%] pb-7"
-                        src={Fundo}
-                        alt="Equipamentos"
-                        initial={{ clipPath: "inset(100% 0 0 0)" }}
-                        animate={{ clipPath: "inset(0% 0 0 0)" }}
-                        transition={{ duration: 1.5, ease: "easeOut" }}
-                    />
-                </div>
-            </section>
+             <section>
+        <motion.img
+          className="h-[40%] w-full pb-7"
+          src={Fundo}
+          alt="Equipamentos"
+          initial={{ clipPath: "inset(100% 0 0 0)" }}
+          animate={{ clipPath: "inset(0% 0 0 0)" }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+        />
+      </section>
+
+      <CarouselFull images={imagens} />
             <motion.section variants={scaleIn} initial="hidden" whileInView="visible" animate="visible" id="servicos">
                 <h1 className="text-3xl font-bold text-center py-8 font-quantico bg-primary">Conheça nossos serviços</h1>
                 <p className="text-xl text-center py-8">Contamos com uma frota moderna e diversificada, equipada com tecnologia de ponta e operada por profissionais altamente capacitados, prontos para atender com eficiência e segurança às demandas dos setores de construção, movimentação de cargas e materiais, transportes e terraplanagem.</p>
