@@ -10,19 +10,22 @@ import Escavadeira2 from "../../assets/escavadeira2.png";
 import WhatsappIcon from "../../assets/whats.png";
 
 export default function About() {
-    const sectionsRef = useRef([]);
+    const sectionsRef = useRef([]); // Referências para as seções da página
     const [visibleSections, setVisibleSections] = useState(Array(sectionsRef.current.length).fill(false));
 
+    // Animação de fade com leve movimento vertical
     const fadeInUp = {
         hidden: { opacity: 0, y: 20 },
         visible: { opacity: 1, y: 0 },
     };
 
+    // Animação de fade sem movimento
     const fadeIn = {
         hidden: { opacity: 0 },
         visible: { opacity: 1 },
     };
 
+    // Observer para ativar animações ao rolar para a seção
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
@@ -40,25 +43,22 @@ export default function About() {
             });
         }, { threshold: 0.1 });
 
+        // Observa cada seção referenciada
         sectionsRef.current.forEach((section) => {
-            if (section) {
-                observer.observe(section);
-            }
+            if (section) observer.observe(section);
         });
 
         return () => {
-            if (sectionsRef.current) {
-                sectionsRef.current.forEach((section) => {
-                    if (section) {
-                        observer.unobserve(section);
-                    }
-                });
-            }
+            // Limpeza do observer
+            sectionsRef.current.forEach((section) => {
+                if (section) observer.unobserve(section);
+            });
         };
     }, []);
 
     return (
         <main>
+            {/* Seção: Título e imagem principal */}
             <section ref={(el) => (sectionsRef.current[0] = el)}>
                 <motion.div
                     initial={{ opacity: 0, x: -100 }}
@@ -66,7 +66,7 @@ export default function About() {
                     transition={{ duration: 0.5 }}
                     className="bg-gradient-to-b from-faixa1 to-faixa2 w-full h-auto px-6 tablet:px-20"
                 >
-                    <h3 className="text-primary uppercase text-1xl pt-8 text-left ml-8">a empresa</h3>
+                    <h3 className="text-primary uppercase text-1xl pt-8 text-left ml-8">A Empresa</h3>
                     <h2 className="text-primary uppercase text-2xl font-bold text-left ml-8 pb-8 font-quantico">
                         Sobre a GRT Engenharia
                     </h2>
@@ -81,6 +81,7 @@ export default function About() {
                 </motion.div>
             </section>
 
+            {/* Seção: Texto institucional */}
             <section ref={(el) => (sectionsRef.current[1] = el)}>
                 <motion.div
                     initial="hidden"
@@ -89,19 +90,24 @@ export default function About() {
                     transition={{ duration: 0.5, delay: 0.6 }}
                 >
                     <h2 className="text-3xl font-bold text-left ml-8 py-10 tablet:px-20 tablet:py-10 font-quantico">
-                        A GRT Engenharia é uma empresa sólida e experiente, atuando há mais de 10 anos no setor de construção civil e infraestrutura.
+                        A GRT Engenharia é uma empresa sólida e experiente, com mais de 10 anos de atuação na construção civil e infraestrutura.
                     </h2>
+
                     <p className="text-2xl text-left text-wrap ml-8 px-8 tablet:px-20 mb-14">
-                        Com mais de uma década de experiência, a GRT Engenharia e Locação é uma empresa consolidada no setor de locação de equipamentos, movimentação e transporte de cargas, movimentação e limpeza industrial, reconhecida pela excelência, confiabilidade e alto padrão de seus serviços.</p>
+                        Ao longo de sua trajetória, a GRT Engenharia e Locação consolidou-se no setor de locação de equipamentos, transporte e movimentação de cargas, além de serviços de limpeza e movimentação industrial. É reconhecida por sua excelência, confiabilidade e alto padrão de entrega.
+                    </p>
 
-                        <p className="text-2xl text-left text-wrap ml-8 px-8 tablet:px-20 mb-14">Com uma frota moderna e uma equipe altamente qualificada, a GRT Engenharia e Locação se destaca na locação de equipamentos de linha amarela e caminhões e na execução de serviços industriais e de terraplenagem e pavimentação, oferecendo soluções personalizadas e eficientes. </p>
-                        <p className="text-2xl text-left text-wrap ml-8 px-8 tablet:px-20 mb-14"> Nosso compromisso é atender às demandas dos clientes com segurança, inovação e alto desempenho, garantindo resultados que agregam valor e produtividade aos projetos.
-                        Nosso compromisso é garantir segurança, qualidade e eficiência, assegurando a execução de projetos com rigor técnico, inovação e foco em resultados.</p>
+                    <p className="text-2xl text-left text-wrap ml-8 px-8 tablet:px-20 mb-14">
+                        Com uma frota moderna e equipe qualificada, destaca-se na locação de equipamentos de linha amarela e caminhões, além da execução de serviços industriais, terraplenagem e pavimentação. Oferece soluções personalizadas e eficazes.
+                    </p>
 
-                    
+                    <p className="text-2xl text-left text-wrap ml-8 px-8 tablet:px-20 mb-14">
+                        Temos como prioridade atender às demandas com segurança, inovação e alto desempenho, sempre buscando agregar valor e aumentar a produtividade. Nosso compromisso é a entrega de projetos com rigor técnico e foco em resultados.
+                    </p>
                 </motion.div>
             </section>
 
+            {/* Seção: Equipe e diferencial humano */}
             <section ref={(el) => (sectionsRef.current[2] = el)} className="mx-auto px-6 py-12 flex flex-col items-center relative laptop:flex-row laptop:items-center laptop:px-24 laptop:py-10">
                 <motion.div
                     initial="hidden"
@@ -120,14 +126,14 @@ export default function About() {
                     className="w-full relative z-10 laptop:pl-10 text-left laptop:text-left mt-6 flex items-center laptop:mt-0"
                 >
                     <p className="mt-4 text-lg text-primary">
-                        Contamos com uma equipe de profissionais altamente qualificados, treinados e em constante atualização para oferecer serviços com precisão, eficiência e segurança. Nosso time é composto por especialistas experientes, preparados para atuar em locação de equipamentos, movimentação de cargas, transporte, terraplenagem, pavimentação, limpeza industrial e movimentação industrial, garantindo excelência em cada etapa dos projetos.
-                        Nosso compromisso com a capacitação contínua e o cumprimento rigoroso das normas técnicas e de segurança assegura a entrega de soluções confiáveis e alinhadas às necessidades específicas de cada cliente. Com uma equipe dedicada e qualificada, proporcionamos maior produtividade, redução de riscos operacionais e resultados de alto padrão.
-
+                        Contamos com uma equipe de profissionais qualificados e em constante atualização, preparados para atuar com eficiência, precisão e segurança. Nossa expertise abrange locação de equipamentos, transporte, terraplenagem, pavimentação, limpeza e movimentação industrial.
+                        Priorizamos o cumprimento das normas técnicas e de segurança, assegurando a entrega de soluções confiáveis, com redução de riscos e alto desempenho operacional.
                     </p>
                 </motion.div>
                 <div className="absolute right-0 top-0 h-full lg:w-[80%] w-full laptop:w-2/3 bg-gradient-to-b from-faixa1 to-faixa2 z-0"></div>
             </section>
 
+            {/* Seção: Inovação e Sustentabilidade */}
             <section ref={(el) => (sectionsRef.current[3] = el)} className="flex flex-col items-center laptop:grid laptop:grid-cols-2 w-full gap-8 px-6 tablet:px-12 laptop:px-24 py-12">
                 <motion.div
                     initial="hidden"
@@ -138,11 +144,7 @@ export default function About() {
                 >
                     <img className="rounded-xl object-cover w-full h-[450%]" src={Escavadeira1} alt="Escavadeira em obra" />
                     <p className="text-lg text-center laptop:text-left text-titulo leading-8 mt-4">
-                        A tecnologia e a inovação são fundamentais para o sucesso de cada projeto.
-                        Investimos em métodos e ferramentas que maximizam a eficiência e minimizam os impactos ambientais,
-                        refletindo nosso compromisso com a sustentabilidade. Além disso, oferecemos um atendimento
-                        personalizado, que se destaca pelo relacionamento próximo com nossos clientes e pelo entendimento
-                        pleno de suas necessidades.
+                        A inovação é essencial para o sucesso dos nossos projetos. Investimos constantemente em tecnologias e métodos que aumentam a eficiência e reduzem os impactos ambientais. Nosso atendimento é personalizado e focado no entendimento completo das necessidades de cada cliente.
                     </p>
                 </motion.div>
 
@@ -155,14 +157,12 @@ export default function About() {
                 >
                     <img className="rounded-xl object-cover w-full h-[550%]" src={Escavadeira2} alt="Escavadeira em galpão" />
                     <div className="bg-gradient-to-b from-faixa1 to-faixa2 w-full p-6 text-primary text-lg leading-8 text-center laptop:text-left -mt-10 relative z-10 rounded-xl">
-                        Estamos preparados para enfrentar qualquer desafio no setor de construção civil,
-                        contribuindo para o desenvolvimento de projetos que agregam valor e impactam positivamente
-                        a comunidade. Conte com a GRT Engenharia e Locações para transformar suas ideias em realidade,
-                        com qualidade, segurança e um olhar voltado para o futuro.
+                        Estamos prontos para encarar os desafios da construção civil, colaborando para projetos de alto impacto e valor agregado. A GRT Engenharia e Locações é sua parceira para transformar ideias em realidade, com qualidade, segurança e foco no futuro.
                     </div>
                 </motion.div>
             </section>
 
+            {/* Seção: Missão, Visão e Valores */}
             <section ref={(el) => (sectionsRef.current[4] = el)} className="px-16 py-10 w-full h-auto flex flex-col justify-center items-center tablet:grid tablet:grid-cols-3 tablet:gap-8 tablet:place-items-center desktop:place-items-center">
                 <motion.div
                     initial="hidden"
@@ -171,7 +171,6 @@ export default function About() {
                     transition={{ duration: 0.5, delay: 1.2 }}
                 >
                     <img className="w-60 h-auto" src={Missao} alt="Missão" />
-
                 </motion.div>
                 <motion.div
                     initial="hidden"
@@ -180,7 +179,6 @@ export default function About() {
                     transition={{ duration: 0.5, delay: 1.4 }}
                 >
                     <img className="w-60 h-auto" src={Visao} alt="Visão" />
-
                 </motion.div>
                 <motion.div
                     initial="hidden"
@@ -189,7 +187,6 @@ export default function About() {
                     transition={{ duration: 0.5, delay: 1.6 }}
                 >
                     <img className="w-60 h-auto" src={Valores} alt="Valores" />
-
                 </motion.div>
             </section>
             <a

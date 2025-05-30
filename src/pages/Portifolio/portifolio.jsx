@@ -342,20 +342,20 @@ export default function Portilio() {
                 <div className="flex flex-col justify-center items-center  content-center laptop:grid laptop:grid-cols-2   laptop:px-20">
                     <div className="relative">
                         <img className=" rounded-lg mt-6 w-96 tablet:w-[80%] laptop:w-[80%]" src={Image} alt="" />
-                        <p className="text-sm text-left  text-primary absolute bottom-0 w-96 pl-3 bg-gradient-to-tr from-faixa3/90 to-transparent text-nowrap tablet:text-2xl tablet:w-[80%] laptop:w-[80%] laptop:text-base">Experiência consolidada no mercado.</p>
+                        <p className="text-sm text-left  text-primary absolute bottom-0 w-full pl-3 bg-gradient-to-tr from-faixa3/90 to-transparent text-nowrap tablet:text-2xl tablet:w-[80%] laptop:w-[80%] laptop:text-base">Experiência consolidada no mercado.</p>
                     </div>
                     <div className="relative">
                         <img className="rounded-lg mt-6 w-96 tablet:w-[80%] laptop:w-[80%]" src={Image1} alt="" />
-                        <p className="text-sm text-right flex pl-2 text-primary absolute bottom-0 w-96 bg-gradient-to-tr from-faixa3/95 to-transparent tablet:text-2xl tablet:w-[80%] tablet:text-nowrap laptop:w-[80%] laptop:text-lg">Equipamentos de ponta e equipe qualificada</p>
+                        <p className="text-sm text-right flex pl-2 text-primary absolute bottom-0 w-full bg-gradient-to-tr from-faixa3/95 to-transparent tablet:text-2xl tablet:w-[80%] tablet:text-nowrap laptop:w-[80%] laptop:text-base">Equipamentos de ponta e equipe qualificada</p>
                     </div>
                     <div className="relative">
-                        <img className="r-20 rounded-lg mt-6 w-96 h-auto tablet:w-[70%] laptop:w-[80%]" src={Image3} alt="" />
-                        <p className="text-sm  text-left text-wrap  text-primary pl-3 absolute bottom-0 w-96 bg-gradient-to-tr from-faixa3/95 to-transparent  tablet:text-2xl tablet:w-[70%] tablet:text-nowrap laptop:w-[80%] laptop:text-lg">Soluções personalizadas para cada cliente.
+                        <img className="r-20 rounded-lg mt-6 w-96 h-auto tablet:w-[80%] laptop:w-[80%]" src={Image3} alt="" />
+                        <p className="text-sm  text-left text-wrap  text-primary pl-3 absolute bottom-0 w-full bg-gradient-to-tr from-faixa3/95 to-transparent  tablet:text-2xl tablet:w-[70%] tablet:text-nowrap laptop:w-[80%] laptop:text-base">Soluções personalizadas para cada cliente.
                         </p>
                     </div>
                     <div className="relative ">
                         <img className=" rounded-lg mt-6 w-96 tablet:w-[80%] laptop:w-[80%] " src={Image2} alt="" />
-                        <p className="text-sm  text-right flex pl-3 text-primary absolute bottom-0 w-96 bg-gradient-to-tr from-faixa3/95 to-transparent tablet:text-2xl tablet:w-[80%] tablet:text-nowrap laptop:w-[80%] laptop:text-base">Compromisso com prazos e qualidade.</p>
+                        <p className="text-sm  text-right flex pl-3 text-primary absolute bottom-0 w-full bg-gradient-to-tr from-faixa3/95 to-transparent tablet:text-2xl tablet:w-[80%] tablet:text-nowrap laptop:w-[80%] laptop:text-base">Compromisso com prazos e qualidade.</p>
                     </div>
                 </div>
             </motion.section>

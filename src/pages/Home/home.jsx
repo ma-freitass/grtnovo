@@ -153,7 +153,7 @@ export default function Home() {
                                 whileInView={{ opacity: 1, clipPath: "inset(0% 0 0 0)" }}
                                 transition={{ duration: 1.5, ease: "easeOut" }} />
                         </Link>
-                        <p className="text-lg font-bold text-left ml-6">- Movimentação de carga</p>
+                        <p className="text-lg font-bold text-left ml-6"> Movimentação de carga</p>
                         <div>
                             <p className="text-lg font-bold text-left ml-6">Precisa transportar, içar ou movimentar cargas pesadas com segurança e eficiência? </p>
 
