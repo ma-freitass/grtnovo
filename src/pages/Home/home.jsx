@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from 'react-router-dom';
-import Fundo from "../../assets/fundo.jpg"
+
 import Escavadeira from "../../assets/escavadeira.jpg"
 import Equipamentos from "../../assets/equipamentos.jpg"
 import Carga from "../../assets/carga.jpg"
@@ -29,13 +29,13 @@ import Img35 from "../../assets/img35.jpg";
 import Img36 from "../../assets/img36.jpg";
 import Img37 from "../../assets/img37.jpg";
 import Img38 from "../../assets/img38.jpg";
-
-
+import ISO from "../../assets/iso.png"
+import Equipamentos1 from "../../assets/equipamentos1.png"
 import Img13 from "../../assets/img13.jpg"
 import Img18 from "../../assets/img18.jpg"
 import Img19 from "../../assets/img19.jpg"
 const imagens = [
-     Img24, Img25, Img26, Img27, Img28, Img29, Img30, Img31,
+    Img24, Img25, Img26, Img27, Img28, Img29, Img30, Img31,
     Img32, Img33, Img34, Img35, Img36, Img37, Img38, Img13, Img18, Img19
 ];
 
@@ -57,23 +57,50 @@ export default function Home() {
 
     return (
         <main>
-             <section>
-        <motion.img
-          className="h-[40%] w-full pb-7"
-          src={Fundo}
-          alt="Equipamentos"
-          initial={{ clipPath: "inset(100% 0 0 0)" }}
-          animate={{ clipPath: "inset(0% 0 0 0)" }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
-        />
-      </section>
+            {/* Container relativo para posicionamento absoluto do selo ISO e efeitos visuais */}
+            <section className="relative w-full overflow-hidden">            
+                {/* Selo ISO fixado no canto superior esquerdo */}
+                <motion.img
+                    src={ISO}
+                    alt="Certificação ISO 9001"
+                    className="absolute top-2 left-2 w-24 sm:w-28 md:w-32 lg:w-36 z-10"
+                    initial={{ opacity: 0, x: -30 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
+                />
 
-      <CarouselFull images={imagens} />
+                {/* Imagem de fundo com efeito de revelação (clipPath) */}
+                <motion.img
+  className="w-full pb-7 relative z-0"
+  src={Equipamentos1}
+  alt="Equipamentos"
+  initial={{ opacity: 0, x: -50, y: -50, scale: 1.1 }}
+  animate={{ opacity: 1, x: 0, y: 0, scale: 1 }}
+  transition={{ duration: 1.8, ease: "easeInOut" }}
+/>
+            </section>
+            {/* Frase com animação de entrada */}
+            <section className="flex justify-center items-center px-4 py-8 bg-primary">
+                <motion.h1
+                    initial={{ opacity: 0, y: 40 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{
+                        duration: 1.2,
+                        ease: "easeOut",
+                        delay: 0.4,
+                    }}
+                    className="font-ethnocentric text-titulo text-center text-2xl md:text-4xl leading-snug"
+                >
+                    GRT Engenharia e Locações – Mais que máquinas. Conectamos inovação à produtividade.
+                </motion.h1>
+            </section>
+
+            <CarouselFull images={imagens} />
             <motion.section variants={scaleIn} initial="hidden" whileInView="visible" animate="visible" id="servicos" >
                 <div className="bg-primary">
 
-                <h1 className="text-3xl font-bold text-center py-6 font-quantico">Conheça nossos serviços</h1>
-                <p className="text-xl text-center py-6">Contamos com uma frota moderna e diversificada, equipada com tecnologia de ponta e operada por profissionais altamente capacitados, prontos para atender com eficiência e segurança às demandas dos setores de construção, movimentação de cargas e materiais, transportes e terraplanagem.</p>
+                    <h1 className="text-3xl font-bold text-center py-6 font-quantico">Conheça nossos serviços</h1>
+                    <p className="text-xl text-center py-6">Disponibilizamos uma frota diversificada e moderna, equipada com tecnologia avançada e conduzida por profissionais especializados, garantindo eficiência operacional e máxima segurança na execução de transportes, movimentação de cargas e materiais, em indústrias, construção civil e terraplanagem.</p>
                 </div>
                 <div className="flex flex-col justify-center p-2 mx-10 laptop:flex-row">
                     <div>
@@ -89,8 +116,8 @@ export default function Home() {
                             />
                         </Link>
                         <div>
-
-                            <p className="text-lg font-bold text-left ml-6">Realizamos escavação, carga, transporte e acondicionamento de diversos materiais, garantindo eficiência e segurança em cada etapa do processo. </p>
+                            <p className="text-2xl font-bold text-center py-6 font-quantico">Escavação e transporte de materiais</p>
+                            <p className="text-lg font-bold text-left ml-6">Executamos serviços especializados de escavação, carregamento, transporte e acondicionamento de materiais diversos, com rigor técnico e segurança em todas as etapas.</p>
                             <p className="text-lg font-bold text-left ml-6">Materiais que trabalhamos:</p>
 
                             <ul className="text-lg font-bold list-disc ml-10 pl-4 space-y-1">
@@ -108,14 +135,17 @@ export default function Home() {
                                 whileInView={{ opacity: 1, clipPath: "inset(0% 0 0 0)" }}
                                 transition={{ duration: 1.5, ease: "easeOut" }} />
                         </Link>
-                        <p className="text-lg font-bold text-left ml-6">Aluguel de máquinas e equipamentos, mas não se limitando a:</p>
+                        <p className="text-2xl font-bold text-center py-6 font-quantico">Aluguel de máquinas e equipamentos</p>
+                        <p className="text-lg font-bold text-left ml-6">Locação flexível de máquinas e equipamentos, incluindo: </p>
                         <div>
-                            <p className="text-lg font-bold text-left ml-6">Equipamentos para Movimentação e Transporte:</p>
+                            <p className="text-lg font-bold text-left ml-6">Equipamentos para transporte e movimentação: </p>
 
                             <ul className="text-lg font-bold list-disc ml-10 pl-4 space-y-1">
                                 <li>• Caminhões Munck</li>
                                 <li>• Caminhões basculantes;</li>
                                 <li>• Caminhões carroceria;</li>
+                                <li>• Carreta prancha;</li>
+                                <li>• Carreta basculante;</li>
 
                             </ul>
                         </div>
@@ -131,6 +161,7 @@ export default function Home() {
                                 <li>• Motoniveladora;</li>
                                 <li>• Rolo compactador;</li>
                                 <li>• Manipulador telescópico;</li>
+                                <li>• Empilhadeira;</li>
 
                             </ul>
                         </div>
@@ -153,9 +184,9 @@ export default function Home() {
                                 whileInView={{ opacity: 1, clipPath: "inset(0% 0 0 0)" }}
                                 transition={{ duration: 1.5, ease: "easeOut" }} />
                         </Link>
-                        <p className="text-lg font-bold text-left ml-6"> Movimentação de carga</p>
+                        <p className="text-2xl font-bold text-center py-6 font-quantico">Movimentação de carga</p>
                         <div>
-                            <p className="text-lg font-bold text-left ml-6">Precisa transportar, içar ou movimentar cargas pesadas com segurança e eficiência? </p>
+                            <p className="text-lg font-bold text-left ml-6">Movimentação especializada de cargas pesadas, necessita transportar ou içar equipamentos e materiais com total segurança e alta performance?</p>
 
                             <ul className="text-lg font-bold list-disc ml-10 pl-4 space-y-1">
                                 <li>• Içamento e remoção de equipamentos</li>
@@ -169,8 +200,7 @@ export default function Home() {
                 </div>
                 <motion.section variants={scaleIn} initial="hidden" whileInView="visible" animate="visible" id="servicos" className="bg-primary">
                     <h1 className="text-3xl font-bold text-center py-6 font-quantico">Compromisso com a Excelência</h1>
-                    <p className="text-xl text-center py-6">Nosso compromisso é fornecer soluções eficientes e personalizadas, por meio de equipamentos modernos e uma equipe altamente qualificada, atendendo com precisão às necessidades do seu projeto.
-                        Asseguramos segurança, agilidade e qualidade em cada serviço prestado, sempre seguindo os mais altos padrões técnicos e operacionais.
+                    <p className="text-xl text-center py-6">Nosso compromisso é oferecer soluções personalizadas e de alta eficiência operacional. Com equipamentos modernos e profissionais altamente qualificados, atendemos com precisão cada necessidade, assegurando segurança, agilidade e excelência técnica em todas as operações.
                     </p>
                 </motion.section>
             </motion.section>
@@ -186,17 +216,16 @@ export default function Home() {
                             <img className=" h-auto object-cover rounded-md mb-10" src={Atuacao} alt="Máquina carregando um caminhão" />
                         </motion.div>
 
-                        <p className="text-lg text-left ml-6 leading-8 text-primary">A <span className="font-bold text-xl">GRT ENGENHARIA E LOCAÇÕES</span> é especialistas na locação de equipamentos de médio e grande porte e na prestação de serviços para os setores de movimentação de cargas, transporte, serviços industriais, terraplenagem e pavimentação. Com uma frota moderna e uma equipe altamente qualificada, garantimos soluções seguras, eficientes e adaptadas às necessidades de cada projeto.</p>
-                        <p className="text-lg text-left ml-6 leading-8 text-primary">Nossos serviços incluem:</p>
+                        <p className="text-lg text-left ml-6 leading-8 text-primary">A <span className="font-bold text-xl">GRT ENGENHARIA E LOCAÇÕES</span> é especialista na locação de equipamentos industriais de médio e grande porte e em serviços integrados para transporte, movimentação de cargas, terraplenagem e pavimentação. Contamos com frota avançada e equipe técnica especializada, entregando soluções eficientes, seguras e adaptadas às demandas de cada cliente.</p>
+                        <p className="text-2xl font-bold text-center py-6 font-quantico text-primary">Serviços detalhados</p>
                         <ul className="text-lg text-left ml-12 text-wrap mr-5 text-primary">
-                            <li>✔ Movimentação de cargas – Transporte e içamento de containers e equipamentos com segurança e precisão. </li>
-                            <li>✔ Movimentação industrial, escavação, carga e transporte de materiais – Manuseio e acondicionamento de minério, carvão, escória e solos de 1ª, 2ª e 3ª categoria.</li>
-                            <li>✔ Transporte de resíduos de obra – Coleta e destinação correta de materiais das classes RDC, A, B, C, 2A e 2B.</li>
-                            <li>✔ Transporte e abastecimento – Fornecimento de combustíveis e lubrificantes para operações industriais e de campo.</li>
-                            <li>✔ Demolições de grande porte – Remoção segura e controlada de estruturas robustas.</li>
-                            <li>✔ Umidificação de vias e materiais – Redução de poeira e controle ambiental em obras e indústrias. </li>
-                            <li>✔ Limpeza industrial – Serviços completos de higienização e manutenção de áreas industriais.
-                                Nosso compromisso é oferecer segurança, qualidade e produtividade, sempre alinhados às melhores práticas do setor.</li>
+                            <li>• Movimentação industrial: Escavação, carregamento e transporte técnico de minério, carvão, escória e solos (categorias 1, 2 e 3).</li>
+                            <li>• Movimentação de cargas: Transporte e içamento seguro e preciso de contêineres e equipamentos diversos.</li>
+                            <li>• Demolições de grande porte: Desmontagem controlada e segura de estruturas robustas.</li>
+                            <li>• Transporte de resíduos: Gestão ambiental com coleta e destinação correta de resíduos industriais (classes RDC, A, B, C, 2A e 2B).</li>
+                            <li>• Transporte e abastecimento: Fornecimento contínuo de combustíveis e lubrificantes para operações industriais e em campo.</li>
+                            <li>• Umidificação de vias: Redução eficaz de poeira e controle ambiental em obras e instalações industriais.</li>
+                            <li>• Limpeza industrial: Higienização completa de áreas industriais, visando qualidade, produtividade e preservação ambiental.</li>
 
                         </ul>
                         <Link to="/portifolio">
@@ -284,8 +313,8 @@ export default function Home() {
                     <motion.img className="rounded-xl my-6 mx-8 object-cover w-1/2 max-laptop:w-full h-auto justify-center" src={Final} alt="" variants={scaleIn} initial="hidden" whileInView="visible" animate="visible" />
                     <div className="w-full h-auto place-content-center">
 
-                        <motion.h2 className="text-4xl font-quantico font-bold text-left text-primary pt-6 ml-8" variants={fadeInUp} initial="hidden" whileInView="visible" animate="visible">Faça seu orçamento!</motion.h2>
-                        <motion.p className="text-lg text-left ml-6 leading-8 text-primary p-4" variants={scaleIn} initial="hidden" whileInView="visible" animate="visible">A GRT Engenharia e Locações está pronta para transformar seus desafios em soluções. Entre em contato conosco e descubra como podemos ajudar você a alcançar o sucesso em seus projetos com qualidade, segurança e eficiência.</motion.p>
+                        <motion.h2 className="text-4xl font-quantico font-bold text-left text-primary pt-6 ml-8" variants={fadeInUp} initial="hidden" whileInView="visible" animate="visible">Solicite seu orçamento! </motion.h2>
+                        <motion.p className="text-lg text-left ml-6 leading-8 text-primary p-4" variants={scaleIn} initial="hidden" whileInView="visible" animate="visible">A GRT Engenharia e Locações transformam seus desafios em soluções práticas e rentáveis. Entre em contato e descubra como podemos impulsionar o sucesso do seu projeto com qualidade, segurança e alta eficiência operacional.</motion.p>
                         <Link to="/contact">
                             <motion.button
                                 className="bg-primary px-20 py-4 rounded-lg ml-20 my-6 font-bold"

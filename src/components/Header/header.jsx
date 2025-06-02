@@ -75,7 +75,7 @@ export default function Header() {
             <div className="fixed laptop:hidden inset-0 bg-primary/40 backdrop-blur-md"></div>
             <ul className="w-[30vw] laptop:flex justify-around laptop:flex-wrap max-laptop:z-50  max-laptop:divide-y-2 max-laptop:divide-titulo/10 max-laptop:absolute text-2xl max-laptop:p-20 max-laptop:w-full">
               <li className="laptop:hover:underline laptop:hover:underline-offset-4 p-4 block max-laptop:hover:bg-titulo/10 laptop:px-0 laptop:py-2">
-                <Link to="/">Home</Link>
+                <Link to="/">Início</Link>
               </li>
               <li className="laptop:hover:underline laptop:hover:underline-offset-4 p-4 block max-laptop:hover:bg-titulo/10 laptop:px-0 laptop:py-2">
                 <Link to="/about">Sobre</Link>

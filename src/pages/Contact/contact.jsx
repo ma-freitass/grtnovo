@@ -57,8 +57,8 @@ export default function Contact() {
       </section>
 
       <section className="bg-primary flex flex-col justify-center p-16 tablet:flex-row">
-        <article className="bg-gradient-to-b from-faixa1 to-faixa2 text-branco h-[30vh] w-auto text-center flex flex-col justify-evenly rounded-md tablet:w-1/2 tablet:h-[45vh] laptop:h-[60vh] laptop:w-1/3">
-          <h2 className="font-quantico font-bold text-2xl">Tire Suas Dúvidas</h2>
+        <article className="bg-gradient-to-b from-faixa1 to-faixa2 text-branco h-[30vh] w-auto text-center flex flex-col justify-evenly rounded-md tablet:w-1/2 tablet:h-[45vh] laptop:h-auto laptop:w-1/2">
+          <h2 className="font-quantico font-bold text-2xl">Fale Conosco – Estamos prontos para atender você.</h2>
           <p>contato@grtengenharia.com.br</p>
           <p>
             +55 24 3350-1815
@@ -95,24 +95,24 @@ export default function Contact() {
 
         <form
           onSubmit={handleSubmit}
-          className="bg-branco h-auto w-auto rounded-md flex flex-col justify-evenly tablet:w-1/2 laptop:w-[30%]"
+          className="bg-branco h-auto w-auto rounded-md flex flex-col justify-evenly tablet:w-1/2 laptop:w-[40%]"
         >
           <div className="flex flex-col p-2">
             <div className="p-2">
-              <label>Nome:</label>
+              <label>Seu nome completo:</label>
               <input
                 type="text"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
                 className="bg-primary rounded-md w-full placeholder:pl-2"
-                placeholder="Seu Nome"
+                placeholder="Nome Completo"
               />
               {errors.name && <span className="error">{errors.name}</span>}
             </div>
 
             <div className="p-2">
-              <label>Telefone:</label>
+              <label>Telefone (com DDD):</label>
               <input
                 type="text"
                 name="phone"
@@ -126,7 +126,7 @@ export default function Contact() {
           </div>
 
           <div className="px-4">
-            <label>Email:</label>
+            <label>•	Seu e-mail:</label>
             <input
               type="email"
               name="email"
@@ -138,7 +138,7 @@ export default function Contact() {
           </div>
 
           <div className="px-4 p-2">
-            <label>Mensagem:</label>
+            <label>Como podemos ajudar?</label>
             <textarea
               name="message"
               value={formData.message}

@@ -7,6 +7,7 @@ export default {
   theme: {
     fontFamily:{
       quantico:['quantico'],
+      ethnocentric: ['Ethnocentric', 'sans-serif'],
     },
     screens:{
       'mobile': '201px',

@@ -8,6 +8,7 @@ import Pessoal from "../../assets/pessoal.png";
 import Escavadeira1 from "../../assets/escavadeira1.png";
 import Escavadeira2 from "../../assets/escavadeira2.png";
 import WhatsappIcon from "../../assets/whats.png";
+import ISO2 from "../../assets/ISO2.png";
 
 export default function About() {
     const sectionsRef = useRef([]); // Referências para as seções da página
@@ -23,6 +24,16 @@ export default function About() {
     const fadeIn = {
         hidden: { opacity: 0 },
         visible: { opacity: 1 },
+    };
+
+    // Animação de escala para seção de serviços
+    const scaleIn = {
+        hidden: { opacity: 0, y: 30 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.8, ease: "easeOut" },
+        },
     };
 
     // Observer para ativar animações ao rolar para a seção
@@ -68,7 +79,7 @@ export default function About() {
                 >
                     <h3 className="text-primary uppercase text-1xl pt-8 text-left ml-8">A Empresa</h3>
                     <h2 className="text-primary uppercase text-2xl font-bold text-left ml-8 pb-8 font-quantico">
-                        Sobre a GRT Engenharia
+                        Sobre a GRT Engenharia e Locações
                     </h2>
                 </motion.div>
                 <motion.div
@@ -89,20 +100,25 @@ export default function About() {
                     variants={fadeInUp}
                     transition={{ duration: 0.5, delay: 0.6 }}
                 >
-                    <h2 className="text-3xl font-bold text-left ml-8 py-10 tablet:px-20 tablet:py-10 font-quantico">
+                    <h2 className="text-3xl font-bold text-left ml-8 py-10 tablet:px-20 tablet:py-6 font-quantico">
                         A GRT Engenharia é uma empresa sólida e experiente, com mais de 10 anos de atuação na construção civil e infraestrutura.
                     </h2>
 
-                    <p className="text-2xl text-left text-wrap ml-8 px-8 tablet:px-20 mb-14">
-                        Ao longo de sua trajetória, a GRT Engenharia e Locação consolidou-se no setor de locação de equipamentos, transporte e movimentação de cargas, além de serviços de limpeza e movimentação industrial. É reconhecida por sua excelência, confiabilidade e alto padrão de entrega.
+                    <p className="text-2xl text-left text-wrap ml-8 px-8 tablet:px-20 mb-6">
+                        A GRT Engenharia e Locações é uma empresa consolidada e experiente, com mais de uma década oferecendo soluções em locação de equipamentos, transporte, movimentação de cargas e serviços industriais para construção civil e infraestrutura. Reconhecida pela excelência, confiabilidade e alto padrão em suas entregas, atua com comprometimento e inovação.
                     </p>
 
-                    <p className="text-2xl text-left text-wrap ml-8 px-8 tablet:px-20 mb-14">
-                        Com uma frota moderna e equipe qualificada, destaca-se na locação de equipamentos de linha amarela e caminhões, além da execução de serviços industriais, terraplenagem e pavimentação. Oferece soluções personalizadas e eficazes.
+                    <h3 className="text-2xl font-bold text-left ml-8 py-10 tablet:px-20 tablet:py-6 font-quantico">
+                        Frota e Serviços
+                    </h3>
+                    <p className="text-2xl text-left text-wrap ml-8 px-8 tablet:px-20 mb-6">
+                        Dispomos de uma frota moderna e uma equipe altamente qualificada, especializadas na locação de equipamentos de linha amarela e caminhões, além de realizar serviços industriais, terraplenagem e pavimentação, oferecendo soluções eficientes e personalizadas.
                     </p>
-
+                    <h3 className="text-2xl font-bold text-left ml-8 py-10 tablet:px-20 tablet:py-6 font-quantico">
+                        Compromissos
+                    </h3>
                     <p className="text-2xl text-left text-wrap ml-8 px-8 tablet:px-20 mb-14">
-                        Temos como prioridade atender às demandas com segurança, inovação e alto desempenho, sempre buscando agregar valor e aumentar a produtividade. Nosso compromisso é a entrega de projetos com rigor técnico e foco em resultados.
+                        Nossa prioridade é atender às demandas dos clientes com segurança, inovação e alta performance, promovendo aumento da produtividade e agregando valor aos projetos. Temos o compromisso de executar cada trabalho com rigor técnico e resultados concretos.
                     </p>
                 </motion.div>
             </section>
@@ -125,13 +141,46 @@ export default function About() {
                     transition={{ duration: 0.5, delay: 0.8 }}
                     className="w-full relative z-10 laptop:pl-10 text-left laptop:text-left mt-6 flex items-center laptop:mt-0"
                 >
-                    <p className="mt-4 text-lg text-primary">
-                        Contamos com uma equipe de profissionais qualificados e em constante atualização, preparados para atuar com eficiência, precisão e segurança. Nossa expertise abrange locação de equipamentos, transporte, terraplenagem, pavimentação, limpeza e movimentação industrial.
-                        Priorizamos o cumprimento das normas técnicas e de segurança, assegurando a entrega de soluções confiáveis, com redução de riscos e alto desempenho operacional.
+
+                    <p className="mt-4 text-lg text-primary"><strong>Equipe técnica</strong> -
+                        Contamos com profissionais altamente capacitados e constantemente atualizados, preparados para atuar com excelência, segurança e precisão. Nossa expertise inclui locação de equipamentos para transporte, terraplenagem, pavimentação, limpeza e movimentação industrial, sempre respeitando as normas técnicas mais exigentes para oferecer soluções confiáveis e alto desempenho operacional.
                     </p>
                 </motion.div>
                 <div className="absolute right-0 top-0 h-full lg:w-[80%] w-full laptop:w-2/3 bg-gradient-to-b from-faixa1 to-faixa2 z-0"></div>
             </section>
+            <section className="w-full bg-primary py-10 px-4">
+                <motion.section
+                    variants={scaleIn}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                    id="servicos"
+                    className="max-w-5xl mx-auto flex flex-col items-center text-center gap-6"
+                >
+                    {/* Imagem com efeito de zoom ao hover e revelação ao rolar */}
+                    <motion.img
+                        src={ISO2}
+                        alt="Movimentação de cargas"
+                        className="w-64 sm:w-72 md:w-80 lg:w-96 h-auto rounded-lg shadow-lg"
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ duration: 0.6, ease: "easeOut" }}
+                        viewport={{ once: true, amount: 0.4 }}
+                    />
+
+                    <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-quantico text-titulo">
+                        Compromisso com a Qualidade – ISO 9001
+                    </h1>
+
+                    <p className="text-base sm:text-lg lg:text-xl leading-relaxed text-titulo max-w-4xl">
+                        A GRT Engenharia e Locações está em processo de certificação ISO 9001, a mais reconhecida norma de gestão da qualidade no mundo.
+                        Nosso objetivo com a certificação é fortalecer ainda mais os padrões de qualidade em todos os processos, desde o atendimento inicial até a execução e entrega dos serviços.
+                        A implantação do Sistema de Gestão da Qualidade reforça nosso compromisso com a melhoria contínua, a padronização dos processos operacionais e a satisfação total de nossos clientes, garantindo segurança, eficiência e alto desempenho em cada projeto.
+                    </p>
+                </motion.section>
+            </section>
+
 
             {/* Seção: Inovação e Sustentabilidade */}
             <section ref={(el) => (sectionsRef.current[3] = el)} className="flex flex-col items-center laptop:grid laptop:grid-cols-2 w-full gap-8 px-6 tablet:px-12 laptop:px-24 py-12">
@@ -144,7 +193,9 @@ export default function About() {
                 >
                     <img className="rounded-xl object-cover w-full h-[450%]" src={Escavadeira1} alt="Escavadeira em obra" />
                     <p className="text-lg text-center laptop:text-left text-titulo leading-8 mt-4">
-                        A inovação é essencial para o sucesso dos nossos projetos. Investimos constantemente em tecnologias e métodos que aumentam a eficiência e reduzem os impactos ambientais. Nosso atendimento é personalizado e focado no entendimento completo das necessidades de cada cliente.
+                        <strong>Inovação e Sustentabilidade</strong> - 
+                        A inovação está no centro do sucesso dos nossos projetos. Investimos constantemente em tecnologias avançadas e métodos sustentáveis, visando a máxima eficiência operacional e minimização dos impactos ambientais. Nosso atendimento personalizado prioriza o entendimento detalhado das necessidades de cada cliente.
+
                     </p>
                 </motion.div>
 
@@ -157,7 +208,9 @@ export default function About() {
                 >
                     <img className="rounded-xl object-cover w-full h-[550%]" src={Escavadeira2} alt="Escavadeira em galpão" />
                     <div className="bg-gradient-to-b from-faixa1 to-faixa2 w-full p-6 text-primary text-lg leading-8 text-center laptop:text-left -mt-10 relative z-10 rounded-xl">
-                        Estamos prontos para encarar os desafios da construção civil, colaborando para projetos de alto impacto e valor agregado. A GRT Engenharia e Locações é sua parceira para transformar ideias em realidade, com qualidade, segurança e foco no futuro.
+                        <strong>Compromisso com o Cliente</strong> -
+Estamos prontos para superar os desafios da construção civil e infraestrutura, colaborando com projetos de alto impacto e valor agregado. A GRT Engenharia e Locações é parceira estratégica na transformação de ideias em resultados concretos, garantindo qualidade, segurança e uma visão orientada para o futuro.
+
                     </div>
                 </motion.div>
             </section>
