@@ -8,7 +8,7 @@ import Pessoal from "../../assets/pessoal.png";
 import Escavadeira1 from "../../assets/escavadeira1.png";
 import Escavadeira2 from "../../assets/escavadeira2.png";
 import WhatsappIcon from "../../assets/whats.png";
-import ISO2 from "../../assets/ISO2.png";
+import ISO2 from "../../assets/iso2.png";
 
 export default function About() {
     const sectionsRef = useRef([]); // Referências para as seções da página
