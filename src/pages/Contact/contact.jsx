@@ -81,24 +81,26 @@ export default function Contact() {
       </motion.section>
 
       {/* Informações sobre os diferenciais */}
-      <motion.section
-        className="bg-gradient-to-b from-faixa1 to-faixa2 text-primary text-center rounded-md p-6 w-full max-w-screen-md"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, delay: 0.3 }}
-        variants={fadeIn}
-      >
-        <p className="text-2xl font-semibold mb-4">
-          Solicite um orçamento sem compromisso e descubra como podemos contribuir para o sucesso do seu projeto.
-        </p>
-        <ul className="list-disc list-inside space-y-2 text-lg text-left">
-          <li>Atendimento personalizado e técnico</li>
-          <li>Propostas detalhadas e com prazos claros</li>
-          <li>Apoio para montagem de cronogramas e escopos</li>
-          <li>Planos de locação sob medida: curto, médio e longo prazo</li>
-        </ul>
-      </motion.section>
+      <div className="flex justify-center px-4">
+        <motion.section
+          className="bg-gradient-to-b from-faixa1 to-faixa2 text-primary text-center rounded-md p-6 w-full max-w-screen-md"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          variants={fadeIn}
+        >
+          <p className="text-2xl font-semibold mb-4">
+            Solicite um orçamento sem compromisso e descubra como podemos contribuir para o sucesso do seu projeto.
+          </p>
+          <ul className="list-disc list-inside space-y-2 text-lg text-left">
+            <li>Atendimento personalizado e técnico</li>
+            <li>Propostas detalhadas e com prazos claros</li>
+            <li>Apoio para montagem de cronogramas e escopos</li>
+            <li>Planos de locação sob medida: curto, médio e longo prazo</li>
+          </ul>
+        </motion.section>
+      </div>
 
       {/* Formulário de orçamento */}
       <motion.section
