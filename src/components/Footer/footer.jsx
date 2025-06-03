@@ -33,7 +33,7 @@ export default function Footer() {
               className="w-10 h-10 mx-6"
             />
           </a>
-          <a href="https://wa.me/5524981417949" target="_blank">
+          <a href="https://wa.me/5524998651115" target="_blank">
             <img
               src={Whatsapp}
               alt="whatsapp-icon"

@@ -350,7 +350,7 @@ export default function Portilio() {
                 </div>
             </motion.section>
             <a
-                href="https://wa.me/5524981417949"
+                href="https://wa.me/5524998651115"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="fixed bottom-2 right-2 z-50 tablet:bottom-6 tablet:right-6 tablet:p-3 hover:scale-110 transition duration-300"

@@ -68,9 +68,7 @@ export default function Contact() {
           <h2 className="font-quantico font-bold text-2xl">Tire suas dúvidas</h2>
           <p>contato@grtengenharia.com.br</p>
           <p>
-            +55 24 3350-1815
-            <br />
-            +55 24 98141-7949
+            +55 24 99865-1115
           </p>
           <div className="flex justify-center">
             <a href="https://www.instagram.com/grt.engenharia/" target="_blank">
@@ -80,7 +78,7 @@ export default function Contact() {
                 className="w-6 h-6 mx-4 hover:bg-faixa2 rounded-md"
               />
             </a>
-            <a href="https://wa.me/5524981417949" target="_blank">
+            <a href="https://wa.me/5524998651115" target="_blank">
               <img
                 src={Whatsapp}
                 alt="Logo Whatsapp"

@@ -48,7 +48,7 @@ export default function Header() {
             className="w-6 h-6 mx-4 hover:bg-faixa2 rounded-md"
           />
         </a>
-        <a href="https://wa.me/5524981417949" target="_blank">
+        <a href="https://wa.me/5524998651115" target="_blank">
           <img
             src={Whatsapp}
             alt="Logo Whatsapp"
