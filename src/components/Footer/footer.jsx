@@ -14,9 +14,12 @@ export default function Footer() {
             <img src={Logo} alt="Logo GRT" className="h-36 w-96 drop-shadow-custom	" />
           </a>
         </div>
-        <div className="mb-2">
-          <p className="font-ethnocentric text-faixa1"> Mais que máquinas. Conectamos inovação à produtividade. </p>
+        <div className="mb-2 flex justify-center">
+          <p className="font-ethnocentric text-faixa1 text-center">
+            Mais que máquinas. Conectamos inovação à produtividade.
+          </p>
         </div>
+
         <div className="text-faixa2 font-bold text-center">
           <p> Avenida Paulo Erlei Alves Abrantes, 1110</p>
           <p>Três Poços, Volta Redonda, RJ - CEP: 27240-560</p>
@@ -55,7 +58,7 @@ export default function Footer() {
           &copy; 2014 - {currentYear} GRT Engenharia - Todos os direitos
           reservados. Desenvolvido por Maiala Freitas.
         </p>
-        
+
       </div>
     </>
   );
