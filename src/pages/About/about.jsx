@@ -38,10 +38,11 @@ export default function About() {
 
     // Observer para ativar animações ao rolar para a seção
     useEffect(() => {
+        const sections = sectionsRef.current; // Copy ref value to a variable
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    const index = sectionsRef.current.indexOf(entry.target);
+                    const index = sections.indexOf(entry.target);
                     if (index !== -1) {
                         setVisibleSections((prev) => {
                             const updated = [...prev];
@@ -55,13 +56,13 @@ export default function About() {
         }, { threshold: 0.1 });
 
         // Observa cada seção referenciada
-        sectionsRef.current.forEach((section) => {
+        sections.forEach((section) => {
             if (section) observer.observe(section);
         });
 
         return () => {
             // Limpeza do observer
-            sectionsRef.current.forEach((section) => {
+            sections.forEach((section) => {
                 if (section) observer.unobserve(section);
             });
         };
@@ -101,11 +102,11 @@ export default function About() {
                     transition={{ duration: 0.5, delay: 0.6 }}
                 >
                     <h2 className="text-3xl font-bold text-left ml-8 py-10 tablet:px-20 tablet:py-6 font-quantico">
-                        A GRT Engenharia é uma empresa sólida e experiente, com mais de 10 anos de atuação na construção civil e infraestrutura.
+                        A GRT Engenharia e locações é referência em locação de equipamentos, transporte e movimentação de cargas, com forte presença nos setores industrial, da construção civil e de infraestrutura.
                     </h2>
 
                     <p className="text-2xl text-left text-wrap ml-8 px-8 tablet:px-20 mb-6">
-                        A GRT Engenharia e Locações é uma empresa consolidada e experiente, com mais de uma década oferecendo soluções em locação de equipamentos, transporte, movimentação de cargas e serviços industriais para construção civil e infraestrutura. Reconhecida pela excelência, confiabilidade e alto padrão em suas entregas, atua com comprometimento e inovação.
+                        Somos uma empresa consolidada e experiente, com mais de uma década oferecendo soluções em locação de equipamentos, transporte, movimentação de cargas e serviços industriais para construção civil e infraestrutura. Reconhecida pela excelência, confiabilidade e alto padrão em suas entregas, atua com comprometimento e inovação.
                     </p>
 
                     <h3 className="text-2xl font-bold text-left ml-8 py-10 tablet:px-20 tablet:py-6 font-quantico">
@@ -193,7 +194,7 @@ export default function About() {
                 >
                     <img className="rounded-xl object-cover w-full h-[450%]" src={Escavadeira1} alt="Escavadeira em obra" />
                     <p className="text-lg text-center laptop:text-left text-titulo leading-8 mt-4">
-                        <strong>Inovação e Sustentabilidade</strong> - 
+                        <strong>Inovação e Sustentabilidade</strong> -
                         A inovação está no centro do sucesso dos nossos projetos. Investimos constantemente em tecnologias avançadas e métodos sustentáveis, visando a máxima eficiência operacional e minimização dos impactos ambientais. Nosso atendimento personalizado prioriza o entendimento detalhado das necessidades de cada cliente.
 
                     </p>
@@ -209,7 +210,7 @@ export default function About() {
                     <img className="rounded-xl object-cover w-full h-[550%]" src={Escavadeira2} alt="Escavadeira em galpão" />
                     <div className="bg-gradient-to-b from-faixa1 to-faixa2 w-full p-6 text-primary text-lg leading-8 text-center laptop:text-left -mt-10 relative z-10 rounded-xl">
                         <strong>Compromisso com o Cliente</strong> -
-Estamos prontos para superar os desafios da construção civil e infraestrutura, colaborando com projetos de alto impacto e valor agregado. A GRT Engenharia e Locações é parceira estratégica na transformação de ideias em resultados concretos, garantindo qualidade, segurança e uma visão orientada para o futuro.
+                        Estamos prontos para superar os desafios da construção civil e infraestrutura, colaborando com projetos de alto impacto e valor agregado. A GRT Engenharia e Locações é parceira estratégica na transformação de ideias em resultados concretos, garantindo qualidade, segurança e uma visão orientada para o futuro.
 
                     </div>
                 </motion.div>

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 
-export default function FullWidthCarouselAutoScroll({ images, speed = 1 }) {
+export default function FullWidthCarouselAutoScroll({ images, speed = 1.5}) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -41,7 +41,7 @@ export default function FullWidthCarouselAutoScroll({ images, speed = 1 }) {
             whileHover={{ scale: 1.1 }}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.9 }}
           />
         ))}
       </motion.div>

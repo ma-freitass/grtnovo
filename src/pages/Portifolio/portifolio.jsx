@@ -316,9 +316,9 @@ export default function Portilio() {
                     hidden: { opacity: 0, y: 50 },
                     visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.6 } }
                 }}>
-                <motion.h3 variants={scaleIn} initial="hidden" whileInView="visible" animate="visible" className="text-2xl font-bold text-left text-wrap ml-8 pt-6 mr-32 tablet:px-20 tablet:py-10 font-quantico">Nossa Expertise,
-                    Seu Sucesso:</motion.h3>
-                <motion.h4 variants={fadeInUp} initial="hidden" whileInView="visible" animate="visible" className="text-2xl font-bold text-left text-wrap ml-8 mr-32 tablet:px-20 font-quantico">Soluções Inteligentes para Todos os Projetos</motion.h4>
+                <motion.h3 variants={scaleIn} initial="hidden" whileInView="visible" animate="visible" className="text-2xl font-bold text-left text-wrap ml-8 pt-6 mr-32 tablet:px-20 tablet:py-10 font-quantico">Nossa expertise,
+                    seu sucesso:</motion.h3>
+                <motion.h4 variants={fadeInUp} initial="hidden" whileInView="visible" animate="visible" className="text-2xl font-bold text-left text-wrap ml-8 mr-32 tablet:px-20 font-quantico">Soluções inteligentes para todos os projetos</motion.h4>
                 <motion.p variants={fadeIn} initial="hidden" whileInView="visible" animate="visible" className="text-2xl  text-left pb-8 text-wrap mx-12 my-4 tablet:px-20 mb-14">Atendemos projetos de pequeno, médio e grande porte com soluções técnicas e logísticas sob medida, aliando economia, eficiência e inteligência operacional. Atuamos com agilidade em demandas emergenciais e planejadas.
                 </motion.p>
             </motion.section>
@@ -336,7 +336,7 @@ export default function Portilio() {
                     </div>
                     <div className="relative">
                         <img className="rounded-lg mt-6 w-96 tablet:w-[80%] laptop:w-[80%]" src={Image1} alt="" />
-                        <p className="text-sm text-right flex pl-2 text-primary absolute bottom-0 w-full bg-gradient-to-tr from-faixa3/95 to-transparent tablet:text-2xl tablet:w-[80%] tablet:text-nowrap laptop:w-[80%] laptop:text-base">Equipamentos de ponta e equipe especializada</p>
+                        <p className="text-sm text-right flex pl-2 text-primary absolute bottom-0 w-full bg-gradient-to-tr from-faixa3/95 to-transparent tablet:text-2xl tablet:w-[80%] tablet:text-nowrap laptop:w-[80%] laptop:text-base">Equipamentos de ponta e equipe especializada.</p>
                     </div>
                     <div className="relative">
                         <img className="r-20 rounded-lg mt-6 w-96 h-auto tablet:w-[80%] laptop:w-[80%]" src={Image3} alt="" />
@@ -345,7 +345,7 @@ export default function Portilio() {
                     </div>
                     <div className="relative ">
                         <img className=" rounded-lg mt-6 w-96 tablet:w-[80%] laptop:w-[80%] " src={Image2} alt="" />
-                        <p className="text-sm  text-right flex pl-3 text-primary absolute bottom-0 w-full bg-gradient-to-tr from-faixa3/95 to-transparent tablet:text-2xl tablet:w-[80%] tablet:text-nowrap laptop:w-[80%] laptop:text-base">•	Compromisso com prazos, qualidade e segurança</p>
+                        <p className="text-sm  text-right flex pl-3 text-primary absolute bottom-0 w-full bg-gradient-to-tr from-faixa3/95 to-transparent tablet:text-2xl tablet:w-[80%] tablet:text-nowrap laptop:w-[80%] laptop:text-base">Compromisso com prazos, qualidade e segurança.</p>
                     </div>
                 </div>
             </motion.section>

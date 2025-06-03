@@ -58,7 +58,7 @@ export default function Home() {
     return (
         <main>
             {/* Container relativo para posicionamento absoluto do selo ISO e efeitos visuais */}
-            <section className="relative w-full overflow-hidden">            
+            <section className="relative w-full overflow-hidden">
                 {/* Selo ISO fixado no canto superior esquerdo */}
                 <motion.img
                     src={ISO}
@@ -71,13 +71,13 @@ export default function Home() {
 
                 {/* Imagem de fundo com efeito de revelação (clipPath) */}
                 <motion.img
-  className="w-full pb-7 relative z-0"
-  src={Equipamentos1}
-  alt="Equipamentos"
-  initial={{ opacity: 0, x: -50, y: -50, scale: 1.1 }}
-  animate={{ opacity: 1, x: 0, y: 0, scale: 1 }}
-  transition={{ duration: 1.8, ease: "easeInOut" }}
-/>
+                    className="w-full pb-7 relative z-0"
+                    src={Equipamentos1}
+                    alt="Equipamentos"
+                    initial={{ opacity: 0, x: -50, y: -50, scale: 1.1 }}
+                    animate={{ opacity: 1, x: 0, y: 0, scale: 1 }}
+                    transition={{ duration: 1.8, ease: "easeInOut" }}
+                />
             </section>
             {/* Frase com animação de entrada */}
             <section className="flex justify-center items-center px-4 py-8 bg-primary">
@@ -124,7 +124,7 @@ export default function Home() {
                                 <li>• Minério;</li>
                                 <li>• Carvão;</li>
                                 <li>• Escória;</li>
-                                <li>• Solo de 1ª, 2ª e 3ª categoria</li>
+                                <li>• Solo de 1ª, 2ª e 3ª categoria.</li>
                             </ul>
                         </div>
                     </div>
@@ -145,7 +145,7 @@ export default function Home() {
                                 <li>• Caminhões basculantes;</li>
                                 <li>• Caminhões carroceria;</li>
                                 <li>• Carreta prancha;</li>
-                                <li>• Carreta basculante;</li>
+                                <li>• Carreta basculante.</li>
 
                             </ul>
                         </div>
@@ -161,7 +161,7 @@ export default function Home() {
                                 <li>• Motoniveladora;</li>
                                 <li>• Rolo compactador;</li>
                                 <li>• Manipulador telescópico;</li>
-                                <li>• Empilhadeira;</li>
+                                <li>• Empilhadeira.</li>
 
                             </ul>
                         </div>
@@ -186,13 +186,13 @@ export default function Home() {
                         </Link>
                         <p className="text-2xl font-bold text-center py-6 font-quantico">Movimentação de carga</p>
                         <div>
-                            <p className="text-lg font-bold text-left ml-6">Movimentação especializada de cargas pesadas, necessita transportar ou içar equipamentos e materiais com total segurança e alta performance?</p>
-
+                            <p className="text-lg font-bold text-left ml-6">Movimentação especializada de cargas pesadas. Necessita transportar ou içar equipamentos e materiais com total segurança e alta performance? Nós temos a solução!  </p>
+  
                             <ul className="text-lg font-bold list-disc ml-10 pl-4 space-y-1">
                                 <li>• Içamento e remoção de equipamentos</li>
                                 <li>• Transporte e movimentação de máquinas industriais</li>
                                 <li>• Montagem e desmontagem de estruturas metálicas</li>
-                                <li>• Atendimento para indústrias, construção civil e agronegócio</li>
+                                <li>• Atendimento para indústrias, construção civil e agronegócio.</li>
 
                             </ul>
                         </div>
@@ -311,13 +311,32 @@ export default function Home() {
                 <motion.div className="flex flex-row max-laptop:flex-col bg-gradient-to-b from-faixa1 to-faixa2 py-10 w-full" variants={fadeInUp} initial="hidden" whileInView="visible" animate="visible">
 
                     <motion.img className="rounded-xl my-6 mx-8 object-cover w-1/2 max-laptop:w-full h-auto justify-center" src={Final} alt="" variants={scaleIn} initial="hidden" whileInView="visible" animate="visible" />
-                    <div className="w-full h-auto place-content-center">
+                    <div className="w-full h-auto flex flex-col items-center text-center px-4">
+                        <motion.h2
+                            className="text-4xl font-quantico font-bold text-primary pt-6"
+                            variants={fadeInUp}
+                            initial="hidden"
+                            whileInView="visible"
+                            animate="visible"
+                        >
+                            Solicite seu orçamento!
+                        </motion.h2>
 
-                        <motion.h2 className="text-4xl font-quantico font-bold text-left text-primary pt-6 ml-8" variants={fadeInUp} initial="hidden" whileInView="visible" animate="visible">Solicite seu orçamento! </motion.h2>
-                        <motion.p className="text-lg text-left ml-6 leading-8 text-primary p-4" variants={scaleIn} initial="hidden" whileInView="visible" animate="visible">A GRT Engenharia e Locações transformam seus desafios em soluções práticas e rentáveis. Entre em contato e descubra como podemos impulsionar o sucesso do seu projeto com qualidade, segurança e alta eficiência operacional.</motion.p>
+                        <motion.p
+                            className="text-lg leading-8 text-primary py-4 max-w-4xl"
+                            variants={scaleIn}
+                            initial="hidden"
+                            whileInView="visible"
+                            animate="visible"
+                        >
+                            A GRT Engenharia e Locações transforma seus desafios em soluções práticas e rentáveis.
+                            Entre em contato e descubra como podemos impulsionar o sucesso do seu projeto com qualidade,
+                            segurança e alta eficiência operacional.
+                        </motion.p>
+
                         <Link to="/contact">
                             <motion.button
-                                className="bg-primary px-20 py-4 rounded-lg ml-20 my-6 font-bold"
+                                className="bg-primary px-20 py-4 rounded-lg my-6 font-bold text-white"
                                 variants={fadeInUp}
                                 initial="hidden"
                                 whileInView="visible"
@@ -328,6 +347,7 @@ export default function Home() {
                             </motion.button>
                         </Link>
                     </div>
+
                 </motion.div>
             </motion.section>
             <a
