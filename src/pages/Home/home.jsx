@@ -324,7 +324,7 @@ export default function Home() {
                                 animate="visible"
                                 onClick={() => window.scrollTo(0, 0)}
                             >
-                                Fale conosco ➔
+                                Solicite seu orçamento ➔
                             </motion.button>
                         </Link>
                     </div>
