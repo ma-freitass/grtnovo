@@ -63,7 +63,7 @@ export default function Home() {
                 <motion.img
                     src={ISO}
                     alt="Certificação ISO 9001"
-                    className="absolute top-2 left-2 w-24 sm:w-28 md:w-32 lg:w-36 z-10"
+                    className="absolute top-2 left-2 w-32 sm:w-28 md:w-36 lg:w-36 z-10"
                     initial={{ opacity: 0, x: -30 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
